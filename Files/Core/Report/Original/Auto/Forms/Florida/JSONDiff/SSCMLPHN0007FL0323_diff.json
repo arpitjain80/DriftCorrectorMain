@@ -1,0 +1,23 @@
+{
+  "reportMetadata": {
+    "generatedAt": "2026-03-10T18:16:38",
+    "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Auto\\Forms\\Florida\\SSCMLPHN0007FL0323.pdf",
+    "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V23\\Auto\\Forms\\Florida\\SSCMLPHN0007FL0323.pdf",
+    "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Auto\\Forms\\Florida",
+    "publishFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V23\\Auto\\Forms\\Florida"
+  },
+  "summary": {
+    "totalWordDifferences": 0,
+    "positionShifts": 0,
+    "fontDifferences": 0,
+    "fontSizeDifferences": 0,
+    "missingFromPublish": 0,
+    "extraInPublish": 0,
+    "totalPhraseGroups": 0,
+    "totalTableGroups": 0,
+    "isClean": true
+  },
+  "tableGroups": [],
+  "phraseGroups": [],
+  "wordLevelDifferences": []
+}

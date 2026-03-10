@@ -1,0 +1,23 @@
+{
+  "reportMetadata": {
+    "generatedAt": "2026-03-09T12:56:43",
+    "baselinePdf": "C:\\Personal\\Project\\DriftCorrector\\Files\\PDF\\Original\\V14\\DO\\DO_PrimaryManagementLiability_BL_MA.pdf",
+    "publishPdf": "C:\\Personal\\Project\\DriftCorrector\\Files\\PDF\\Modified\\V23\\DO\\DO_PrimaryManagementLiability_BL_MA.pdf",
+    "baselineFolder": "C:\\Personal\\Project\\DriftCorrector\\Files\\PDF\\Original\\V14\\DO",
+    "publishFolder": "C:\\Personal\\Project\\DriftCorrector\\Files\\PDF\\Modified\\V23\\DO"
+  },
+  "summary": {
+    "totalWordDifferences": 0,
+    "positionShifts": 0,
+    "fontDifferences": 0,
+    "fontSizeDifferences": 0,
+    "missingFromPublish": 0,
+    "extraInPublish": 0,
+    "totalPhraseGroups": 0,
+    "totalTableGroups": 0,
+    "isClean": true
+  },
+  "tableGroups": [],
+  "phraseGroups": [],
+  "wordLevelDifferences": []
+}

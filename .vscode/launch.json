@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run DriftCorrectorWinForm",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build: DriftCorrectorWinForm",
+      "program": "${workspaceFolder}/DriftCorrectorWinForm/bin/Debug/net6.0-windows/DriftCorrectorWinForm.exe",
+      "args": [],
+      "cwd": "${workspaceFolder}/DriftCorrectorWinForm",
+      "console": "internalConsole",
+      "stopAtEntry": false
+    }
+  ]
+}

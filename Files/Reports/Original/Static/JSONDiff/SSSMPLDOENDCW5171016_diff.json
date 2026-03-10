@@ -1,0 +1,107 @@
+{
+  "reportMetadata": {
+    "generatedAt": "2026-03-09T12:56:36",
+    "baselinePdf": "C:\\Personal\\Project\\DriftCorrector\\Files\\PDF\\Original\\V14\\Static\\SSSMPLDOENDCW5171016.pdf",
+    "publishPdf": "C:\\Personal\\Project\\DriftCorrector\\Files\\PDF\\Original\\V23\\Static\\SSSMPLDOENDCW5171016.pdf",
+    "baselineFolder": "C:\\Personal\\Project\\DriftCorrector\\Files\\PDF\\Original\\V14\\Static",
+    "publishFolder": "C:\\Personal\\Project\\DriftCorrector\\Files\\PDF\\Original\\V23\\Static"
+  },
+  "summary": {
+    "totalWordDifferences": 1,
+    "positionShifts": 1,
+    "fontDifferences": 0,
+    "fontSizeDifferences": 0,
+    "missingFromPublish": 0,
+    "extraInPublish": 0,
+    "totalPhraseGroups": 1,
+    "totalTableGroups": 0,
+    "isClean": false
+  },
+  "tableGroups": [],
+  "phraseGroups": [
+    {
+      "groupId": 1,
+      "page": 1,
+      "phraseText": "Page",
+      "wordCount": 1,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "PARAGRAPH",
+      "baselineRegion": {
+        "xStart": 445.06415,
+        "xEnd": 461.06415,
+        "y": 14.406998,
+        "font": "ArialMT",
+        "fontSize": 8
+      },
+      "publishRegion": {
+        "xStart": 445.59198,
+        "xEnd": 461.59198,
+        "y": 14.398997,
+        "font": "ArialMT",
+        "fontSize": 8
+      },
+      "sharedDelta": {
+        "x": 0.52783203,
+        "y": -0.008000374,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.52783203,
+        "y": 0.008000374,
+        "xTwips": -11,
+        "yTwips": 0,
+        "xPt": "-0.53pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -0.53pt (-11 twips)"
+      },
+      "wordIds": [
+        1
+      ]
+    }
+  ],
+  "wordLevelDifferences": [
+    {
+      "differenceId": 1,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Page",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 445.06415,
+        "y": 14.406998,
+        "font": "ArialMT",
+        "fontSize": 8,
+        "page": 1
+      },
+      "publish": {
+        "x": 445.59198,
+        "y": 14.398997,
+        "font": "ArialMT",
+        "fontSize": 8,
+        "page": 1
+      },
+      "delta": {
+        "x": 0.52783203,
+        "y": -0.008000374,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.52783203,
+        "y": 0.008000374,
+        "xTwips": -11,
+        "yTwips": 0,
+        "xPt": "-0.53pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -0.53pt (-11 twips)"
+      },
+      "phraseGroupId": 1
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+bin/
+obj/
+.claude/
+Files/Logs/
+Files/Reports
+Files/WordTemplates/Modified
+Files/PDF/Modified
+run_log_Exception.txt
+run_log.txt
+run_log4.txt
+run_log.txt

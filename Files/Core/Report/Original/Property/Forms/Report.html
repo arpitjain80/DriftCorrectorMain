@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PDF Comparison – Summary</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg:          #f5f4f0;
+    --surface:     #ffffff;
+    --border:      #e2e0db;
+    --text-main:   #1c1b18;
+    --text-muted: #6b6860;
+    --accent:      #2a5bd7;
+    --accent-lt:  #eef2fd;
+    --green:       #1a7a4a;
+    --green-lt:    #eaf5ef;
+    --red:         #c0392b;
+    --red-lt:      #fdf0ee;
+    --shadow-sm:  0 1px 3px rgba(0,0,0,.07), 0 1px 2px rgba(0,0,0,.05);
+    --shadow-md:  0 4px 12px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.04);
+    --radius:      10px;
+  }
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    background: var(--bg);
+    color: var(--text-main);
+    min-height: 100vh;
+  }
+  .topbar {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0 40px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+  }
+  .topbar-brand {
+    font-family: 'Lora', serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-main);
+    letter-spacing: -.01em;
+  }
+  .topbar-brand span { color: var(--accent); }
+  .topbar-meta { font-size: 12.5px; color: var(--text-muted); font-weight: 300; }
+  .page { max-width: 1060px; margin: 0 auto; padding: 48px 32px 80px; }
+  .page-heading { margin-bottom: 36px; }
+  .page-heading h1 {
+    font-family: 'Lora', serif;
+    font-size: 28px; font-weight: 600;
+    letter-spacing: -.02em; color: var(--text-main); margin-bottom: 6px;
+  }
+  .page-heading p { font-size: 14px; color: var(--text-muted); font-weight: 300; }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px; margin-bottom: 36px;
+  }
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+    box-shadow: var(--shadow-sm);
+  }
+  .stat-card .label {
+    font-size: 11.5px; font-weight: 500;
+    letter-spacing: .06em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 8px;
+  }
+  .stat-card .value {
+    font-family: 'Lora', serif;
+    font-size: 36px; font-weight: 600;
+    line-height: 1; color: var(--text-main);
+  }
+  .stat-card.accent .value { color: var(--accent); }
+  .stat-card.green  .value { color: var(--green);  }
+  .stat-card.red    .value { color: var(--red);    }
+  .table-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+  .table-card-header {
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .table-card-header h2 { font-size: 14px; font-weight: 600; color: var(--text-main); }
+  .badge-count {
+    background: var(--accent-lt); color: var(--accent);
+    font-size: 11px; font-weight: 600;
+    padding: 2px 8px; border-radius: 20px;
+  }
+  table { width: 100%; border-collapse: collapse; }
+  thead th {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: .07em; text-transform: uppercase;
+    color: var(--text-muted); padding: 11px 24px;
+    text-align: left; background: #fafaf8;
+    border-bottom: 1px solid var(--border);
+  }
+  tbody tr { border-bottom: 1px solid var(--border); transition: background .15s; }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: #fafaf8; }
+  tbody td {
+    padding: 14px 24px; font-size: 13.5px;
+    vertical-align: middle; color: var(--text-main);
+  }
+  .col-num    { width: 52px; color: var(--text-muted); font-size: 12.5px; }
+  .col-file   { font-family: 'Source Code Pro', monospace; font-size: 12.5px; }
+  .col-status { width: 140px; }
+  .col-report { width: 140px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 5px;
+    font-size: 12px; font-weight: 600;
+    padding: 3px 10px; border-radius: 20px; white-space: nowrap;
+  }
+  .badge-ok  { background: var(--green-lt); color: var(--green); }
+  .badge-err { background: var(--red-lt);   color: var(--red);   }
+  .badge-clean-diff {
+    background: #e6f8ed; color: #1aaf5d;
+  }
+  .badge-ok::before            { content: '✓'; font-size: 11px; }
+  .badge-err::before           { content: '●'; font-size: 7px;  }
+  .badge-clean-diff::before    { content: '◈'; font-size: 11px; }
+  .report-link {
+    font-size: 12.5px; color: var(--accent); text-decoration: none;
+    font-weight: 500; display: inline-flex; align-items: center; gap: 4px;
+    padding: 4px 10px; border-radius: 6px;
+    border: 1px solid #c9d8f5; background: var(--accent-lt);
+    transition: background .15s, border-color .15s;
+  }
+  .report-link:hover { background: #dde7fb; border-color: #a8bfee; }
+  .report-link::after { content: '→'; }
+  .jump-nav {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); box-shadow: var(--shadow-sm);
+    padding: 18px 24px; margin-bottom: 28px;
+  }
+  .jump-nav h3 {
+    font-size: 11px; font-weight: 600;
+    letter-spacing: .07em; text-transform: uppercase;
+    color: var(--text-muted); margin-bottom: 12px;
+  }
+  .jump-links { display: flex; flex-wrap: wrap; gap: 8px; }
+  .jump-link {
+    font-size: 12px; color: var(--accent); text-decoration: none;
+    padding: 4px 10px; border-radius: 6px;
+    border: 1px solid #c9d8f5; background: var(--accent-lt);
+    font-weight: 500; transition: background .15s;
+  }
+  .jump-link:hover { background: #dde7fb; }
+  .footer {
+    margin-top: 56px; text-align: center;
+    font-size: 12px; color: var(--text-muted); font-weight: 300;
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-brand">PDF<span>Compare</span> &mdash; Summary Report</div>
+  <div class="topbar-meta">Generated March 10, 2026  6:18 PM</div>
+</div>
+
+<div class="page">
+  <div class="page-heading">
+    <h1>Comparison Summary</h1>
+    <p>All baseline PDF files compared against the publish folder. Click a report link to inspect differences.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card accent">
+      <div class="label">Total Files</div>
+      <div class="value">0</div>
+    </div>
+    <div class="stat-card red">
+      <div class="label">Differences Found</div>
+      <div class="value">0</div>
+    </div>
+    <div class="stat-card" style="--val-color:#1aaf5d">
+      <div class="label">Clean Differences</div>
+      <div class="value" style="color:#1aaf5d">0</div>
+    </div>
+    <div class="stat-card green">
+      <div class="label">No Differences</div>
+      <div class="value">0</div>
+    </div>
+  </div>
+
+  <div class="table-card">
+    <div class="table-card-header">
+      <h2>File Results</h2>
+      <span class="badge-count">0 files</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th class="col-num">#</th>
+          <th>File Name</th>
+          <th class="col-status">Status</th>
+          <th class="col-report">Report</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="table-card" style="margin-top:28px;">
+    <div class="table-card-header">
+      <h2>Subfolders</h2>
+      <span class="badge-count">1 folder</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th class="col-num">#</th>
+          <th>Folder Name</th>
+          <th class="col-status">Status</th>
+          <th class="col-report">Open</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="col-num">1</td>
+          <td class="col-file">&#128193; Florida</td>
+          <td class="col-status"><span class="badge badge-ok">Clean</span></td>
+          <td class="col-report"><a class="report-link" href="Florida/Report.html">Open &rarr;</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">PDFCompare &nbsp;·&nbsp; Report generated March 10, 2026  6:18 PM</div>
+</div>
+</body>
+</html>

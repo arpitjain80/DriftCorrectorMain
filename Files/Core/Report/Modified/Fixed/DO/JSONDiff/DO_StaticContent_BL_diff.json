@@ -1,0 +1,3969 @@
+{
+  "reportMetadata": {
+    "generatedAt": "2026-03-10T18:18:57",
+    "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Fixed\\DO\\DO_StaticContent_BL.pdf",
+    "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\Modified\\Fixed\\DO\\DO_StaticContent_BL.pdf",
+    "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Fixed\\DO",
+    "publishFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\Modified\\Fixed\\DO"
+  },
+  "summary": {
+    "totalWordDifferences": 217,
+    "positionShifts": 3,
+    "fontDifferences": 0,
+    "fontSizeDifferences": 0,
+    "missingFromPublish": 107,
+    "extraInPublish": 107,
+    "totalPhraseGroups": 3,
+    "totalTableGroups": 0,
+    "isClean": false
+  },
+  "tableGroups": [],
+  "phraseGroups": [
+    {
+      "groupId": 1,
+      "page": 1,
+      "phraseText": "in",
+      "wordCount": 1,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "PARAGRAPH",
+      "baselineRegion": {
+        "xStart": 216.639008,
+        "xEnd": 226.639008,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 234.37001,
+        "xEnd": 244.37001,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 17.7310028,
+        "y": 0.938995361,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -17.7310028,
+        "y": -0.938995361,
+        "xTwips": -355,
+        "yTwips": -19,
+        "xPt": "-17.73pt",
+        "yPt": "-0.94pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -17.73pt (-355 twips); Adjust paragraph SpaceBefore by -0.94pt (-19 twips)"
+      },
+      "wordIds": [
+        51
+      ],
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 2,
+      "page": 1,
+      "phraseText": "the",
+      "wordCount": 1,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "PARAGRAPH",
+      "baselineRegion": {
+        "xStart": 245.242004,
+        "xEnd": 260.242004,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 295.809967,
+        "xEnd": 310.809967,
+        "y": 475.809021,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 50.5679626,
+        "y": 0.939025879,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -50.5679626,
+        "y": -0.939025879,
+        "xTwips": -1011,
+        "yTwips": -19,
+        "xPt": "-50.57pt",
+        "yPt": "-0.94pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -50.57pt (-1011 twips); Adjust paragraph SpaceBefore by -0.94pt (-19 twips)"
+      },
+      "wordIds": [
+        69
+      ],
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 3,
+      "page": 1,
+      "phraseText": "and",
+      "wordCount": 1,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "PARAGRAPH",
+      "baselineRegion": {
+        "xStart": 362.143005,
+        "xEnd": 377.143005,
+        "y": 462.609009,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 334.240021,
+        "xEnd": 349.240021,
+        "y": 463.548004,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": -27.9029846,
+        "y": 0.938995361,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 27.9029846,
+        "y": -0.938995361,
+        "xTwips": 558,
+        "yTwips": -19,
+        "xPt": "\u002B27.9pt",
+        "yPt": "-0.94pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B27.9pt (558 twips); Adjust paragraph SpaceBefore by -0.94pt (-19 twips)"
+      },
+      "wordIds": [
+        90
+      ],
+      "isCleanDiff": true
+    }
+  ],
+  "wordLevelDifferences": [
+    {
+      "differenceId": 1,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "In",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 67.5,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 12,
+        "spaceAfterPt": 8,
+        "lineSpacingPt": 12,
+        "tableIndex": 1,
+        "rowIndex": 6,
+        "colIndex": 0,
+        "colWidthPt": 535.5,
+        "rowHeightPt": 12.5,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": -4.5,
+        "columnOffsetPt": 0
+      }
+    },
+    {
+      "differenceId": 2,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 78.6279984,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 18,
+        "spaceAfterPt": 8,
+        "lineSpacingPt": 12,
+        "tableIndex": 1,
+        "rowIndex": 0,
+        "colIndex": 0,
+        "colWidthPt": 535.5,
+        "rowHeightPt": 13.3999996,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": -4.5,
+        "columnOffsetPt": 0
+      }
+    },
+    {
+      "differenceId": 3,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "event",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 97.3829956,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 4,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "that",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 128.179001,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 5,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 150.654999,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 12,
+        "spaceAfterPt": 8,
+        "lineSpacingPt": 12,
+        "tableIndex": 1,
+        "rowIndex": 9,
+        "colIndex": 0,
+        "colWidthPt": 535.5,
+        "rowHeightPt": 12.5,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": -4.5,
+        "columnOffsetPt": 0
+      }
+    },
+    {
+      "differenceId": 6,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "required",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 169.410004,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 7,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "information",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 212.945999,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 8,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "is",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 270.759003,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 9,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "not",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 279.411987,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 10,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "received",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 298.216003,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 11,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "within",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 344.354004,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 12,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "thirty",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 375.02301,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 13,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "(30)",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 401.039001,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 14,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "days",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 422.274994,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 15,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "from",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 447.968994,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 16,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 472.812988,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 17,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "effective",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 491.567993,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 18,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "date",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 537.515991,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 19,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "of",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 563.854004,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 20,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "this",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 576.311035,
+        "y": 563.91394,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 21,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "Binder,",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 67.5,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 22,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "it",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 103.237999,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 23,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "will",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 111.397995,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 24,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "be",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 128.483002,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 25,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "of",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 144.571991,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 26,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "no",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 157.028992,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 27,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "further",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 172.444,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 28,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "effect",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 206.434006,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 29,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "and",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 238.339005,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 30,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 260.888,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 31,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "coverage",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 279.643005,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 32,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "bound",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 330.536987,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 33,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "hereunder",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 365.703003,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 34,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "will",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 419.112,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 35,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "be",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 436.196991,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 36,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "void",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 452.286011,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 37,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "as",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 475.997009,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 38,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "of",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 489.479004,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 39,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "effective",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 501.936005,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 40,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "date",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 547.884033,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 41,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "of",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 574.221985,
+        "y": 551.652954,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 42,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 67.5,
+        "y": 539.391968,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 43,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "Policy",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 86.2549973,
+        "y": 539.391968,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 44,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "Period.",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 117.324997,
+        "y": 539.391968,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 45,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "The",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 67.5,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 46,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "binding",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 87.1240005,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 47,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "of",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 126.494995,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 48,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "this",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 138.951996,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 49,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "coverage",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 157.09201,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 50,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "is",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 207.985992,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 51,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "in",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 216.639008,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 234.37001,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 17.7310028,
+        "y": 0.938995361,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -17.7310028,
+        "y": -0.938995361,
+        "xTwips": -355,
+        "yTwips": -19,
+        "xPt": "-17.73pt",
+        "yPt": "-0.94pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -17.73pt (-355 twips); Adjust paragraph SpaceBefore by -0.94pt (-19 twips)"
+      },
+      "phraseGroupId": 1
+    },
+    {
+      "differenceId": 52,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "reliance",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 227.509003,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 53,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "upon",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 269.687012,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 54,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "all",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 298.002991,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 55,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "materials",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 311.606995,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 56,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "submitted",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 358.199005,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 57,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "to",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 409.259003,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 58,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 421.964996,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 59,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "StarStone",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 440.720001,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 60,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "and",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 489.212006,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 61,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "any",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 511.760986,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 62,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "public",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 532.821045,
+        "y": 487.131012,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 63,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "documents",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 67.5,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 64,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "filed",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 125.464005,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 65,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "by",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 148.725998,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 66,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 163.678009,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 67,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "Company",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 182.432999,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 68,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "in",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 234.371994,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 69,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 245.242004,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 295.809967,
+        "y": 475.809021,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 50.5679626,
+        "y": 0.939025879,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -50.5679626,
+        "y": -0.939025879,
+        "xTwips": -1011,
+        "yTwips": -19,
+        "xPt": "-50.57pt",
+        "yPt": "-0.94pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -50.57pt (-1011 twips); Adjust paragraph SpaceBefore by -0.94pt (-19 twips)"
+      },
+      "phraseGroupId": 2
+    },
+    {
+      "differenceId": 70,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "last",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 263.997009,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 71,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "twelve",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 282.869995,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 72,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "(12)",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 317.880005,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 73,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "months",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 339.115997,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 74,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "with",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 377.281006,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 75,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "any",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 399.850006,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 76,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "federal,",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 420.910004,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 77,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "state,",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 461.277008,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 78,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "local,",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 490.803986,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 79,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "or",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 520.19397,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 80,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "foreign",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 532.519043,
+        "y": 474.869995,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 81,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "regulatory",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 67.5,
+        "y": 462.609009,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 82,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "agency,",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 119.722,
+        "y": 462.609009,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 83,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "including",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 163.248001,
+        "y": 462.609009,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 84,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "but",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 210.348007,
+        "y": 462.609009,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 85,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "not",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 229.406006,
+        "y": 462.609009,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 86,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "limited",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 248.210007,
+        "y": 462.609009,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 87,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "to",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 283.102997,
+        "y": 462.609009,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 88,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 295.809021,
+        "y": 462.609009,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 89,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "Securities",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 314.563995,
+        "y": 462.609009,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 90,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "and",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 362.143005,
+        "y": 462.609009,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 334.240021,
+        "y": 463.548004,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -27.9029846,
+        "y": 0.938995361,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 27.9029846,
+        "y": -0.938995361,
+        "xTwips": 558,
+        "yTwips": -19,
+        "xPt": "\u002B27.9pt",
+        "yPt": "-0.94pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B27.9pt (558 twips); Adjust paragraph SpaceBefore by -0.94pt (-19 twips)"
+      },
+      "phraseGroupId": 3
+    },
+    {
+      "differenceId": 91,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "Exchange",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 384.691986,
+        "y": 462.609009,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 92,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "Commission",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 436.347992,
+        "y": 462.609009,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 93,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "(SEC)",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 496.968994,
+        "y": 462.609009,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 94,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "and,",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 525.592041,
+        "y": 462.609009,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 95,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "if",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 550.910034,
+        "y": 462.609009,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 96,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "applicable,",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 67.5,
+        "y": 450.347992,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 97,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "subject",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 126.138,
+        "y": 450.347992,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 98,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "to",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 164.078003,
+        "y": 450.347992,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 99,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 176.783997,
+        "y": 450.347992,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 100,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "Underwriter\u0027s",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 195.539001,
+        "y": 450.347992,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 101,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "receipt,",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 259.386993,
+        "y": 450.347992,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 102,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "review",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 299.612,
+        "y": 450.347992,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 103,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "and",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 334.240997,
+        "y": 450.347992,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 104,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "acceptance",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 356.790009,
+        "y": 450.347992,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 105,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "of",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 421.937012,
+        "y": 450.347992,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 106,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 434.394012,
+        "y": 450.347992,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 107,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "additional",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 453.148987,
+        "y": 450.347992,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 108,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "information",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 505.321991,
+        "y": 450.347992,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 109,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "requested",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 67.5,
+        "y": 438.087006,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 110,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "above.",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 119.794998,
+        "y": 438.087006,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 111,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "In",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 67.5,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 112,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 78.6300049,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 113,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "event",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 97.3799973,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 114,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "that",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 128.179993,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 115,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 150.649994,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 116,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "required",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 169.409988,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 117,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "information",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 212.949982,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 118,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "is",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 270.76001,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 119,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "not",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 279.410004,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 120,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "received",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 298.220001,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 121,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "within",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 344.350006,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 122,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "thirty",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 375.019989,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 123,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "(30)",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 401.040009,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 124,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "days",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 422.269989,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 125,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "from",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 447.970001,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 126,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 472.809998,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 127,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "effective",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 491.570007,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 128,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "date",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 537.52002,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 129,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "of",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 563.850037,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 130,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "this",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 576.309998,
+        "y": 570.513977,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 131,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "Binder,",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 67.5,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 132,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "it",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 103.240005,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 133,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "will",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 111.400002,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 134,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "be",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 128.479996,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 135,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "of",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 144.570007,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 136,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "no",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 157.029999,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 137,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "further",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 172.440002,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 138,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "effect",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 206.430008,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 139,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "and",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 238.339996,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 140,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 260.890015,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 141,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "coverage",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 279.639984,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 142,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "bound",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 330.539978,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 143,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "hereunder",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 365.700012,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 144,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "will",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 419.110016,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 145,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "be",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 436.200012,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 146,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "void",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 452.290039,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 147,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "as",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 476.000031,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 148,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "of",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 489.480042,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 149,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "effective",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 501.940033,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 150,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "date",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 547.880005,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 151,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "of",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 574.220093,
+        "y": 558.252991,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 152,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 67.5,
+        "y": 545.992004,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 153,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "Policy",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 86.25,
+        "y": 545.992004,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 154,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "Period.",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 117.32,
+        "y": 545.992004,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 155,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "The",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 67.5,
+        "y": 500.331024,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 156,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "binding",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 87.1199951,
+        "y": 500.331024,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 157,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "of",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 126.490005,
+        "y": 500.331024,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 158,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "this",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 138.950012,
+        "y": 500.331024,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 159,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "coverage",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 157.089996,
+        "y": 500.331024,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 160,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "is",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 207.98999,
+        "y": 500.331024,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 161,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "in",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 216.639984,
+        "y": 500.331024,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 162,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "reliance",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 227.509979,
+        "y": 500.331024,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 163,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "upon",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 269.690002,
+        "y": 500.331024,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 164,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "all",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 297.999969,
+        "y": 500.331024,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 165,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "materials",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 311.609985,
+        "y": 500.331024,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 166,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "submitted",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 358.200012,
+        "y": 500.331024,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 167,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "to",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 409.26001,
+        "y": 500.331024,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 168,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 421.959991,
+        "y": 500.331024,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 169,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "StarStone",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 440.720001,
+        "y": 500.331024,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 170,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "and",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 489.209961,
+        "y": 500.331024,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 171,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "any",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 511.759979,
+        "y": 500.331024,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 172,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "public",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 532.819946,
+        "y": 500.331024,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 173,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "documents",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 67.5,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 174,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "filed",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 125.459999,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 175,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "by",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 148.729996,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 176,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 163.679993,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 177,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "Company",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 182.430008,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 178,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 245.240005,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 179,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "last",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 264,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 180,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "twelve",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 282.869995,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 181,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "(12)",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 317.880005,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 182,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "months",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 339.119965,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 183,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "with",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 377.279968,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 184,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "any",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 399.849976,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 185,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "federal,",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 420.909973,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 186,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "state,",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 461.279968,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 187,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "local,",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 490.799957,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 188,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "or",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 520.189941,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 189,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "foreign",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 532.519897,
+        "y": 488.070007,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 190,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "regulatory",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 67.5,
+        "y": 475.809021,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 191,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "agency,",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 119.720001,
+        "y": 475.809021,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 192,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "including",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 163.25,
+        "y": 475.809021,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 193,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "but",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 210.350006,
+        "y": 475.809021,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 194,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "not",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 229.410004,
+        "y": 475.809021,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 195,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "limited",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 248.209991,
+        "y": 475.809021,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 196,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "to",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 283.099976,
+        "y": 475.809021,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 197,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "Securities",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 314.559967,
+        "y": 475.809021,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 198,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "and",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 362.139984,
+        "y": 475.809021,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 199,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "Exchange",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 384.689972,
+        "y": 475.809021,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 200,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "Commission",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 436.349976,
+        "y": 475.809021,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 201,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "(SEC)",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 496.970032,
+        "y": 475.809021,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 202,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "and,",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 525.590027,
+        "y": 475.809021,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 203,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "if",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 550.910034,
+        "y": 475.809021,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 204,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "applicable,",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 67.5,
+        "y": 463.548004,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 205,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "subject",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 126.139999,
+        "y": 463.548004,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 206,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "to",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 164.079987,
+        "y": 463.548004,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 207,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 176.780014,
+        "y": 463.548004,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 208,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "Underwriter\u0027s",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 195.540009,
+        "y": 463.548004,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 209,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "receipt,",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 259.390015,
+        "y": 463.548004,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 210,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "review",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 299.610016,
+        "y": 463.548004,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 211,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "acceptance",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 356.790009,
+        "y": 463.548004,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 212,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "of",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 421.940002,
+        "y": 463.548004,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 213,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "the",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 434.390015,
+        "y": 463.548004,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 214,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "additional",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 453.150024,
+        "y": 463.548004,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 215,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "information",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 505.320007,
+        "y": 463.548004,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 216,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "requested",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 67.5,
+        "y": 451.287018,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 217,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "above.",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 119.790001,
+        "y": 451.287018,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      }
+    }
+  ]
+}

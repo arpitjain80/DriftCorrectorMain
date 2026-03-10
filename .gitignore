@@ -1,0 +1,50 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+
+# NuGet (old .NET Framework style)
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.assets.json
+project.nuget.cache
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# Rider
+.idea/
+*.sln.iml
+
+# VSCode (keep .vscode/ tracked so run/debug config is shared)
+# .vscode/
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.trx
+*.coverage
+*.coveragexml
+
+# Publish output
+[Pp]ublish/
+PublishProfiles/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Logs
+*.log
+
+# Keep the Files folder
+!Files/
+!Files/**

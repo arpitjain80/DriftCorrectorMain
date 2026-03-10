@@ -1,0 +1,482 @@
+{
+  "reportMetadata": {
+    "generatedAt": "2026-03-10T18:18:48",
+    "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\ProfessionalAndManagementLiability\\DirectorsAndOfficers\\SSSMPLDOENDCW9020316.pdf",
+    "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V23\\ProfessionalAndManagementLiability\\DirectorsAndOfficers\\SSSMPLDOENDCW9020316.pdf",
+    "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\ProfessionalAndManagementLiability\\DirectorsAndOfficers",
+    "publishFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V23\\ProfessionalAndManagementLiability\\DirectorsAndOfficers"
+  },
+  "summary": {
+    "totalWordDifferences": 16,
+    "positionShifts": 2,
+    "fontDifferences": 0,
+    "fontSizeDifferences": 0,
+    "missingFromPublish": 7,
+    "extraInPublish": 7,
+    "totalPhraseGroups": 2,
+    "totalTableGroups": 0,
+    "isClean": false
+  },
+  "tableGroups": [],
+  "phraseGroups": [
+    {
+      "groupId": 1,
+      "page": 1,
+      "phraseText": "$\u00ABEPLOrigLiabLimit\u00BB",
+      "wordCount": 1,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "PARAGRAPH",
+      "baselineRegion": {
+        "xStart": 446.341003,
+        "xEnd": 541.341003,
+        "y": 385.492004,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 446.843994,
+        "xEnd": 541.843994,
+        "y": 385.481995,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0.502990723,
+        "y": -0.0100097656,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.502990723,
+        "y": 0.0100097656,
+        "xTwips": -10,
+        "yTwips": 0,
+        "xPt": "-0.5pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -0.5pt (-10 twips)"
+      },
+      "wordIds": [
+        4
+      ]
+    },
+    {
+      "groupId": 2,
+      "page": 1,
+      "phraseText": "Page",
+      "wordCount": 1,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "PARAGRAPH",
+      "baselineRegion": {
+        "xStart": 445.064148,
+        "xEnd": 461.064148,
+        "y": 14.4069977,
+        "font": "ArialMT",
+        "fontSize": 8
+      },
+      "publishRegion": {
+        "xStart": 445.59198,
+        "xEnd": 461.59198,
+        "y": 14.3989973,
+        "font": "ArialMT",
+        "fontSize": 8
+      },
+      "sharedDelta": {
+        "x": 0.527832031,
+        "y": -0.00800037384,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.527832031,
+        "y": 0.00800037384,
+        "xTwips": -11,
+        "yTwips": 0,
+        "xPt": "-0.53pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -0.53pt (-11 twips)"
+      },
+      "wordIds": [
+        9
+      ]
+    }
+  ],
+  "wordLevelDifferences": [
+    {
+      "differenceId": 1,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "$\u00ABDOIncLiabLimit\u00BBexcess",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 380.700012,
+        "y": 508.732971,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 2,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "of",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 490.247009,
+        "y": 508.732971,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 8.10000038,
+        "spaceBeforePt": 3,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 2,
+        "rowIndex": 1,
+        "colIndex": 4,
+        "colWidthPt": 99,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": -22.75,
+        "columnOffsetPt": 472.5
+      }
+    },
+    {
+      "differenceId": 3,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "$\u00ABDOOrigLiabLimit\u00BB",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 380.700012,
+        "y": 497.233948,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 4,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "$\u00ABEPLOrigLiabLimit\u00BB",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 446.341003,
+        "y": 385.492004,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 446.843994,
+        "y": 385.481995,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0.502990723,
+        "y": -0.0100097656,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.502990723,
+        "y": 0.0100097656,
+        "xTwips": -10,
+        "yTwips": 0,
+        "xPt": "-0.5pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -0.5pt (-10 twips)"
+      },
+      "phraseGroupId": 1
+    },
+    {
+      "differenceId": 5,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "$\u00ABFLIncLiabLimit\u00BBexcess",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 380.700012,
+        "y": 297.949005,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 6,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "of",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 463.323029,
+        "y": 297.949005,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 8.10000038,
+        "spaceBeforePt": 3,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 2,
+        "rowIndex": 1,
+        "colIndex": 3,
+        "colWidthPt": 126,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": -22.75,
+        "columnOffsetPt": 346.5
+      }
+    },
+    {
+      "differenceId": 7,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "$",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 491.608002,
+        "y": 297.949005,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 8,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "\u00ABFLOrigLiabLimit\u00BB",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 380.700012,
+        "y": 286.450012,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "docxContext": {
+        "elementType": "MERGE_FIELD",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "mergeFieldName": "FLOrigLiabLimit",
+        "paragraphLeftIndentPt": 8.10000038,
+        "spaceBeforePt": 3,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 2,
+        "rowIndex": 11,
+        "colIndex": 3,
+        "colWidthPt": 126,
+        "cellLeftPaddingPt": 0,
+        "tableLeftIndentPt": -22.75,
+        "columnOffsetPt": 346.5
+      }
+    },
+    {
+      "differenceId": 9,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Page",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 445.064148,
+        "y": 14.4069977,
+        "font": "ArialMT",
+        "fontSize": 8,
+        "page": 1
+      },
+      "publish": {
+        "x": 445.59198,
+        "y": 14.3989973,
+        "font": "ArialMT",
+        "fontSize": 8,
+        "page": 1
+      },
+      "delta": {
+        "x": 0.527832031,
+        "y": -0.00800037384,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.527832031,
+        "y": 0.00800037384,
+        "xTwips": -11,
+        "yTwips": 0,
+        "xPt": "-0.53pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -0.53pt (-11 twips)"
+      },
+      "phraseGroupId": 2
+    },
+    {
+      "differenceId": 10,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "$\u00ABDOIncLiabLimit\u00BBexcess",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 380.700012,
+        "y": 502.972961,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 11,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "of",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 441.502991,
+        "y": 502.972961,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 12,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "$\u00ABDOOrigLiabLimit\u00BB",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 447.190002,
+        "y": 502.972961,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 13,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "$\u00ABFLIncLiabLimit\u00BBexcess",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 380.700012,
+        "y": 292.188995,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 14,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "of",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 440.84201,
+        "y": 292.188995,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 15,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "$",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 446.625031,
+        "y": 292.188995,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 16,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "\u00ABFLOrigLiabLimit\u00BB",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 450.963013,
+        "y": 292.188995,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    }
+  ]
+}

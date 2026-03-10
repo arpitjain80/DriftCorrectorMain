@@ -1,0 +1,23 @@
+{
+  "reportMetadata": {
+    "generatedAt": "2026-03-09T12:56:26",
+    "baselinePdf": "C:\\Personal\\Project\\DriftCorrector\\Files\\PDF\\Original\\V14\\Binder\\BinderLetter.pdf",
+    "publishPdf": "C:\\Personal\\Project\\DriftCorrector\\Files\\PDF\\Original\\V23\\Binder\\BinderLetter.pdf",
+    "baselineFolder": "C:\\Personal\\Project\\DriftCorrector\\Files\\PDF\\Original\\V14\\Binder",
+    "publishFolder": "C:\\Personal\\Project\\DriftCorrector\\Files\\PDF\\Original\\V23\\Binder"
+  },
+  "summary": {
+    "totalWordDifferences": 0,
+    "positionShifts": 0,
+    "fontDifferences": 0,
+    "fontSizeDifferences": 0,
+    "missingFromPublish": 0,
+    "extraInPublish": 0,
+    "totalPhraseGroups": 0,
+    "totalTableGroups": 0,
+    "isClean": true
+  },
+  "tableGroups": [],
+  "phraseGroups": [],
+  "wordLevelDifferences": []
+}
