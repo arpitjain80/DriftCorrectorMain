@@ -217,10 +217,12 @@ namespace DocumentProcessor
             if (jsonFiles.Length == 0)
             {
                 Console.WriteLine("[WordDriftCorrector] No *_diff.json files found in: " + jsonDriftFolder);
-                return results;
+                // Do not return early — subfolder recursion below must still run
             }
-
-            Console.WriteLine($"[WordDriftCorrector] Found {jsonFiles.Length} diff file(s).\n");
+            else
+            {
+                Console.WriteLine($"[WordDriftCorrector] Found {jsonFiles.Length} diff file(s).\n");
+            }
 
             foreach (var jsonPath in jsonFiles)
             {
@@ -291,43 +293,38 @@ namespace DocumentProcessor
             }
 
             // ── RECURSIVE SUBFOLDER PROCESSING ───────────────────────────────────────
-            // The report structure nests JSONDiff as a child of each subfolder:
-            //   Reports/Original/
-            //     ├── JSONDiff/          ← jsonDriftFolder (root level, already processed above)
-            //     ├── Binder/
-            //     │   └── JSONDiff/      ← subJsonDir for Binder
-            //     ├── DO/
-            //     │   └── JSONDiff/      ← subJsonDir for DO
-            //     └── Static/
-            //         └── JSONDiff/      ← subJsonDir for Static
+            // Drive recursion from the word template folder structure.
+            // For each subfolder of wordTemplateFolder, mirror into the report tree:
+            //   wordTemplateFolder/Binder  →  reportBase/Binder/JSONDiff
+            //   wordTemplateFolder/DO      →  reportBase/DO/JSONDiff
+            //   wordTemplateFolder/CommercialProperty/Forms/Florida  →  reportBase/CommercialProperty/Forms/Florida/JSONDiff
             //
-            // So we scan the PARENT of jsonDriftFolder for sibling report subdirectories,
-            // and look for a JSONDiff child inside each one.
+            // This handles cases where intermediate report folders have no JSONDiff of their
+            // own (e.g. CommercialProperty has diffs only at Forms/Florida/JSONDiff, not at
+            // CommercialProperty/JSONDiff). The function itself creates the JSONDiff dir when
+            // it does not yet exist, so empty intermediate levels pass through gracefully.
             string reportBase = Path.GetDirectoryName(jsonDriftFolder);
             if (!string.IsNullOrEmpty(reportBase))
             {
-                foreach (var subReportDir in Directory.GetDirectories(reportBase))
+                foreach (var subWordFolderPath in Directory.GetDirectories(wordTemplateFolder))
                 {
-                    string subDirName = Path.GetFileName(subReportDir);
-                    string subJsonDir = Path.Combine(subReportDir, "JSONDiff");
+                    string subDirName = Path.GetFileName(subWordFolderPath);
+                    string subReportDir = Path.Combine(reportBase, subDirName);
 
-                    // Skip sibling dirs that have no JSONDiff subfolder (e.g. the JSONDiff
-                    // folder itself, or a Reports/HTMLReports folder, etc.)
-                    if (!Directory.Exists(subJsonDir)) continue;
-
-                    string subWordFolder = Path.Combine(wordTemplateFolder, subDirName);
-                    string subOutputFolder = Path.Combine(outputFolder, subDirName);
-
-                    if (!Directory.Exists(subWordFolder))
+                    // No corresponding report subtree → nothing to diff here
+                    if (!Directory.Exists(subReportDir))
                     {
-                        Console.WriteLine($"[INFO] Skipping subfolder '{subDirName}': word template folder not found at '{subWordFolder}'.");
+                        Console.WriteLine($"[INFO] Skipping subfolder '{subDirName}': report folder not found at '{subReportDir}'.");
                         continue;
                     }
+
+                    string subJsonDir = Path.Combine(subReportDir, "JSONDiff");
+                    string subOutputFolder = Path.Combine(outputFolder, subDirName);
 
                     Console.WriteLine($"[WordDriftCorrector] Processing subfolder: {subDirName}");
                     try
                     {
-                        var subResults = ApplyDriftCorrections(subWordFolder, subJsonDir, subOutputFolder);
+                        var subResults = ApplyDriftCorrections(subWordFolderPath, subJsonDir, subOutputFolder);
                         results.AddRange(subResults);
                     }
                     catch (Exception ex)
