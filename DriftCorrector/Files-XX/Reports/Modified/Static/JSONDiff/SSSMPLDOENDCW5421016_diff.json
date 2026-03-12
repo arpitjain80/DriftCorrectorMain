@@ -1,0 +1,4052 @@
+{
+  "reportMetadata": {
+    "generatedAt": "2026-03-09T12:56:46",
+    "baselinePdf": "C:\\Personal\\Project\\DriftCorrector\\Files\\PDF\\Original\\V14\\Static\\SSSMPLDOENDCW5421016.pdf",
+    "publishPdf": "C:\\Personal\\Project\\DriftCorrector\\Files\\PDF\\Modified\\V23\\Static\\SSSMPLDOENDCW5421016.pdf",
+    "baselineFolder": "C:\\Personal\\Project\\DriftCorrector\\Files\\PDF\\Original\\V14\\Static",
+    "publishFolder": "C:\\Personal\\Project\\DriftCorrector\\Files\\PDF\\Modified\\V23\\Static"
+  },
+  "summary": {
+    "totalWordDifferences": 60,
+    "positionShifts": 60,
+    "fontDifferences": 0,
+    "fontSizeDifferences": 0,
+    "missingFromPublish": 0,
+    "extraInPublish": 0,
+    "totalPhraseGroups": 22,
+    "totalTableGroups": 1,
+    "isClean": false
+  },
+  "tableGroups": [
+    {
+      "correctionStrategy": "CELL_PADDING",
+      "tableId": 1,
+      "page": 1,
+      "rowCount": 6,
+      "columnCount": 3,
+      "columnDrifts": [
+        {
+          "columnIndex": 0,
+          "baselineXStart": 84.475,
+          "avgDeltaX": 0.007499695,
+          "widthCorrectionTwips": 0,
+          "widthCorrectionPt": "-0.01pt"
+        },
+        {
+          "columnIndex": 1,
+          "baselineXStart": 95.43,
+          "avgDeltaX": 0,
+          "widthCorrectionTwips": 0,
+          "widthCorrectionPt": "\u002B0.01pt"
+        }
+      ],
+      "rowDrifts": [
+        {
+          "rowIndex": 0,
+          "baselineY": 478.71002,
+          "avgDeltaY": -0.51000977,
+          "heightCorrectionTwips": 10,
+          "heightCorrectionPt": "\u002B0.51pt"
+        },
+        {
+          "rowIndex": 1,
+          "baselineY": 437.213,
+          "avgDeltaY": -0.51000977,
+          "heightCorrectionTwips": 0,
+          "heightCorrectionPt": "0pt"
+        },
+        {
+          "rowIndex": 2,
+          "baselineY": 410.71503,
+          "avgDeltaY": -0.51000977,
+          "heightCorrectionTwips": 0,
+          "heightCorrectionPt": "0pt"
+        },
+        {
+          "rowIndex": 3,
+          "baselineY": 384.21704,
+          "avgDeltaY": -0.51000977,
+          "heightCorrectionTwips": 0,
+          "heightCorrectionPt": "0pt"
+        },
+        {
+          "rowIndex": 4,
+          "baselineY": 309.422,
+          "avgDeltaY": -1.0100098,
+          "heightCorrectionTwips": 10,
+          "heightCorrectionPt": "\u002B0.5pt"
+        },
+        {
+          "rowIndex": 5,
+          "baselineY": 276.62402,
+          "avgDeltaY": -1.2600098,
+          "heightCorrectionTwips": 5,
+          "heightCorrectionPt": "\u002B0.25pt"
+        }
+      ],
+      "baselineBounds": {
+        "xStart": 84.35,
+        "xEnd": 454.35,
+        "y": 276.62402,
+        "fontSize": 0
+      },
+      "publishBounds": {
+        "xStart": 84.35,
+        "xEnd": 454.35,
+        "y": 275.114,
+        "fontSize": 0
+      },
+      "wordCorrectionHint": "WORD TABLE CORRECTIONS (CELL_PADDING strategy):\r\n  Root cause: cell LeftPadding increased from 5.4pt to 5.4pt between versions.\r\n  Fix: set LeftPadding on ALL cells to 5.4pt (108 twips).\r\n  Apply ONCE to all cells \u2014 do NOT apply per word or per phrase.",
+      "phraseGroupIds": [
+        2,
+        6,
+        4,
+        5,
+        8,
+        11,
+        14,
+        15
+      ]
+    }
+  ],
+  "phraseGroups": [
+    {
+      "groupId": 1,
+      "page": 1,
+      "phraseText": "Officers\u00ABD\u00BB",
+      "wordCount": 1,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "PARAGRAPH",
+      "baselineRegion": {
+        "xStart": 84.85,
+        "xEnd": 139.85,
+        "y": 494.209,
+        "font": "Arial-BoldMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 84.85,
+        "xEnd": 139.85,
+        "y": 493.699,
+        "font": "Arial-BoldMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "wordIds": [
+        1
+      ],
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 2,
+      "page": 1,
+      "phraseText": "A. Insuring Agreement A-Insured Person Liability",
+      "wordCount": 6,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "TABLE_CELL",
+      "baselineRegion": {
+        "xStart": 84.35,
+        "xEnd": 312.219,
+        "y": 478.71002,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 84.35,
+        "xEnd": 312.22,
+        "y": 478.2,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Table 1, Col 0, Row 0: see tableGroups for column/row corrections"
+      },
+      "wordIds": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 3,
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 3,
+      "page": 1,
+      "phraseText": "$\u00ABDOAgreeARetAmt\u00BB",
+      "wordCount": 1,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "INLINE_RUN",
+      "baselineRegion": {
+        "xStart": 364.35,
+        "xEnd": 449.35,
+        "y": 478.71002,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 364.35,
+        "xEnd": 449.35,
+        "y": 478.2,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+      },
+      "wordIds": [
+        8
+      ],
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 4,
+      "page": 1,
+      "phraseText": "each Claim",
+      "wordCount": 2,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "TABLE_CELL",
+      "baselineRegion": {
+        "xStart": 364.35,
+        "xEnd": 413.81302,
+        "y": 467.21103,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 364.35,
+        "xEnd": 413.81,
+        "y": 466.70102,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Table cell: see tableGroups for column/row width correction"
+      },
+      "wordIds": [
+        9,
+        10
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 3,
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 5,
+      "page": 1,
+      "phraseText": "B. Insuring Agreement B-Company Indemnification",
+      "wordCount": 5,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "TABLE_CELL",
+      "baselineRegion": {
+        "xStart": 84.35,
+        "xEnd": 317.2,
+        "y": 452.21204,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 84.35,
+        "xEnd": 317.2,
+        "y": 451.70203,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Table cell: see tableGroups for column/row width correction"
+      },
+      "wordIds": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 11,
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 6,
+      "page": 1,
+      "phraseText": "1. Claims except Securities Claims",
+      "wordCount": 5,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "TABLE_CELL",
+      "baselineRegion": {
+        "xStart": 95.43,
+        "xEnd": 254.974,
+        "y": 437.213,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 95.46,
+        "xEnd": 254.97,
+        "y": 436.703,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0.02999878,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.02999878,
+        "y": 0.51000977,
+        "xTwips": -1,
+        "yTwips": 10,
+        "xPt": "-0.03pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Table 1, Col 1, Row 1: see tableGroups for column/row corrections"
+      },
+      "wordIds": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 5,
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 7,
+      "page": 1,
+      "phraseText": "$\u00ABDOAgreeBRetAmt\u00BB",
+      "wordCount": 1,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "INLINE_RUN",
+      "baselineRegion": {
+        "xStart": 364.35,
+        "xEnd": 449.35,
+        "y": 437.213,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 364.35,
+        "xEnd": 449.35,
+        "y": 436.703,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+      },
+      "wordIds": [
+        21
+      ],
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 8,
+      "page": 1,
+      "phraseText": "each Claim",
+      "wordCount": 2,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "TABLE_CELL",
+      "baselineRegion": {
+        "xStart": 364.35,
+        "xEnd": 413.81302,
+        "y": 425.71402,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 364.35,
+        "xEnd": 413.81,
+        "y": 425.204,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Table cell: see tableGroups for column/row width correction"
+      },
+      "wordIds": [
+        22,
+        23
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 6,
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 9,
+      "page": 1,
+      "phraseText": "2. Securities Claims",
+      "wordCount": 3,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "INLINE_RUN",
+      "baselineRegion": {
+        "xStart": 95.43,
+        "xEnd": 187.16199,
+        "y": 410.71503,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 95.46,
+        "xEnd": 187.16,
+        "y": 410.20502,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0.02999878,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.02999878,
+        "y": 0.51000977,
+        "xTwips": -1,
+        "yTwips": 10,
+        "xPt": "-0.03pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+      },
+      "wordIds": [
+        24,
+        25,
+        26
+      ],
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 10,
+      "page": 1,
+      "phraseText": "$\u00ABDOAgreeB2RetAmt\u00BB",
+      "wordCount": 1,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "INLINE_RUN",
+      "baselineRegion": {
+        "xStart": 364.35,
+        "xEnd": 454.35,
+        "y": 410.71503,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 364.35,
+        "xEnd": 454.35,
+        "y": 410.20502,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+      },
+      "wordIds": [
+        27
+      ],
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 11,
+      "page": 1,
+      "phraseText": "each Claim",
+      "wordCount": 2,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "TABLE_CELL",
+      "baselineRegion": {
+        "xStart": 364.35,
+        "xEnd": 413.81302,
+        "y": 399.21603,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 364.35,
+        "xEnd": 413.81,
+        "y": 398.70602,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Table cell: see tableGroups for column/row width correction"
+      },
+      "wordIds": [
+        28,
+        29
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 10,
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 12,
+      "page": 1,
+      "phraseText": "C. Insuring Agreement C-Company Securities",
+      "wordCount": 5,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "INLINE_RUN",
+      "baselineRegion": {
+        "xStart": 84.35,
+        "xEnd": 293.304,
+        "y": 384.21704,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 84.35,
+        "xEnd": 293.3,
+        "y": 383.70703,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+      },
+      "wordIds": [
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 13,
+      "page": 1,
+      "phraseText": "$\u00ABDOAgreeCRetAmt\u00BB",
+      "wordCount": 1,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "INLINE_RUN",
+      "baselineRegion": {
+        "xStart": 364.35,
+        "xEnd": 449.35,
+        "y": 384.21704,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 364.35,
+        "xEnd": 449.35,
+        "y": 383.70703,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+      },
+      "wordIds": [
+        35
+      ],
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 14,
+      "page": 1,
+      "phraseText": "each Claim",
+      "wordCount": 2,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "TABLE_CELL",
+      "baselineRegion": {
+        "xStart": 364.35,
+        "xEnd": 413.81302,
+        "y": 372.71805,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 364.35,
+        "xEnd": 413.81,
+        "y": 372.20804,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Table cell: see tableGroups for column/row width correction"
+      },
+      "wordIds": [
+        36,
+        37
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 13,
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 15,
+      "page": 1,
+      "phraseText": "Practices\u00ABE\u00BB Employment",
+      "wordCount": 2,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "PARAGRAPH",
+      "baselineRegion": {
+        "xStart": 84.85,
+        "xEnd": 165.528,
+        "y": 351.419,
+        "font": "Arial-BoldMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 84.85,
+        "xEnd": 165.53,
+        "y": 350.409,
+        "font": "Arial-BoldMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "wordIds": [
+        38,
+        39
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 9,
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 16,
+      "page": 1,
+      "phraseText": "A. Insuring Agreement A-Employment Practices Liability $\u00ABEPLAgreeARetAmt\u00BB",
+      "wordCount": 7,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "PARAGRAPH",
+      "baselineRegion": {
+        "xStart": 84.35,
+        "xEnd": 454.35,
+        "y": 335.92,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 84.35,
+        "xEnd": 454.35,
+        "y": 334.91,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "wordIds": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 17,
+      "page": 1,
+      "phraseText": "each Claim",
+      "wordCount": 2,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "PARAGRAPH",
+      "baselineRegion": {
+        "xStart": 364.35,
+        "xEnd": 413.81302,
+        "y": 324.42102,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 364.35,
+        "xEnd": 413.81,
+        "y": 323.411,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "wordIds": [
+        47,
+        48
+      ],
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 18,
+      "page": 1,
+      "phraseText": "B. Insuring Agreement B-Third Party Liability",
+      "wordCount": 6,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "INLINE_RUN",
+      "baselineRegion": {
+        "xStart": 84.35,
+        "xEnd": 293.303,
+        "y": 309.422,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 84.35,
+        "xEnd": 293.30002,
+        "y": 308.412,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+      },
+      "wordIds": [
+        49,
+        50,
+        51,
+        52,
+        53,
+        54
+      ],
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 19,
+      "page": 1,
+      "phraseText": "$\u00ABEPLAgreeBRetAmt\u00BB",
+      "wordCount": 1,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "INLINE_RUN",
+      "baselineRegion": {
+        "xStart": 364.35,
+        "xEnd": 454.35,
+        "y": 309.422,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 364.35,
+        "xEnd": 454.35,
+        "y": 308.412,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+      },
+      "wordIds": [
+        55
+      ],
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 20,
+      "page": 1,
+      "phraseText": "each Claim",
+      "wordCount": 2,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "PARAGRAPH",
+      "baselineRegion": {
+        "xStart": 364.35,
+        "xEnd": 413.81302,
+        "y": 297.923,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 364.35,
+        "xEnd": 413.81,
+        "y": 296.913,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "wordIds": [
+        56,
+        57
+      ],
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 21,
+      "page": 1,
+      "phraseText": "Fiduciary\u00ABF\u00BB",
+      "wordCount": 1,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "INLINE_RUN",
+      "baselineRegion": {
+        "xStart": 84.85,
+        "xEnd": 144.85,
+        "y": 276.62402,
+        "font": "Arial-BoldMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 84.85,
+        "xEnd": 144.85,
+        "y": 275.114,
+        "font": "Arial-BoldMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -1.5100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.5100098,
+        "xTwips": 0,
+        "yTwips": 30,
+        "xPt": "0pt",
+        "yPt": "\u002B1.51pt",
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+      },
+      "wordIds": [
+        58
+      ],
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 22,
+      "page": 1,
+      "phraseText": "$\u00ABFLRetAmt\u00BB each",
+      "wordCount": 2,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "INLINE_RUN",
+      "baselineRegion": {
+        "xStart": 364.35,
+        "xEnd": 448.823,
+        "y": 276.62402,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 364.35,
+        "xEnd": 448.82,
+        "y": 275.614,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 0,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+      },
+      "wordIds": [
+        59,
+        60
+      ],
+      "isCleanDiff": true
+    }
+  ],
+  "wordLevelDifferences": [
+    {
+      "differenceId": 1,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Officers\u00ABD\u00BB",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 84.85,
+        "y": 494.209,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 84.85,
+        "y": 493.699,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 1
+    },
+    {
+      "differenceId": 2,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "A.",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 84.35,
+        "y": 478.71002,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 84.35,
+        "y": 478.2,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 2,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 3,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 3,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 2,
+        "rowIndex": 3,
+        "colIndex": 0,
+        "colWidthPt": 280,
+        "rowHeightPt": 17.65,
+        "cellLeftPaddingPt": 5.4,
+        "tableLeftIndentPt": 30.35,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "Row.RowFormat.Height (w:trHeight/@w:val)",
+            "axis": "Y",
+            "currentValuePt": 17.65,
+            "newValuePt": 18.16001,
+            "currentValueTwips": 353,
+            "newValueTwips": 363,
+            "description": "[ROW_HEIGHT] Row height: 17.65pt \u2192 18.16pt."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 3,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Insuring",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 96.576,
+        "y": 478.71002,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 96.58,
+        "y": 478.2,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0.004005432,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.004005432,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 2,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 4,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 3,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 2,
+        "rowIndex": 4,
+        "colIndex": 0,
+        "colWidthPt": 280,
+        "rowHeightPt": 9.65,
+        "cellLeftPaddingPt": 5.4,
+        "tableLeftIndentPt": 30.35,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "Row.RowFormat.Height (w:trHeight/@w:val)",
+            "axis": "Y",
+            "currentValuePt": 9.65,
+            "newValuePt": 10.160009,
+            "currentValueTwips": 193,
+            "newValueTwips": 203,
+            "description": "[ROW_HEIGHT] Row height: 9.65pt \u2192 10.16pt."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 4,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Agreement",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 134.93,
+        "y": 478.71002,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 134.93,
+        "y": 478.2,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 2,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 7,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 3,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 2,
+        "rowIndex": 7,
+        "colIndex": 0,
+        "colWidthPt": 280,
+        "rowHeightPt": 17.65,
+        "cellLeftPaddingPt": 5.4,
+        "tableLeftIndentPt": 30.35,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "Row.RowFormat.Height (w:trHeight/@w:val)",
+            "axis": "Y",
+            "currentValuePt": 17.65,
+            "newValuePt": 18.16001,
+            "currentValueTwips": 353,
+            "newValueTwips": 363,
+            "description": "[ROW_HEIGHT] Row height: 17.65pt \u2192 18.16pt."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 5,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "A-Insured",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 186.624,
+        "y": 478.71002,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 186.62,
+        "y": 478.2,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0039978027,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0039978027,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 2,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 3
+    },
+    {
+      "differenceId": 6,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Person",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 232.75601,
+        "y": 478.71002,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 232.76,
+        "y": 478.2,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0.003982544,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.003982544,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 2,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 3
+    },
+    {
+      "differenceId": 7,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Liability",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 267.219,
+        "y": 478.71002,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 267.22,
+        "y": 478.2,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0.0010070801,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.0010070801,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 2,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 3
+    },
+    {
+      "differenceId": 8,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "$\u00ABDOAgreeARetAmt\u00BB",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 364.35,
+        "y": 478.71002,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 364.35,
+        "y": 478.2,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 3
+    },
+    {
+      "differenceId": 9,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "each",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 364.35,
+        "y": 467.21103,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 364.35,
+        "y": 466.70102,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 4,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 3,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 3,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 2,
+        "rowIndex": 3,
+        "colIndex": 1,
+        "colWidthPt": 140.75,
+        "rowHeightPt": 17.65,
+        "cellLeftPaddingPt": 5.4,
+        "tableLeftIndentPt": 30.35,
+        "columnOffsetPt": 280,
+        "correctionTargets": [
+          {
+            "property": "Row.RowFormat.Height (w:trHeight/@w:val)",
+            "axis": "Y",
+            "currentValuePt": 17.65,
+            "newValuePt": 18.16001,
+            "currentValueTwips": 353,
+            "newValueTwips": 363,
+            "description": "[ROW_HEIGHT] Row height: 17.65pt \u2192 18.16pt."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 10,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Claim",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 388.81302,
+        "y": 467.21103,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 388.81,
+        "y": 466.70102,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0030212402,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0030212402,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 4,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 5,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 3,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 2,
+        "rowIndex": 5,
+        "colIndex": 1,
+        "colWidthPt": 140.75,
+        "rowHeightPt": 17.65,
+        "cellLeftPaddingPt": 5.4,
+        "tableLeftIndentPt": 30.35,
+        "columnOffsetPt": 280,
+        "correctionTargets": [
+          {
+            "property": "Row.RowFormat.Height (w:trHeight/@w:val)",
+            "axis": "Y",
+            "currentValuePt": 17.65,
+            "newValuePt": 18.16001,
+            "currentValueTwips": 353,
+            "newValueTwips": 363,
+            "description": "[ROW_HEIGHT] Row height: 17.65pt \u2192 18.16pt."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 11,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "B.",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 84.35,
+        "y": 452.21204,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 84.35,
+        "y": 451.70203,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 5,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 11,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 3,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 2,
+        "rowIndex": 11,
+        "colIndex": 0,
+        "colWidthPt": 280,
+        "rowHeightPt": 17.65,
+        "cellLeftPaddingPt": 5.4,
+        "tableLeftIndentPt": 30.35,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "Row.RowFormat.Height (w:trHeight/@w:val)",
+            "axis": "Y",
+            "currentValuePt": 17.65,
+            "newValuePt": 18.16001,
+            "currentValueTwips": 353,
+            "newValueTwips": 363,
+            "description": "[ROW_HEIGHT] Row height: 17.65pt \u2192 18.16pt."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 12,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Insuring",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 96.576,
+        "y": 452.21204,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 96.58,
+        "y": 451.70203,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0.004005432,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.004005432,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 5,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 10,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 3,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 2,
+        "rowIndex": 10,
+        "colIndex": 0,
+        "colWidthPt": 280,
+        "rowHeightPt": 17.65,
+        "cellLeftPaddingPt": 5.4,
+        "tableLeftIndentPt": 30.35,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "Row.RowFormat.Height (w:trHeight/@w:val)",
+            "axis": "Y",
+            "currentValuePt": 17.65,
+            "newValuePt": 18.16001,
+            "currentValueTwips": 353,
+            "newValueTwips": 363,
+            "description": "[ROW_HEIGHT] Row height: 17.65pt \u2192 18.16pt."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 13,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Agreement",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 134.93,
+        "y": 452.21204,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 134.93,
+        "y": 451.70203,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 5,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 11
+    },
+    {
+      "differenceId": 14,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "B-Company",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 186.624,
+        "y": 452.21204,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 186.62,
+        "y": 451.70203,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0039978027,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0039978027,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 5,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 11
+    },
+    {
+      "differenceId": 15,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Indemnification",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 242.20001,
+        "y": 452.21204,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 242.20001,
+        "y": 451.70203,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 5,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 11
+    },
+    {
+      "differenceId": 16,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "1.",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 95.43,
+        "y": 437.213,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 95.46,
+        "y": 436.703,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0.02999878,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.02999878,
+        "y": 0.51000977,
+        "xTwips": -1,
+        "yTwips": 10,
+        "xPt": "-0.03pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 6,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 5,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 3,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 2,
+        "rowIndex": 5,
+        "colIndex": 0,
+        "colWidthPt": 280,
+        "rowHeightPt": 17.65,
+        "cellLeftPaddingPt": 5.4,
+        "tableLeftIndentPt": 30.35,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "Row.RowFormat.Height (w:trHeight/@w:val)",
+            "axis": "Y",
+            "currentValuePt": 17.65,
+            "newValuePt": 18.16001,
+            "currentValueTwips": 353,
+            "newValueTwips": 363,
+            "description": "[ROW_HEIGHT] Row height: 17.65pt \u2192 18.16pt."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 17,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Claims",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 106.581,
+        "y": 437.213,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 106.58,
+        "y": 436.703,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0009994507,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0009994507,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 6,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 6,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 3,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 2,
+        "rowIndex": 6,
+        "colIndex": 0,
+        "colWidthPt": 280,
+        "rowHeightPt": 17.65,
+        "cellLeftPaddingPt": 5.4,
+        "tableLeftIndentPt": 30.35,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "Row.RowFormat.Height (w:trHeight/@w:val)",
+            "axis": "Y",
+            "currentValuePt": 17.65,
+            "newValuePt": 18.16001,
+            "currentValueTwips": 353,
+            "newValueTwips": 363,
+            "description": "[ROW_HEIGHT] Row height: 17.65pt \u2192 18.16pt."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 18,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "except",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 142.15201,
+        "y": 437.213,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 142.15,
+        "y": 436.703,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0020141602,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0020141602,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 6,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 5
+    },
+    {
+      "differenceId": 19,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Securities",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 174.393,
+        "y": 437.213,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 174.39,
+        "y": 436.703,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0030059814,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0030059814,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 6,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 5
+    },
+    {
+      "differenceId": 20,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Claims",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 224.974,
+        "y": 437.213,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 224.97,
+        "y": 436.703,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0039978027,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0039978027,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 6,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 5
+    },
+    {
+      "differenceId": 21,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "$\u00ABDOAgreeBRetAmt\u00BB",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 364.35,
+        "y": 437.213,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 364.35,
+        "y": 436.703,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 7
+    },
+    {
+      "differenceId": 22,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "each",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 364.35,
+        "y": 425.71402,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 364.35,
+        "y": 425.204,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 8,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 6,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 3,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 2,
+        "rowIndex": 6,
+        "colIndex": 1,
+        "colWidthPt": 140.75,
+        "rowHeightPt": 17.65,
+        "cellLeftPaddingPt": 5.4,
+        "tableLeftIndentPt": 30.35,
+        "columnOffsetPt": 280,
+        "correctionTargets": [
+          {
+            "property": "Row.RowFormat.Height (w:trHeight/@w:val)",
+            "axis": "Y",
+            "currentValuePt": 17.65,
+            "newValuePt": 18.16001,
+            "currentValueTwips": 353,
+            "newValueTwips": 363,
+            "description": "[ROW_HEIGHT] Row height: 17.65pt \u2192 18.16pt."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 23,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Claim",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 388.81302,
+        "y": 425.71402,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 388.81,
+        "y": 425.204,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0030212402,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0030212402,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 8,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 7,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 3,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 2,
+        "rowIndex": 7,
+        "colIndex": 1,
+        "colWidthPt": 140.75,
+        "rowHeightPt": 17.65,
+        "cellLeftPaddingPt": 5.4,
+        "tableLeftIndentPt": 30.35,
+        "columnOffsetPt": 280,
+        "correctionTargets": [
+          {
+            "property": "Row.RowFormat.Height (w:trHeight/@w:val)",
+            "axis": "Y",
+            "currentValuePt": 17.65,
+            "newValuePt": 18.16001,
+            "currentValueTwips": 353,
+            "newValueTwips": 363,
+            "description": "[ROW_HEIGHT] Row height: 17.65pt \u2192 18.16pt."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 24,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "2.",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 95.43,
+        "y": 410.71503,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 95.46,
+        "y": 410.20502,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0.02999878,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.02999878,
+        "y": 0.51000977,
+        "xTwips": -1,
+        "yTwips": 10,
+        "xPt": "-0.03pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 9
+    },
+    {
+      "differenceId": 25,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Securities",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 106.581,
+        "y": 410.71503,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 106.58,
+        "y": 410.20502,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0009994507,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0009994507,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 9
+    },
+    {
+      "differenceId": 26,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Claims",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 157.16199,
+        "y": 410.71503,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 157.16,
+        "y": 410.20502,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0019836426,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0019836426,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 9
+    },
+    {
+      "differenceId": 27,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "$\u00ABDOAgreeB2RetAmt\u00BB",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 364.35,
+        "y": 410.71503,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 364.35,
+        "y": 410.20502,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 10
+    },
+    {
+      "differenceId": 28,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "each",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 364.35,
+        "y": 399.21603,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 364.35,
+        "y": 398.70602,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 11,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 10,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 3,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 2,
+        "rowIndex": 10,
+        "colIndex": 1,
+        "colWidthPt": 140.75,
+        "rowHeightPt": 17.65,
+        "cellLeftPaddingPt": 5.4,
+        "tableLeftIndentPt": 30.35,
+        "columnOffsetPt": 280,
+        "correctionTargets": [
+          {
+            "property": "Row.RowFormat.Height (w:trHeight/@w:val)",
+            "axis": "Y",
+            "currentValuePt": 17.65,
+            "newValuePt": 18.16001,
+            "currentValueTwips": 353,
+            "newValueTwips": 363,
+            "description": "[ROW_HEIGHT] Row height: 17.65pt \u2192 18.16pt."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 29,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Claim",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 388.81302,
+        "y": 399.21603,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 388.81,
+        "y": 398.70602,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0030212402,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0030212402,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 11,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 11,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 3,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 2,
+        "rowIndex": 11,
+        "colIndex": 1,
+        "colWidthPt": 140.75,
+        "rowHeightPt": 17.65,
+        "cellLeftPaddingPt": 5.4,
+        "tableLeftIndentPt": 30.35,
+        "columnOffsetPt": 280,
+        "correctionTargets": [
+          {
+            "property": "Row.RowFormat.Height (w:trHeight/@w:val)",
+            "axis": "Y",
+            "currentValuePt": 17.65,
+            "newValuePt": 18.16001,
+            "currentValueTwips": 353,
+            "newValueTwips": 363,
+            "description": "[ROW_HEIGHT] Row height: 17.65pt \u2192 18.16pt."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 30,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "C.",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 84.35,
+        "y": 384.21704,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 84.35,
+        "y": 383.70703,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 12
+    },
+    {
+      "differenceId": 31,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Insuring",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 97.128,
+        "y": 384.21704,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 97.13,
+        "y": 383.70703,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0.0019989014,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.0019989014,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 12
+    },
+    {
+      "differenceId": 32,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Agreement",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 135.482,
+        "y": 384.21704,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 135.48,
+        "y": 383.70703,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0019989014,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0019989014,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 12
+    },
+    {
+      "differenceId": 33,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "C-Company",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 187.176,
+        "y": 384.21704,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 187.18,
+        "y": 383.70703,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0.0039978027,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.0039978027,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 12
+    },
+    {
+      "differenceId": 34,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Securities",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 243.30399,
+        "y": 384.21704,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 243.29999,
+        "y": 383.70703,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0039978027,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0039978027,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 12
+    },
+    {
+      "differenceId": 35,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "$\u00ABDOAgreeCRetAmt\u00BB",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 364.35,
+        "y": 384.21704,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 364.35,
+        "y": 383.70703,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 13
+    },
+    {
+      "differenceId": 36,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "each",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 364.35,
+        "y": 372.71805,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 364.35,
+        "y": 372.20804,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 14,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 13,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 3,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 2,
+        "rowIndex": 13,
+        "colIndex": 1,
+        "colWidthPt": 140.75,
+        "rowHeightPt": 10.6,
+        "cellLeftPaddingPt": 5.4,
+        "tableLeftIndentPt": 30.35,
+        "columnOffsetPt": 280,
+        "correctionTargets": [
+          {
+            "property": "Row.RowFormat.Height (w:trHeight/@w:val)",
+            "axis": "Y",
+            "currentValuePt": 10.6,
+            "newValuePt": 11.11001,
+            "currentValueTwips": 212,
+            "newValueTwips": 222,
+            "description": "[ROW_HEIGHT] Row height: 10.6pt \u2192 11.11pt."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 37,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Claim",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 388.81302,
+        "y": 372.71805,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 388.81,
+        "y": 372.20804,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0030212402,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0030212402,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 14,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 13
+    },
+    {
+      "differenceId": 38,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Practices\u00ABE\u00BB",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 84.85,
+        "y": 351.419,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 84.85,
+        "y": 350.409,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 15,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 9
+    },
+    {
+      "differenceId": 39,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Employment",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 115.528,
+        "y": 351.419,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 115.53,
+        "y": 350.909,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0.0019989014,
+        "y": -0.51000977,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.0019989014,
+        "y": 0.51000977,
+        "xTwips": 0,
+        "yTwips": 10,
+        "xPt": "0pt",
+        "yPt": "\u002B0.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B0.51pt (10 twips)"
+      },
+      "phraseGroupId": 15,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 9,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 3,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 2,
+        "rowIndex": 9,
+        "colIndex": 0,
+        "colWidthPt": 280,
+        "rowHeightPt": 12.8,
+        "cellLeftPaddingPt": 5.4,
+        "tableLeftIndentPt": 30.35,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "Row.RowFormat.Height (w:trHeight/@w:val)",
+            "axis": "Y",
+            "currentValuePt": 12.8,
+            "newValuePt": 13.31001,
+            "currentValueTwips": 256,
+            "newValueTwips": 266,
+            "description": "[ROW_HEIGHT] Row height: 12.8pt \u2192 13.31pt."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 40,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "A.",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 84.35,
+        "y": 335.92,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 84.35,
+        "y": 334.91,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 16
+    },
+    {
+      "differenceId": 41,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Insuring",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 96.576,
+        "y": 335.92,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 96.58,
+        "y": 334.91,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0.004005432,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.004005432,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 16
+    },
+    {
+      "differenceId": 42,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Agreement",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 134.93,
+        "y": 335.92,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 134.93,
+        "y": 334.91,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 16
+    },
+    {
+      "differenceId": 43,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "A-Employment",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 186.624,
+        "y": 335.92,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 186.62,
+        "y": 334.91,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0039978027,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0039978027,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 16
+    },
+    {
+      "differenceId": 44,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Practices",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 254.978,
+        "y": 335.92,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 254.98,
+        "y": 334.91,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0.0019989014,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.0019989014,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 16
+    },
+    {
+      "differenceId": 45,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Liability",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 298.879,
+        "y": 335.92,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 298.88,
+        "y": 334.91,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0.0010070801,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.0010070801,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 16
+    },
+    {
+      "differenceId": 46,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "$\u00ABEPLAgreeARetAmt\u00BB",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 364.35,
+        "y": 335.92,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 364.35,
+        "y": 334.91,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 16
+    },
+    {
+      "differenceId": 47,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "each",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 364.35,
+        "y": 324.42102,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 364.35,
+        "y": 323.411,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 17
+    },
+    {
+      "differenceId": 48,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Claim",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 388.81302,
+        "y": 324.42102,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 388.81,
+        "y": 323.411,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0030212402,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0030212402,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 17
+    },
+    {
+      "differenceId": 49,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "B.",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 84.35,
+        "y": 309.422,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 84.35,
+        "y": 308.412,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 18
+    },
+    {
+      "differenceId": 50,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Insuring",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 96.576,
+        "y": 309.422,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 96.58,
+        "y": 308.412,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0.004005432,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.004005432,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 18
+    },
+    {
+      "differenceId": 51,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Agreement",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 134.93,
+        "y": 309.422,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 134.93,
+        "y": 308.412,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 18
+    },
+    {
+      "differenceId": 52,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "B-Third",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 186.624,
+        "y": 309.422,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 186.62,
+        "y": 308.412,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0039978027,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0039978027,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 18
+    },
+    {
+      "differenceId": 53,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Party",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 222.185,
+        "y": 309.422,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 222.19,
+        "y": 308.412,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0.005004883,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0.005004883,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "-0.01pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 18
+    },
+    {
+      "differenceId": 54,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Liability",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 248.30301,
+        "y": 309.422,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 248.30002,
+        "y": 308.412,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0029907227,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0029907227,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 18
+    },
+    {
+      "differenceId": 55,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "$\u00ABEPLAgreeBRetAmt\u00BB",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 364.35,
+        "y": 309.422,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 364.35,
+        "y": 308.412,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 19
+    },
+    {
+      "differenceId": 56,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "each",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 364.35,
+        "y": 297.923,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 364.35,
+        "y": 296.913,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 20
+    },
+    {
+      "differenceId": 57,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Claim",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 388.81302,
+        "y": 297.923,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 388.81,
+        "y": 296.913,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0030212402,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0030212402,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 20
+    },
+    {
+      "differenceId": 58,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Fiduciary\u00ABF\u00BB",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 84.85,
+        "y": 276.62402,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 84.85,
+        "y": 275.114,
+        "font": "Arial-BoldMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -1.5100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.5100098,
+        "xTwips": 0,
+        "yTwips": 30,
+        "xPt": "0pt",
+        "yPt": "\u002B1.51pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.51pt (30 twips)"
+      },
+      "phraseGroupId": 21
+    },
+    {
+      "differenceId": 59,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "$\u00ABFLRetAmt\u00BB",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 364.35,
+        "y": 276.62402,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 364.35,
+        "y": 275.614,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 0,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -0,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 22
+    },
+    {
+      "differenceId": 60,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "each",
+      "page": 1,
+      "layoutContext": "INLINE_RUN",
+      "baseline": {
+        "x": 428.823,
+        "y": 276.62402,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 428.82,
+        "y": 275.614,
+        "font": "ArialMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": -0.0029907227,
+        "y": -1.0100098,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 0.0029907227,
+        "y": 1.0100098,
+        "xTwips": 0,
+        "yTwips": 20,
+        "xPt": "0pt",
+        "yPt": "\u002B1.01pt",
+        "wordCorrectionHint": "Adjust paragraph SpaceBefore by \u002B1.01pt (20 twips)"
+      },
+      "phraseGroupId": 22
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "reportMetadata": {
-    "generatedAt": "2026-03-10T19:51:02",
+    "generatedAt": "2026-03-12T15:34:04",
     "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Fixed\\Static\\SSSMPLMLENDCW2041016.pdf",
     "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V23\\Fixed\\Static\\SSSMPLMLENDCW2041016.pdf",
     "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Fixed\\Static",
@@ -224,7 +224,8 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 0,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 2,
@@ -319,7 +320,8 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 1,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 4,

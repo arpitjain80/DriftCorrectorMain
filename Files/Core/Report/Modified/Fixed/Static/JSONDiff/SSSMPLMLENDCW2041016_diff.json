@@ -1,90 +1,111 @@
 {
   "reportMetadata": {
-    "generatedAt": "2026-03-10T19:54:50",
+    "generatedAt": "2026-03-12T15:34:19",
     "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Fixed\\Static\\SSSMPLMLENDCW2041016.pdf",
     "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\Modified\\Fixed\\Static\\SSSMPLMLENDCW2041016.pdf",
     "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Fixed\\Static",
     "publishFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\Modified\\Fixed\\Static"
   },
   "summary": {
-    "totalWordDifferences": 229,
-    "positionShifts": 101,
+    "totalWordDifferences": 237,
+    "positionShifts": 109,
     "fontDifferences": 0,
     "fontSizeDifferences": 0,
     "missingFromPublish": 64,
     "extraInPublish": 64,
-    "totalPhraseGroups": 76,
-    "totalTableGroups": 1,
+    "totalPhraseGroups": 77,
+    "totalTableGroups": 2,
     "isClean": false
   },
   "tableGroups": [
     {
-      "correctionStrategy": "TABLE_INDENT_FALLBACK",
+      "correctionStrategy": "TABLE_INDENT",
       "tableId": 1,
       "page": 1,
-      "rowCount": 8,
-      "columnCount": 22,
+      "rowCount": 10,
+      "columnCount": 21,
       "columnDrifts": [
         {
+          "columnIndex": 0,
+          "baselineXStart": 48.6000023,
+          "avgDeltaX": 5.39999771,
+          "widthCorrectionTwips": -108,
+          "widthCorrectionPt": "-5.4pt"
+        },
+        {
           "columnIndex": 1,
-          "baselineXStart": 135.261505,
-          "avgDeltaX": -10.8860168,
-          "widthCorrectionTwips": 218,
-          "widthCorrectionPt": "\u002B10.89pt"
+          "baselineXStart": 117.976501,
+          "avgDeltaX": 5.3999939,
+          "widthCorrectionTwips": 0,
+          "widthCorrectionPt": "0pt"
         }
       ],
       "rowDrifts": [
         {
           "rowIndex": 0,
-          "baselineY": 581.802002,
-          "avgDeltaY": -0.0100097656,
+          "baselineY": 727.019043,
+          "avgDeltaY": -0.00903320312,
           "heightCorrectionTwips": 0,
           "heightCorrectionPt": "\u002B0.01pt"
         },
         {
           "rowIndex": 1,
-          "baselineY": 529.80603,
-          "avgDeltaY": -0.0100097656,
+          "baselineY": 714.385986,
+          "avgDeltaY": -0.00903320312,
           "heightCorrectionTwips": 0,
           "heightCorrectionPt": "0pt"
         },
         {
           "rowIndex": 2,
-          "baselineY": 518.307007,
+          "baselineY": 581.802002,
           "avgDeltaY": -0.0100097656,
           "heightCorrectionTwips": 0,
           "heightCorrectionPt": "0pt"
         },
         {
           "rowIndex": 3,
-          "baselineY": 506.808014,
+          "baselineY": 529.80603,
           "avgDeltaY": -0.0100097656,
           "heightCorrectionTwips": 0,
           "heightCorrectionPt": "0pt"
         },
         {
           "rowIndex": 4,
-          "baselineY": 495.309021,
+          "baselineY": 518.307007,
           "avgDeltaY": -0.0100097656,
           "heightCorrectionTwips": 0,
           "heightCorrectionPt": "0pt"
         },
         {
           "rowIndex": 5,
-          "baselineY": 483.810028,
+          "baselineY": 506.808014,
           "avgDeltaY": -0.0100097656,
           "heightCorrectionTwips": 0,
           "heightCorrectionPt": "0pt"
         },
         {
           "rowIndex": 6,
-          "baselineY": 323.820007,
+          "baselineY": 495.309021,
           "avgDeltaY": -0.0100097656,
           "heightCorrectionTwips": 0,
           "heightCorrectionPt": "0pt"
         },
         {
           "rowIndex": 7,
+          "baselineY": 483.810028,
+          "avgDeltaY": -0.0100097656,
+          "heightCorrectionTwips": 0,
+          "heightCorrectionPt": "0pt"
+        },
+        {
+          "rowIndex": 8,
+          "baselineY": 323.820007,
+          "avgDeltaY": -0.0100097656,
+          "heightCorrectionTwips": 0,
+          "heightCorrectionPt": "0pt"
+        },
+        {
+          "rowIndex": 9,
           "baselineY": 312.321014,
           "avgDeltaY": -0.0100097656,
           "heightCorrectionTwips": 0,
@@ -92,27 +113,255 @@
         }
       ],
       "baselineBounds": {
-        "xStart": 109.025002,
+        "xStart": 48.6000023,
         "xEnd": 560.747986,
         "y": 312.321014,
         "fontSize": 0
       },
       "publishBounds": {
-        "xStart": 88.6800003,
+        "xStart": 54,
         "xEnd": 543.080078,
         "y": 312.311005,
         "fontSize": 0
       },
-      "wordCorrectionHint": "WORD TABLE CORRECTIONS (TABLE_INDENT_FALLBACK strategy):\r\n  Uniform drift of -10.89pt across all 1 columns.\r\n  Root cause unclear (cell padding and table indent do not match drift).\r\n  Fix: reduce Table.LeftIndent by -10.89pt (-218 twips).\r\n  This shifts the entire table left as a unit \u2014 do NOT apply per word or per phrase.\r\n  Verify: Table.LeftIndent in source .docx = -5.4pt. New value should be 5.49pt.",
+      "wordCorrectionHint": "WORD TABLE CORRECTIONS (TABLE_INDENT strategy):\r\n  Root cause: Table.LeftIndent changed from -10.8pt to -5.4pt between versions.\r\n  Fix: set Table.LeftIndent to -10.8pt (-216 twips).\r\n  Apply ONCE per table \u2014 do NOT apply per word or per phrase.\r\n  Note: table has negative indent (intentional margin positioning).",
       "phraseGroupIds": [
-        6,
-        17
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "correctionStrategy": "TABLE_INDENT_FALLBACK",
+      "tableId": 2,
+      "page": 1,
+      "rowCount": 1,
+      "columnCount": 1,
+      "columnDrifts": [
+        {
+          "columnIndex": 1,
+          "baselineXStart": 312.544006,
+          "avgDeltaX": -11.0440674,
+          "widthCorrectionTwips": 221,
+          "widthCorrectionPt": "\u002B11.04pt"
+        }
+      ],
+      "rowDrifts": [],
+      "baselineBounds": {
+        "xStart": 312.544006,
+        "xEnd": 337.544006,
+        "y": 529.80603,
+        "fontSize": 0
+      },
+      "publishBounds": {
+        "xStart": 301.499939,
+        "xEnd": 326.499939,
+        "y": 529.796021,
+        "fontSize": 0
+      },
+      "wordCorrectionHint": "WORD TABLE CORRECTIONS (TABLE_INDENT_FALLBACK strategy):\r\n  Uniform drift of -11.04pt across all 1 columns.\r\n  Root cause unclear (cell padding and table indent do not match drift).\r\n  Fix: reduce Table.LeftIndent by -11.04pt (-221 twips).\r\n  This shifts the entire table left as a unit \u2014 do NOT apply per word or per phrase.\r\n  Verify: Table.LeftIndent in source .docx = 16.6pt. New value should be 27.64pt.",
+      "phraseGroupIds": [
+        21
       ]
     }
   ],
   "phraseGroups": [
     {
       "groupId": 1,
+      "page": 1,
+      "phraseText": "Company: \u00ABCompanyName\u00BB",
+      "wordCount": 2,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "TABLE_CELL",
+      "baselineRegion": {
+        "xStart": 48.6000023,
+        "xEnd": 146.906006,
+        "y": 727.019043,
+        "font": "Calibri-Bold",
+        "fontSize": 9
+      },
+      "publishRegion": {
+        "xStart": 54,
+        "xEnd": 152.307007,
+        "y": 727.01001,
+        "font": "Calibri-Bold",
+        "fontSize": 9
+      },
+      "sharedDelta": {
+        "x": 5.39999771,
+        "y": -0.00903320312,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -5.39999771,
+        "y": 0.00903320312,
+        "xTwips": -108,
+        "yTwips": 0,
+        "xPt": "-5.4pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Table 1, Col 0, Row 0: see tableGroups for column/row corrections"
+      },
+      "wordIds": [
+        1,
+        2
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 0,
+      "isCleanDiff": true,
+      "isXIgnore": true
+    },
+    {
+      "groupId": 2,
+      "page": 1,
+      "phraseText": "Policy Number: \u00ABPolicyNum\u00BB",
+      "wordCount": 3,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "TABLE_CELL",
+      "baselineRegion": {
+        "xStart": 320.75,
+        "xEnd": 429.519989,
+        "y": 727.019043,
+        "font": "Calibri-Bold",
+        "fontSize": 9
+      },
+      "publishRegion": {
+        "xStart": 326.149994,
+        "xEnd": 434.924011,
+        "y": 727.01001,
+        "font": "Calibri-Bold",
+        "fontSize": 9
+      },
+      "sharedDelta": {
+        "x": 5.3999939,
+        "y": -0.00903320312,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -5.3999939,
+        "y": 0.00903320312,
+        "xTwips": -108,
+        "yTwips": 0,
+        "xPt": "-5.4pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Table 1, Col 9, Row 0: see tableGroups for column/row corrections"
+      },
+      "wordIds": [
+        3,
+        4,
+        5
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 0,
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 3,
+      "page": 1,
+      "phraseText": "Insured: \u00ABNamedInsured\u00BB",
+      "wordCount": 2,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "TABLE_CELL",
+      "baselineRegion": {
+        "xStart": 48.6000023,
+        "xEnd": 144.326004,
+        "y": 714.385986,
+        "font": "Calibri-Bold",
+        "fontSize": 9
+      },
+      "publishRegion": {
+        "xStart": 54,
+        "xEnd": 149.723999,
+        "y": 714.376953,
+        "font": "Calibri-Bold",
+        "fontSize": 9
+      },
+      "sharedDelta": {
+        "x": 5.39999771,
+        "y": -0.00903320312,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -5.39999771,
+        "y": 0.00903320312,
+        "xTwips": -108,
+        "yTwips": 0,
+        "xPt": "-5.4pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Table 1, Col 0, Row 1: see tableGroups for column/row corrections"
+      },
+      "wordIds": [
+        6,
+        7
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 1,
+      "isCleanDiff": true,
+      "isXIgnore": true
+    },
+    {
+      "groupId": 4,
+      "page": 1,
+      "phraseText": "Endorsement Effective Date: \u00ABPolEffDate\u00BB",
+      "wordCount": 4,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "TABLE_CELL",
+      "baselineRegion": {
+        "xStart": 320.75,
+        "xEnd": 483.617004,
+        "y": 714.385986,
+        "font": "Calibri-Bold",
+        "fontSize": 9
+      },
+      "publishRegion": {
+        "xStart": 326.149994,
+        "xEnd": 489.013977,
+        "y": 714.376953,
+        "font": "Calibri-Bold",
+        "fontSize": 9
+      },
+      "sharedDelta": {
+        "x": 5.3999939,
+        "y": -0.00903320312,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -5.3999939,
+        "y": 0.00903320312,
+        "xTwips": -108,
+        "yTwips": 0,
+        "xPt": "-5.4pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Table 1, Col 9, Row 1: see tableGroups for column/row corrections"
+      },
+      "wordIds": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 1,
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 5,
       "page": 1,
       "phraseText": "Part 6",
       "wordCount": 2,
@@ -147,16 +396,16 @@
         "yTwips": 0,
         "xPt": "\u002B0.98pt",
         "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B0.98pt (20 twips)"
       },
       "wordIds": [
-        1,
-        2
+        12,
+        13
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 2,
+      "groupId": 6,
       "page": 1,
       "phraseText": "Common Conditions",
       "wordCount": 2,
@@ -194,13 +443,13 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        3,
-        4
+        14,
+        15
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 3,
+      "groupId": 7,
       "page": 1,
       "phraseText": "B. Defense",
       "wordCount": 2,
@@ -238,13 +487,13 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        5,
-        6
+        16,
+        17
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 4,
+      "groupId": 8,
       "page": 1,
       "phraseText": "and Settlement",
       "wordCount": 2,
@@ -282,13 +531,13 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        7,
-        8
+        18,
+        19
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 5,
+      "groupId": 9,
       "page": 1,
       "phraseText": "of this",
       "wordCount": 2,
@@ -326,20 +575,20 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        9,
-        10
+        20,
+        21
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 6,
+      "groupId": 10,
       "page": 1,
       "phraseText": "Policy is",
       "wordCount": 2,
       "issues": [
         "POSITION_SHIFT"
       ],
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "INLINE_RUN",
       "baselineRegion": {
         "xStart": 392.537994,
         "xEnd": 432.884003,
@@ -367,19 +616,16 @@
         "yTwips": 0,
         "xPt": "\u002B10.73pt",
         "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "Table 1, Col 13, Row 0: see tableGroups for column/row corrections"
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        11,
-        12
+        22,
+        23
       ],
-      "tableGroupId": 1,
-      "tableColumn": 1,
-      "tableRow": 0,
       "isCleanDiff": true
     },
     {
-      "groupId": 7,
+      "groupId": 11,
       "page": 1,
       "phraseText": "amended by",
       "wordCount": 2,
@@ -417,13 +663,13 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        13,
-        14
+        24,
+        25
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 8,
+      "groupId": 12,
       "page": 1,
       "phraseText": "the addition",
       "wordCount": 2,
@@ -461,13 +707,13 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        15,
-        16
+        26,
+        27
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 9,
+      "groupId": 13,
       "page": 1,
       "phraseText": "of",
       "wordCount": 1,
@@ -505,12 +751,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        17
+        28
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 10,
+      "groupId": 14,
       "page": 1,
       "phraseText": "practices",
       "wordCount": 1,
@@ -548,12 +794,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        19
+        30
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 11,
+      "groupId": 15,
       "page": 1,
       "phraseText": "in",
       "wordCount": 1,
@@ -588,15 +834,15 @@
         "yTwips": 0,
         "xPt": "\u002B2.76pt",
         "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B2.76pt (55 twips)"
       },
       "wordIds": [
-        20
+        31
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 12,
+      "groupId": 16,
       "page": 1,
       "phraseText": "the",
       "wordCount": 1,
@@ -634,12 +880,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        21
+        32
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 13,
+      "groupId": 17,
       "page": 1,
       "phraseText": "venue",
       "wordCount": 1,
@@ -677,12 +923,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        22
+        33
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 14,
+      "groupId": 18,
       "page": 1,
       "phraseText": "within",
       "wordCount": 1,
@@ -720,12 +966,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        23
+        34
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 15,
+      "groupId": 19,
       "page": 1,
       "phraseText": "which",
       "wordCount": 1,
@@ -760,15 +1006,15 @@
         "yTwips": 0,
         "xPt": "\u002B8.28pt",
         "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B8.28pt (166 twips)"
       },
       "wordIds": [
-        24
+        35
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 16,
+      "groupId": 20,
       "page": 1,
       "phraseText": "the",
       "wordCount": 1,
@@ -806,12 +1052,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        25
+        36
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 17,
+      "groupId": 21,
       "page": 1,
       "phraseText": "Claim",
       "wordCount": 1,
@@ -846,18 +1092,18 @@
         "yTwips": 0,
         "xPt": "\u002B11.04pt",
         "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "Table 1, Col 10, Row 1: see tableGroups for column/row corrections"
+        "wordCorrectionHint": "Table 2 (docx-derived), Col 1, Row 1: see tableGroups for correction strategy."
       },
       "wordIds": [
-        26
+        37
       ],
-      "tableGroupId": 1,
+      "tableGroupId": 2,
       "tableColumn": 1,
       "tableRow": 1,
       "isCleanDiff": true
     },
     {
-      "groupId": 18,
+      "groupId": 22,
       "page": 1,
       "phraseText": "is",
       "wordCount": 1,
@@ -895,12 +1141,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        27
+        38
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 19,
+      "groupId": 23,
       "page": 1,
       "phraseText": "brought.",
       "wordCount": 1,
@@ -938,12 +1184,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        28
+        39
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 20,
+      "groupId": 24,
       "page": 1,
       "phraseText": "The",
       "wordCount": 1,
@@ -981,12 +1227,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        29
+        40
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 21,
+      "groupId": 25,
       "page": 1,
       "phraseText": "Insurer\u2019s",
       "wordCount": 1,
@@ -1024,12 +1270,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        30
+        41
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 22,
+      "groupId": 26,
       "page": 1,
       "phraseText": "agreement",
       "wordCount": 1,
@@ -1067,12 +1313,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        31
+        42
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 23,
+      "groupId": 27,
       "page": 1,
       "phraseText": "to",
       "wordCount": 1,
@@ -1110,12 +1356,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        32
+        43
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 24,
+      "groupId": 28,
       "page": 1,
       "phraseText": "employ",
       "wordCount": 1,
@@ -1153,450 +1399,364 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        33
-      ],
-      "isCleanDiff": true
-    },
-    {
-      "groupId": 25,
-      "page": 1,
-      "phraseText": "counsel shall",
-      "wordCount": 2,
-      "issues": [
-        "POSITION_SHIFT"
-      ],
-      "layoutContext": "INLINE_RUN",
-      "baselineRegion": {
-        "xStart": 112.623001,
-        "xEnd": 176.369003,
-        "y": 518.307007,
-        "font": "ArialMT",
-        "fontSize": 10
-      },
-      "publishRegion": {
-        "xStart": 90,
-        "xEnd": 153.130005,
-        "y": 518.296997,
-        "font": "ArialMT",
-        "fontSize": 10
-      },
-      "sharedDelta": {
-        "x": -22.6230011,
-        "y": -0.0100097656,
-        "fontSizeDiff": 0,
-        "fontChanged": false
-      },
-      "negativeCorrection": {
-        "x": 22.6230011,
-        "y": 0.0100097656,
-        "xTwips": 452,
-        "yTwips": 0,
-        "xPt": "\u002B22.62pt",
-        "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
-      },
-      "wordIds": [
-        35,
-        36
-      ],
-      "isCleanDiff": true
-    },
-    {
-      "groupId": 26,
-      "page": 1,
-      "phraseText": "be, and",
-      "wordCount": 2,
-      "issues": [
-        "POSITION_SHIFT"
-      ],
-      "layoutContext": "INLINE_RUN",
-      "baselineRegion": {
-        "xStart": 176.212997,
-        "xEnd": 209.391998,
-        "y": 518.307007,
-        "font": "ArialMT",
-        "fontSize": 10
-      },
-      "publishRegion": {
-        "xStart": 152.349991,
-        "xEnd": 184.909988,
-        "y": 518.296997,
-        "font": "ArialMT",
-        "fontSize": 10
-      },
-      "sharedDelta": {
-        "x": -23.8630066,
-        "y": -0.0100097656,
-        "fontSizeDiff": 0,
-        "fontChanged": false
-      },
-      "negativeCorrection": {
-        "x": 23.8630066,
-        "y": 0.0100097656,
-        "xTwips": 477,
-        "yTwips": 0,
-        "xPt": "\u002B23.86pt",
-        "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
-      },
-      "wordIds": [
-        37,
-        38
-      ],
-      "isCleanDiff": true
-    },
-    {
-      "groupId": 27,
-      "page": 1,
-      "phraseText": "remain, subject",
-      "wordCount": 2,
-      "issues": [
-        "POSITION_SHIFT"
-      ],
-      "layoutContext": "INLINE_RUN",
-      "baselineRegion": {
-        "xStart": 215.355011,
-        "xEnd": 287.977997,
-        "y": 518.307007,
-        "font": "ArialMT",
-        "fontSize": 10
-      },
-      "publishRegion": {
-        "xStart": 190.249985,
-        "xEnd": 262.259979,
-        "y": 518.296997,
-        "font": "ArialMT",
-        "fontSize": 10
-      },
-      "sharedDelta": {
-        "x": -25.1050262,
-        "y": -0.0100097656,
-        "fontSizeDiff": 0,
-        "fontChanged": false
-      },
-      "negativeCorrection": {
-        "x": 25.1050262,
-        "y": 0.0100097656,
-        "xTwips": 502,
-        "yTwips": 0,
-        "xPt": "\u002B25.11pt",
-        "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
-      },
-      "wordIds": [
-        39,
-        40
-      ],
-      "isCleanDiff": true
-    },
-    {
-      "groupId": 28,
-      "page": 1,
-      "phraseText": "to the",
-      "wordCount": 2,
-      "issues": [
-        "POSITION_SHIFT"
-      ],
-      "layoutContext": "INLINE_RUN",
-      "baselineRegion": {
-        "xStart": 288.940979,
-        "xEnd": 316.559021,
-        "y": 518.307007,
-        "font": "ArialMT",
-        "fontSize": 10
-      },
-      "publishRegion": {
-        "xStart": 262.599976,
-        "xEnd": 289.599976,
-        "y": 518.296997,
-        "font": "ArialMT",
-        "fontSize": 10
-      },
-      "sharedDelta": {
-        "x": -26.3410034,
-        "y": -0.0100097656,
-        "fontSizeDiff": 0,
-        "fontChanged": false
-      },
-      "negativeCorrection": {
-        "x": 26.3410034,
-        "y": 0.0100097656,
-        "xTwips": 527,
-        "yTwips": 0,
-        "xPt": "\u002B26.34pt",
-        "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
-      },
-      "wordIds": [
-        41,
-        42
+        44
       ],
       "isCleanDiff": true
     },
     {
       "groupId": 29,
       "page": 1,
-      "phraseText": "Insurer\u2019s obligation",
+      "phraseText": "shall be,",
       "wordCount": 2,
       "issues": [
         "POSITION_SHIFT"
       ],
       "layoutContext": "INLINE_RUN",
       "baselineRegion": {
-        "xStart": 319.738007,
-        "xEnd": 416.256989,
+        "xStart": 151.369003,
+        "xEnd": 191.212997,
         "y": 518.307007,
-        "font": "Arial-BoldMT",
+        "font": "ArialMT",
         "fontSize": 10
       },
       "publishRegion": {
-        "xStart": 292.159973,
-        "xEnd": 388.049957,
+        "xStart": 128.130005,
+        "xEnd": 167.349991,
         "y": 518.296997,
-        "font": "Arial-BoldMT",
+        "font": "ArialMT",
         "fontSize": 10
       },
       "sharedDelta": {
-        "x": -27.5780334,
+        "x": -23.2389984,
         "y": -0.0100097656,
         "fontSizeDiff": 0,
         "fontChanged": false
       },
       "negativeCorrection": {
-        "x": 27.5780334,
+        "x": 23.2389984,
         "y": 0.0100097656,
-        "xTwips": 552,
+        "xTwips": 465,
         "yTwips": 0,
-        "xPt": "\u002B27.58pt",
+        "xPt": "\u002B23.24pt",
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        43,
-        44
+        46,
+        47
       ],
       "isCleanDiff": true
     },
     {
       "groupId": 30,
       "page": 1,
-      "phraseText": "to pay",
+      "phraseText": "and remain,",
       "wordCount": 2,
       "issues": [
         "POSITION_SHIFT"
       ],
       "layoutContext": "INLINE_RUN",
       "baselineRegion": {
-        "xStart": 413.346985,
-        "xEnd": 440.964996,
+        "xStart": 194.391998,
+        "xEnd": 250.355011,
         "y": 518.307007,
         "font": "ArialMT",
         "fontSize": 10
       },
       "publishRegion": {
-        "xStart": 384.519958,
-        "xEnd": 411.519958,
+        "xStart": 169.909988,
+        "xEnd": 225.249985,
         "y": 518.296997,
         "font": "ArialMT",
         "fontSize": 10
       },
       "sharedDelta": {
-        "x": -28.8270264,
+        "x": -24.4820099,
         "y": -0.0100097656,
         "fontSizeDiff": 0,
         "fontChanged": false
       },
       "negativeCorrection": {
-        "x": 28.8270264,
+        "x": 24.4820099,
         "y": 0.0100097656,
-        "xTwips": 577,
+        "xTwips": 490,
         "yTwips": 0,
-        "xPt": "\u002B28.83pt",
+        "xPt": "\u002B24.48pt",
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        45,
-        46
+        48,
+        49
       ],
       "isCleanDiff": true
     },
     {
       "groupId": 31,
       "page": 1,
-      "phraseText": "no more",
+      "phraseText": "subject to",
       "wordCount": 2,
       "issues": [
         "POSITION_SHIFT"
       ],
       "layoutContext": "INLINE_RUN",
       "baselineRegion": {
-        "xStart": 446.365997,
-        "xEnd": 481.766998,
+        "xStart": 252.977997,
+        "xEnd": 298.940979,
         "y": 518.307007,
         "font": "ArialMT",
         "fontSize": 10
       },
       "publishRegion": {
-        "xStart": 416.299957,
-        "xEnd": 451.079956,
+        "xStart": 227.259979,
+        "xEnd": 272.599976,
         "y": 518.296997,
         "font": "ArialMT",
         "fontSize": 10
       },
       "sharedDelta": {
-        "x": -30.06604,
+        "x": -25.7180176,
         "y": -0.0100097656,
         "fontSizeDiff": 0,
         "fontChanged": false
       },
       "negativeCorrection": {
-        "x": 30.06604,
+        "x": 25.7180176,
         "y": 0.0100097656,
-        "xTwips": 601,
+        "xTwips": 514,
         "yTwips": 0,
-        "xPt": "\u002B30.07pt",
+        "xPt": "\u002B25.72pt",
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        47,
-        48
+        50,
+        51
       ],
       "isCleanDiff": true
     },
     {
       "groupId": 32,
       "page": 1,
-      "phraseText": "than the",
+      "phraseText": "the Insurer\u2019s",
       "wordCount": 2,
       "issues": [
         "POSITION_SHIFT"
       ],
       "layoutContext": "INLINE_RUN",
       "baselineRegion": {
-        "xStart": 488.828003,
-        "xEnd": 527.56897,
+        "xStart": 301.559021,
+        "xEnd": 364.738007,
         "y": 518.307007,
         "font": "ArialMT",
         "fontSize": 10
       },
       "publishRegion": {
-        "xStart": 457.529999,
-        "xEnd": 495.649994,
+        "xStart": 274.599976,
+        "xEnd": 337.159973,
         "y": 518.296997,
         "font": "ArialMT",
         "fontSize": 10
       },
       "sharedDelta": {
-        "x": -31.2980042,
+        "x": -26.9590454,
         "y": -0.0100097656,
         "fontSizeDiff": 0,
         "fontChanged": false
       },
       "negativeCorrection": {
-        "x": 31.2980042,
+        "x": 26.9590454,
         "y": 0.0100097656,
-        "xTwips": 626,
+        "xTwips": 539,
         "yTwips": 0,
-        "xPt": "\u002B31.3pt",
+        "xPt": "\u002B26.96pt",
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        49,
-        50
+        52,
+        53
       ],
       "isCleanDiff": true
     },
     {
       "groupId": 33,
       "page": 1,
-      "phraseText": "hourly",
-      "wordCount": 1,
+      "phraseText": "obligation to",
+      "wordCount": 2,
       "issues": [
         "POSITION_SHIFT"
       ],
       "layoutContext": "INLINE_RUN",
       "baselineRegion": {
-        "xStart": 530.747986,
-        "xEnd": 560.747986,
+        "xStart": 366.256989,
+        "xEnd": 423.346985,
         "y": 518.307007,
         "font": "ArialMT",
         "fontSize": 10
       },
       "publishRegion": {
-        "xStart": 498.209991,
-        "xEnd": 528.209961,
+        "xStart": 338.049957,
+        "xEnd": 394.519958,
         "y": 518.296997,
         "font": "ArialMT",
         "fontSize": 10
       },
       "sharedDelta": {
-        "x": -32.5379944,
+        "x": -28.2070312,
         "y": -0.0100097656,
         "fontSizeDiff": 0,
         "fontChanged": false
       },
       "negativeCorrection": {
-        "x": 32.5379944,
+        "x": 28.2070312,
         "y": 0.0100097656,
-        "xTwips": 651,
+        "xTwips": 564,
         "yTwips": 0,
-        "xPt": "\u002B32.54pt",
+        "xPt": "\u002B28.21pt",
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        51
+        54,
+        55
       ],
       "isCleanDiff": true
     },
     {
       "groupId": 34,
       "page": 1,
-      "phraseText": "stated",
-      "wordCount": 1,
+      "phraseText": "pay no",
+      "wordCount": 2,
       "issues": [
         "POSITION_SHIFT"
       ],
       "layoutContext": "INLINE_RUN",
       "baselineRegion": {
-        "xStart": 123.252998,
-        "xEnd": 153.252991,
-        "y": 506.808014,
+        "xStart": 425.964996,
+        "xEnd": 456.365997,
+        "y": 518.307007,
         "font": "ArialMT",
         "fontSize": 10
       },
       "publishRegion": {
-        "xStart": 90,
-        "xEnd": 120,
-        "y": 506.798004,
+        "xStart": 396.519958,
+        "xEnd": 426.299957,
+        "y": 518.296997,
         "font": "ArialMT",
         "fontSize": 10
       },
       "sharedDelta": {
-        "x": -33.2529984,
+        "x": -29.4450378,
         "y": -0.0100097656,
         "fontSizeDiff": 0,
         "fontChanged": false
       },
       "negativeCorrection": {
-        "x": 33.2529984,
+        "x": 29.4450378,
         "y": 0.0100097656,
-        "xTwips": 665,
+        "xTwips": 589,
         "yTwips": 0,
-        "xPt": "\u002B33.25pt",
+        "xPt": "\u002B29.45pt",
         "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B33.25pt (665 twips)"
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        53
+        56,
+        57
       ],
       "isCleanDiff": true
     },
     {
       "groupId": 35,
+      "page": 1,
+      "phraseText": "more than",
+      "wordCount": 2,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "INLINE_RUN",
+      "baselineRegion": {
+        "xStart": 461.766998,
+        "xEnd": 508.828003,
+        "y": 518.307007,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 431.079956,
+        "xEnd": 477.529999,
+        "y": 518.296997,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": -30.6870422,
+        "y": -0.0100097656,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 30.6870422,
+        "y": 0.0100097656,
+        "xTwips": 614,
+        "yTwips": 0,
+        "xPt": "\u002B30.69pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+      },
+      "wordIds": [
+        58,
+        59
+      ],
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 36,
+      "page": 1,
+      "phraseText": "the hourly",
+      "wordCount": 2,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "INLINE_RUN",
+      "baselineRegion": {
+        "xStart": 512.56897,
+        "xEnd": 560.747986,
+        "y": 518.307007,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 480.649994,
+        "xEnd": 528.209961,
+        "y": 518.296997,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": -31.9189758,
+        "y": -0.0100097656,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 31.9189758,
+        "y": 0.0100097656,
+        "xTwips": 638,
+        "yTwips": 0,
+        "xPt": "\u002B31.92pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+      },
+      "wordIds": [
+        60,
+        61
+      ],
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 37,
       "page": 1,
       "phraseText": "below",
       "wordCount": 1,
@@ -1634,12 +1794,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        54
+        63
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 36,
+      "groupId": 38,
       "page": 1,
       "phraseText": "and",
       "wordCount": 1,
@@ -1677,12 +1837,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        55
+        64
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 37,
+      "groupId": 39,
       "page": 1,
       "phraseText": "such",
       "wordCount": 1,
@@ -1720,12 +1880,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        56
+        65
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 38,
+      "groupId": 40,
       "page": 1,
       "phraseText": "counsel\u2019s",
       "wordCount": 1,
@@ -1763,12 +1923,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        57
+        66
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 39,
+      "groupId": 41,
       "page": 1,
       "phraseText": "agreement",
       "wordCount": 1,
@@ -1806,12 +1966,12 @@
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B43.77pt (875 twips)"
       },
       "wordIds": [
-        58
+        67
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 40,
+      "groupId": 42,
       "page": 1,
       "phraseText": "to",
       "wordCount": 1,
@@ -1849,12 +2009,12 @@
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B45.87pt (917 twips)"
       },
       "wordIds": [
-        59
+        68
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 41,
+      "groupId": 43,
       "page": 1,
       "phraseText": "abide",
       "wordCount": 1,
@@ -1892,12 +2052,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        60
+        69
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 42,
+      "groupId": 44,
       "page": 1,
       "phraseText": "by",
       "wordCount": 1,
@@ -1932,15 +2092,15 @@
         "yTwips": 0,
         "xPt": "\u002B50.08pt",
         "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B50.08pt (1002 twips)"
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        61
+        70
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 43,
+      "groupId": 45,
       "page": 1,
       "phraseText": "any",
       "wordCount": 1,
@@ -1978,12 +2138,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        62
+        71
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 44,
+      "groupId": 46,
       "page": 1,
       "phraseText": "litigation",
       "wordCount": 1,
@@ -2021,12 +2181,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        63
+        72
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 45,
+      "groupId": 47,
       "page": 1,
       "phraseText": "guidelines",
       "wordCount": 1,
@@ -2061,15 +2221,15 @@
         "yTwips": 0,
         "xPt": "\u002B56.4pt",
         "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B56.4pt (1128 twips)"
       },
       "wordIds": [
-        64
+        73
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 46,
+      "groupId": 48,
       "page": 1,
       "phraseText": "and",
       "wordCount": 1,
@@ -2107,12 +2267,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        65
+        74
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 47,
+      "groupId": 49,
       "page": 1,
       "phraseText": "the",
       "wordCount": 1,
@@ -2150,12 +2310,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        77
+        86
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 48,
+      "groupId": 50,
       "page": 1,
       "phraseText": "the",
       "wordCount": 1,
@@ -2193,12 +2353,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        80
+        89
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 49,
+      "groupId": 51,
       "page": 1,
       "phraseText": "the",
       "wordCount": 1,
@@ -2236,12 +2396,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        84
+        93
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 50,
+      "groupId": 52,
       "page": 1,
       "phraseText": "as",
       "wordCount": 1,
@@ -2279,12 +2439,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        94
+        103
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 51,
+      "groupId": 53,
       "page": 1,
       "phraseText": "any",
       "wordCount": 1,
@@ -2322,12 +2482,12 @@
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B14.45pt (289 twips)"
       },
       "wordIds": [
-        104
+        113
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 52,
+      "groupId": 54,
       "page": 1,
       "phraseText": "respect",
       "wordCount": 1,
@@ -2365,12 +2525,12 @@
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B2.46pt (49 twips)"
       },
       "wordIds": [
-        110
+        119
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 53,
+      "groupId": 55,
       "page": 1,
       "phraseText": "to",
       "wordCount": 1,
@@ -2408,12 +2568,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        111
+        120
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 54,
+      "groupId": 56,
       "page": 1,
       "phraseText": "any",
       "wordCount": 1,
@@ -2451,12 +2611,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        112
+        121
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 55,
+      "groupId": 57,
       "page": 1,
       "phraseText": "Claim",
       "wordCount": 1,
@@ -2494,12 +2654,12 @@
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B9.86pt (197 twips)"
       },
       "wordIds": [
-        113
+        122
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 56,
+      "groupId": 58,
       "page": 1,
       "phraseText": "in",
       "wordCount": 1,
@@ -2537,12 +2697,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        114
+        123
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 57,
+      "groupId": 59,
       "page": 1,
       "phraseText": "which",
       "wordCount": 1,
@@ -2577,15 +2737,15 @@
         "yTwips": 0,
         "xPt": "\u002B14.8pt",
         "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B14.8pt (296 twips)"
       },
       "wordIds": [
-        115
+        124
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 58,
+      "groupId": 60,
       "page": 1,
       "phraseText": "the",
       "wordCount": 1,
@@ -2623,12 +2783,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        116
+        125
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 59,
+      "groupId": 61,
       "page": 1,
       "phraseText": "counsel",
       "wordCount": 1,
@@ -2666,12 +2826,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        117
+        126
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 60,
+      "groupId": 62,
       "page": 1,
       "phraseText": "specified",
       "wordCount": 1,
@@ -2706,15 +2866,15 @@
         "yTwips": 0,
         "xPt": "\u002B22.2pt",
         "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B22.2pt (444 twips)"
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        118
+        127
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 61,
+      "groupId": 63,
       "page": 1,
       "phraseText": "in",
       "wordCount": 1,
@@ -2752,12 +2912,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        119
+        128
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 62,
+      "groupId": 64,
       "page": 1,
       "phraseText": "Item",
       "wordCount": 1,
@@ -2795,12 +2955,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        120
+        129
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 63,
+      "groupId": 65,
       "page": 1,
       "phraseText": "1.",
       "wordCount": 1,
@@ -2838,12 +2998,12 @@
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B29.61pt (592 twips)"
       },
       "wordIds": [
-        121
+        130
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 64,
+      "groupId": 66,
       "page": 1,
       "phraseText": "of",
       "wordCount": 1,
@@ -2881,12 +3041,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        122
+        131
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 65,
+      "groupId": 67,
       "page": 1,
       "phraseText": "this",
       "wordCount": 1,
@@ -2924,12 +3084,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        123
+        132
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 66,
+      "groupId": 68,
       "page": 1,
       "phraseText": "endorsement",
       "wordCount": 1,
@@ -2967,12 +3127,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        124
+        133
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 67,
+      "groupId": 69,
       "page": 1,
       "phraseText": "is",
       "wordCount": 1,
@@ -3010,12 +3170,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        125
+        134
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 68,
+      "groupId": 70,
       "page": 1,
       "phraseText": "employed",
       "wordCount": 1,
@@ -3053,12 +3213,12 @@
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B41.94pt (839 twips)"
       },
       "wordIds": [
-        126
+        135
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 69,
+      "groupId": 71,
       "page": 1,
       "phraseText": "to",
       "wordCount": 1,
@@ -3096,12 +3256,12 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        127
+        136
       ],
       "isCleanDiff": true
     },
     {
-      "groupId": 70,
+      "groupId": 72,
       "page": 1,
       "phraseText": "the",
       "wordCount": 1,
@@ -3139,274 +3299,231 @@
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        129
-      ],
-      "isCleanDiff": true
-    },
-    {
-      "groupId": 71,
-      "page": 1,
-      "phraseText": "Insured, Retention",
-      "wordCount": 2,
-      "issues": [
-        "POSITION_SHIFT"
-      ],
-      "layoutContext": "INLINE_RUN",
-      "baselineRegion": {
-        "xStart": 134.572998,
-        "xEnd": 238.79599,
-        "y": 312.321014,
-        "font": "ArialMT",
-        "fontSize": 10
-      },
-      "publishRegion": {
-        "xStart": 88.6800003,
-        "xEnd": 192.029999,
-        "y": 312.311005,
-        "font": "ArialMT",
-        "fontSize": 10
-      },
-      "sharedDelta": {
-        "x": -45.8929977,
-        "y": -0.0100097656,
-        "fontSizeDiff": 0,
-        "fontChanged": false
-      },
-      "negativeCorrection": {
-        "x": 45.8929977,
-        "y": 0.0100097656,
-        "xTwips": 918,
-        "yTwips": 0,
-        "xPt": "\u002B45.89pt",
-        "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
-      },
-      "wordIds": [
-        130,
-        132
-      ],
-      "isCleanDiff": true
-    },
-    {
-      "groupId": 72,
-      "page": 1,
-      "phraseText": "specified in Item",
-      "wordCount": 3,
-      "issues": [
-        "POSITION_SHIFT"
-      ],
-      "layoutContext": "INLINE_RUN",
-      "baselineRegion": {
-        "xStart": 239.817001,
-        "xEnd": 313.494019,
-        "y": 312.321014,
-        "font": "ArialMT",
-        "fontSize": 10
-      },
-      "publishRegion": {
-        "xStart": 192.619995,
-        "xEnd": 265.429993,
-        "y": 312.311005,
-        "font": "ArialMT",
-        "fontSize": 10
-      },
-      "sharedDelta": {
-        "x": -47.1970062,
-        "y": -0.0100097656,
-        "fontSizeDiff": 0,
-        "fontChanged": false
-      },
-      "negativeCorrection": {
-        "x": 47.1970062,
-        "y": 0.0100097656,
-        "xTwips": 944,
-        "yTwips": 0,
-        "xPt": "\u002B47.2pt",
-        "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
-      },
-      "wordIds": [
-        133,
-        134,
-        135
+        138
       ],
       "isCleanDiff": true
     },
     {
       "groupId": 73,
       "page": 1,
-      "phraseText": "5. of the",
+      "phraseText": "Retention specified in",
       "wordCount": 3,
       "issues": [
         "POSITION_SHIFT"
       ],
       "layoutContext": "INLINE_RUN",
       "baselineRegion": {
-        "xStart": 316.154999,
-        "xEnd": 354.260986,
+        "xStart": 193.79599,
+        "xEnd": 292.497986,
         "y": 312.321014,
         "font": "ArialMT",
         "fontSize": 10
       },
       "publishRegion": {
-        "xStart": 267.649994,
-        "xEnd": 304.889984,
+        "xStart": 147.029999,
+        "xEnd": 244.860001,
         "y": 312.311005,
         "font": "ArialMT",
         "fontSize": 10
       },
       "sharedDelta": {
-        "x": -48.5050049,
+        "x": -46.7659912,
         "y": -0.0100097656,
         "fontSizeDiff": 0,
         "fontChanged": false
       },
       "negativeCorrection": {
-        "x": 48.5050049,
+        "x": 46.7659912,
         "y": 0.0100097656,
-        "xTwips": 970,
+        "xTwips": 935,
         "yTwips": 0,
-        "xPt": "\u002B48.51pt",
+        "xPt": "\u002B46.77pt",
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        136,
-        137,
-        138
+        140,
+        141,
+        142
       ],
       "isCleanDiff": true
     },
     {
       "groupId": 74,
       "page": 1,
-      "phraseText": "Declarations is deleted",
+      "phraseText": "Item 5. of",
       "wordCount": 3,
       "issues": [
         "POSITION_SHIFT"
       ],
       "layoutContext": "INLINE_RUN",
       "baselineRegion": {
-        "xStart": 356.375,
-        "xEnd": 460.604004,
+        "xStart": 293.494019,
+        "xEnd": 337.708008,
         "y": 312.321014,
         "font": "ArialMT",
         "fontSize": 10
       },
       "publishRegion": {
-        "xStart": 306.570007,
-        "xEnd": 409.929993,
+        "xStart": 245.429993,
+        "xEnd": 288.769989,
         "y": 312.311005,
         "font": "ArialMT",
         "fontSize": 10
       },
       "sharedDelta": {
-        "x": -49.8049927,
+        "x": -48.0640259,
         "y": -0.0100097656,
         "fontSizeDiff": 0,
         "fontChanged": false
       },
       "negativeCorrection": {
-        "x": 49.8049927,
+        "x": 48.0640259,
         "y": 0.0100097656,
-        "xTwips": 996,
+        "xTwips": 961,
         "yTwips": 0,
-        "xPt": "\u002B49.8pt",
+        "xPt": "\u002B48.06pt",
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        139,
-        140,
-        141
+        143,
+        144,
+        145
       ],
       "isCleanDiff": true
     },
     {
       "groupId": 75,
       "page": 1,
-      "phraseText": "and replaced with",
+      "phraseText": "the Declarations is",
       "wordCount": 3,
       "issues": [
         "POSITION_SHIFT"
       ],
       "layoutContext": "INLINE_RUN",
       "baselineRegion": {
-        "xStart": 461.625,
-        "xEnd": 543.094971,
+        "xStart": 339.260986,
+        "xEnd": 425.169006,
         "y": 312.321014,
         "font": "ArialMT",
         "fontSize": 10
       },
       "publishRegion": {
-        "xStart": 410.51001,
-        "xEnd": 491.109985,
+        "xStart": 289.889984,
+        "xEnd": 374.929993,
         "y": 312.311005,
         "font": "ArialMT",
         "fontSize": 10
       },
       "sharedDelta": {
-        "x": -51.1149902,
+        "x": -49.3710022,
         "y": -0.0100097656,
         "fontSizeDiff": 0,
         "fontChanged": false
       },
       "negativeCorrection": {
-        "x": 51.1149902,
+        "x": 49.3710022,
         "y": 0.0100097656,
-        "xTwips": 1022,
+        "xTwips": 987,
         "yTwips": 0,
-        "xPt": "\u002B51.11pt",
+        "xPt": "\u002B49.37pt",
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        142,
-        143,
-        144
+        146,
+        147,
+        148
       ],
       "isCleanDiff": true
     },
     {
       "groupId": 76,
       "page": 1,
-      "phraseText": "the",
-      "wordCount": 1,
+      "phraseText": "deleted and replaced",
+      "wordCount": 3,
       "issues": [
         "POSITION_SHIFT"
       ],
       "layoutContext": "INLINE_RUN",
       "baselineRegion": {
-        "xStart": 544.091003,
+        "xStart": 425.604004,
+        "xEnd": 521.52301,
+        "y": 312.321014,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 374.929993,
+        "xEnd": 469.970001,
+        "y": 312.311005,
+        "font": "ArialMT",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": -50.6740112,
+        "y": -0.0100097656,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": 50.6740112,
+        "y": 0.0100097656,
+        "xTwips": 1013,
+        "yTwips": 0,
+        "xPt": "\u002B50.67pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+      },
+      "wordIds": [
+        149,
+        150,
+        151
+      ],
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 77,
+      "page": 1,
+      "phraseText": "with the",
+      "wordCount": 2,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "INLINE_RUN",
+      "baselineRegion": {
+        "xStart": 523.094971,
         "xEnd": 559.091003,
         "y": 312.321014,
         "font": "ArialMT",
         "fontSize": 10
       },
       "publishRegion": {
-        "xStart": 491.669983,
+        "xStart": 471.109985,
         "xEnd": 506.669983,
         "y": 312.311005,
         "font": "ArialMT",
         "fontSize": 10
       },
       "sharedDelta": {
-        "x": -52.4210205,
+        "x": -51.9849854,
         "y": -0.0100097656,
         "fontSizeDiff": 0,
         "fontChanged": false
       },
       "negativeCorrection": {
-        "x": 52.4210205,
+        "x": 51.9849854,
         "y": 0.0100097656,
-        "xTwips": 1048,
+        "xTwips": 1040,
         "yTwips": 0,
-        "xPt": "\u002B52.42pt",
+        "xPt": "\u002B51.98pt",
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
-        145
+        152,
+        153
       ],
       "isCleanDiff": true
     }
@@ -3414,6 +3531,595 @@
   "wordLevelDifferences": [
     {
       "differenceId": 1,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Company:",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 48.6000023,
+        "y": 727.019043,
+        "font": "Calibri-Bold",
+        "fontSize": 9,
+        "page": 1
+      },
+      "publish": {
+        "x": 54,
+        "y": 727.01001,
+        "font": "Calibri-Bold",
+        "fontSize": 9,
+        "page": 1
+      },
+      "delta": {
+        "x": 5.39999771,
+        "y": -0.00903320312,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -5.39999771,
+        "y": 0.00903320312,
+        "xTwips": -108,
+        "yTwips": 0,
+        "xPt": "-5.4pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
+      },
+      "phraseGroupId": 1,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 0,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 13.8000002,
+        "tableIndex": 1,
+        "rowIndex": 0,
+        "colIndex": 0,
+        "colWidthPt": 272.149994,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": -5.4000001,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "CellFormat.LeftPadding",
+            "axis": "X",
+            "currentValuePt": 5.4000001,
+            "newValuePt": 2.38418579E-06,
+            "currentValueTwips": 108,
+            "newValueTwips": 0,
+            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 5.4pt \u2192 0pt to cancel \u002B5.4pt drift. Apply once to all rows/cells \u2014 NOT per word."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 2,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "\u00ABCompanyName\u00BB",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 88.4060059,
+        "y": 727.019043,
+        "font": "Calibri",
+        "fontSize": 9,
+        "page": 1
+      },
+      "publish": {
+        "x": 93.8069992,
+        "y": 727.01001,
+        "font": "Calibri",
+        "fontSize": 9,
+        "page": 1
+      },
+      "delta": {
+        "x": 5.40099335,
+        "y": -0.00903320312,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -5.40099335,
+        "y": 0.00903320312,
+        "xTwips": -108,
+        "yTwips": 0,
+        "xPt": "-5.4pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
+      },
+      "phraseGroupId": 1,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 0
+    },
+    {
+      "differenceId": 3,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Policy",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 320.75,
+        "y": 727.019043,
+        "font": "Calibri-Bold",
+        "fontSize": 9,
+        "page": 1
+      },
+      "publish": {
+        "x": 326.149994,
+        "y": 727.01001,
+        "font": "Calibri-Bold",
+        "fontSize": 9,
+        "page": 1
+      },
+      "delta": {
+        "x": 5.3999939,
+        "y": -0.00903320312,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -5.3999939,
+        "y": 0.00903320312,
+        "xTwips": -108,
+        "yTwips": 0,
+        "xPt": "-5.4pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
+      },
+      "phraseGroupId": 2,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 0,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 13.8000002,
+        "tableIndex": 1,
+        "rowIndex": 0,
+        "colIndex": 1,
+        "colWidthPt": 272.149994,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": -5.4000001,
+        "columnOffsetPt": 272.149994,
+        "correctionTargets": [
+          {
+            "property": "CellFormat.LeftPadding",
+            "axis": "X",
+            "currentValuePt": 5.4000001,
+            "newValuePt": 6.19888306E-06,
+            "currentValueTwips": 108,
+            "newValueTwips": 0,
+            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 5.4pt \u2192 0pt to cancel \u002B5.4pt drift. Apply once to all rows/cells \u2014 NOT per word."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 4,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Number:",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 344.863007,
+        "y": 727.019043,
+        "font": "Calibri-Bold",
+        "fontSize": 9,
+        "page": 1
+      },
+      "publish": {
+        "x": 350.260986,
+        "y": 727.01001,
+        "font": "Calibri-Bold",
+        "fontSize": 9,
+        "page": 1
+      },
+      "delta": {
+        "x": 5.39797974,
+        "y": -0.00903320312,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -5.39797974,
+        "y": 0.00903320312,
+        "xTwips": -108,
+        "yTwips": 0,
+        "xPt": "-5.4pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
+      },
+      "phraseGroupId": 2,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 0
+    },
+    {
+      "differenceId": 5,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "\u00ABPolicyNum\u00BB",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 380.019989,
+        "y": 727.019043,
+        "font": "Calibri",
+        "fontSize": 9,
+        "page": 1
+      },
+      "publish": {
+        "x": 385.424011,
+        "y": 727.01001,
+        "font": "Calibri",
+        "fontSize": 9,
+        "page": 1
+      },
+      "delta": {
+        "x": 5.40402222,
+        "y": -0.00903320312,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -5.40402222,
+        "y": 0.00903320312,
+        "xTwips": -108,
+        "yTwips": 0,
+        "xPt": "-5.4pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
+      },
+      "phraseGroupId": 2,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 0
+    },
+    {
+      "differenceId": 6,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Insured:",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 48.6000023,
+        "y": 714.385986,
+        "font": "Calibri-Bold",
+        "fontSize": 9,
+        "page": 1
+      },
+      "publish": {
+        "x": 54,
+        "y": 714.376953,
+        "font": "Calibri-Bold",
+        "fontSize": 9,
+        "page": 1
+      },
+      "delta": {
+        "x": 5.39999771,
+        "y": -0.00903320312,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -5.39999771,
+        "y": 0.00903320312,
+        "xTwips": -108,
+        "yTwips": 0,
+        "xPt": "-5.4pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
+      },
+      "phraseGroupId": 3,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 1,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 13.8000002,
+        "tableIndex": 1,
+        "rowIndex": 1,
+        "colIndex": 0,
+        "colWidthPt": 272.149994,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": -5.4000001,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "CellFormat.LeftPadding",
+            "axis": "X",
+            "currentValuePt": 5.4000001,
+            "newValuePt": 2.38418579E-06,
+            "currentValueTwips": 108,
+            "newValueTwips": 0,
+            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 5.4pt \u2192 0pt to cancel \u002B5.4pt drift. Apply once to all rows/cells \u2014 NOT per word."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 7,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "\u00ABNamedInsured\u00BB",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 81.326004,
+        "y": 714.385986,
+        "font": "Calibri",
+        "fontSize": 9,
+        "page": 1
+      },
+      "publish": {
+        "x": 86.723999,
+        "y": 714.376953,
+        "font": "Calibri",
+        "fontSize": 9,
+        "page": 1
+      },
+      "delta": {
+        "x": 5.397995,
+        "y": -0.00903320312,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -5.397995,
+        "y": 0.00903320312,
+        "xTwips": -108,
+        "yTwips": 0,
+        "xPt": "-5.4pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
+      },
+      "phraseGroupId": 3,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 1
+    },
+    {
+      "differenceId": 8,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Endorsement",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 320.75,
+        "y": 714.385986,
+        "font": "Calibri-Bold",
+        "fontSize": 9,
+        "page": 1
+      },
+      "publish": {
+        "x": 326.149994,
+        "y": 714.376953,
+        "font": "Calibri-Bold",
+        "fontSize": 9,
+        "page": 1
+      },
+      "delta": {
+        "x": 5.3999939,
+        "y": -0.00903320312,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -5.3999939,
+        "y": 0.00903320312,
+        "xTwips": -108,
+        "yTwips": 0,
+        "xPt": "-5.4pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
+      },
+      "phraseGroupId": 4,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 1,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 13.8000002,
+        "tableIndex": 1,
+        "rowIndex": 1,
+        "colIndex": 1,
+        "colWidthPt": 272.149994,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": -5.4000001,
+        "columnOffsetPt": 272.149994,
+        "correctionTargets": [
+          {
+            "property": "CellFormat.LeftPadding",
+            "axis": "X",
+            "currentValuePt": 5.4000001,
+            "newValuePt": 6.19888306E-06,
+            "currentValueTwips": 108,
+            "newValueTwips": 0,
+            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 5.4pt \u2192 0pt to cancel \u002B5.4pt drift. Apply once to all rows/cells \u2014 NOT per word."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 9,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Effective",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 372.794983,
+        "y": 714.385986,
+        "font": "Calibri-Bold",
+        "fontSize": 9,
+        "page": 1
+      },
+      "publish": {
+        "x": 378.196991,
+        "y": 714.376953,
+        "font": "Calibri-Bold",
+        "fontSize": 9,
+        "page": 1
+      },
+      "delta": {
+        "x": 5.40200806,
+        "y": -0.00903320312,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -5.40200806,
+        "y": 0.00903320312,
+        "xTwips": -108,
+        "yTwips": 0,
+        "xPt": "-5.4pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
+      },
+      "phraseGroupId": 4,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 1
+    },
+    {
+      "differenceId": 10,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Date:",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 407.332001,
+        "y": 714.385986,
+        "font": "Calibri-Bold",
+        "fontSize": 9,
+        "page": 1
+      },
+      "publish": {
+        "x": 412.72998,
+        "y": 714.376953,
+        "font": "Calibri-Bold",
+        "fontSize": 9,
+        "page": 1
+      },
+      "delta": {
+        "x": 5.39797974,
+        "y": -0.00903320312,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -5.39797974,
+        "y": 0.00903320312,
+        "xTwips": -108,
+        "yTwips": 0,
+        "xPt": "-5.4pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
+      },
+      "phraseGroupId": 4,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 1
+    },
+    {
+      "differenceId": 11,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "\u00ABPolEffDate\u00BB",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 429.617004,
+        "y": 714.385986,
+        "font": "Calibri",
+        "fontSize": 9,
+        "page": 1
+      },
+      "publish": {
+        "x": 435.013977,
+        "y": 714.376953,
+        "font": "Calibri",
+        "fontSize": 9,
+        "page": 1
+      },
+      "delta": {
+        "x": 5.39697266,
+        "y": -0.00903320312,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -5.39697266,
+        "y": 0.00903320312,
+        "xTwips": -108,
+        "yTwips": 0,
+        "xPt": "-5.4pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
+      },
+      "phraseGroupId": 4,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 1
+    },
+    {
+      "differenceId": 12,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -3450,7 +4156,7 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B0.98pt (20 twips)"
       },
-      "phraseGroupId": 1,
+      "phraseGroupId": 5,
       "docxContext": {
         "elementType": "PARAGRAPH",
         "styleName": "Normal",
@@ -3475,7 +4181,7 @@
       }
     },
     {
-      "differenceId": 2,
+      "differenceId": 13,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -3512,10 +4218,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B1.95pt (39 twips)"
       },
-      "phraseGroupId": 1
+      "phraseGroupId": 5
     },
     {
-      "differenceId": 3,
+      "differenceId": 14,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -3552,10 +4258,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B2.93pt (59 twips)"
       },
-      "phraseGroupId": 2
+      "phraseGroupId": 6
     },
     {
-      "differenceId": 4,
+      "differenceId": 15,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -3592,10 +4298,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B3.9pt (78 twips)"
       },
-      "phraseGroupId": 2
+      "phraseGroupId": 6
     },
     {
-      "differenceId": 5,
+      "differenceId": 16,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -3632,10 +4338,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B4.88pt (98 twips)"
       },
-      "phraseGroupId": 3
+      "phraseGroupId": 7
     },
     {
-      "differenceId": 6,
+      "differenceId": 17,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -3672,10 +4378,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B5.85pt (117 twips)"
       },
-      "phraseGroupId": 3
+      "phraseGroupId": 7
     },
     {
-      "differenceId": 7,
+      "differenceId": 18,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -3712,10 +4418,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B6.82pt (136 twips)"
       },
-      "phraseGroupId": 4
+      "phraseGroupId": 8
     },
     {
-      "differenceId": 8,
+      "differenceId": 19,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -3752,10 +4458,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B7.8pt (156 twips)"
       },
-      "phraseGroupId": 4
+      "phraseGroupId": 8
     },
     {
-      "differenceId": 9,
+      "differenceId": 20,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -3792,10 +4498,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B8.77pt (175 twips)"
       },
-      "phraseGroupId": 5
+      "phraseGroupId": 9
     },
     {
-      "differenceId": 10,
+      "differenceId": 21,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -3832,17 +4538,17 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B9.74pt (195 twips)"
       },
-      "phraseGroupId": 5
+      "phraseGroupId": 9
     },
     {
-      "differenceId": 11,
+      "differenceId": 22,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
       ],
       "text": "Policy",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "INLINE_RUN",
       "baseline": {
         "x": 392.537994,
         "y": 581.802002,
@@ -3872,49 +4578,17 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B10.73pt (215 twips)"
       },
-      "phraseGroupId": 6,
-      "tableGroupId": 1,
-      "tableColumn": 1,
-      "tableRow": 0,
-      "docxContext": {
-        "elementType": "TABLE_CELL",
-        "styleName": "Normal",
-        "isInHeader": false,
-        "isInFooter": false,
-        "isList": false,
-        "paragraphLeftIndentPt": 0,
-        "spaceBeforePt": 0,
-        "spaceAfterPt": 0,
-        "lineSpacingPt": 13.8000002,
-        "tableIndex": 1,
-        "rowIndex": 0,
-        "colIndex": 1,
-        "colWidthPt": 272.149994,
-        "cellLeftPaddingPt": 5.4000001,
-        "tableLeftIndentPt": -5.4000001,
-        "columnOffsetPt": 272.149994,
-        "correctionTargets": [
-          {
-            "property": "Table.Rows[*].Cells[0].CellFormat.Width",
-            "axis": "X",
-            "currentValuePt": 0,
-            "newValuePt": 10.7279663,
-            "currentValueTwips": 0,
-            "newValueTwips": 215,
-            "description": "[COLUMN_WIDTH] Reduce col[0] width by -10.73pt to shift col[1] left. Current width must be read from the Word document at runtime."
-          }
-        ]
-      }
+      "phraseGroupId": 10
     },
     {
-      "differenceId": 12,
+      "differenceId": 23,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
       ],
       "text": "is",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "INLINE_RUN",
       "baseline": {
         "x": 422.884003,
         "y": 581.802002,
@@ -3944,13 +4618,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B11.7pt (234 twips)"
       },
-      "phraseGroupId": 6,
-      "tableGroupId": 1,
-      "tableColumn": 1,
-      "tableRow": 0
+      "phraseGroupId": 10
     },
     {
-      "differenceId": 13,
+      "differenceId": 24,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -3987,10 +4658,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B12.68pt (254 twips)"
       },
-      "phraseGroupId": 7
+      "phraseGroupId": 11
     },
     {
-      "differenceId": 14,
+      "differenceId": 25,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4027,10 +4698,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B13.65pt (273 twips)"
       },
-      "phraseGroupId": 7
+      "phraseGroupId": 11
     },
     {
-      "differenceId": 15,
+      "differenceId": 26,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4067,10 +4738,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B14.62pt (292 twips)"
       },
-      "phraseGroupId": 8
+      "phraseGroupId": 12
     },
     {
-      "differenceId": 16,
+      "differenceId": 27,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4107,10 +4778,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B15.6pt (312 twips)"
       },
-      "phraseGroupId": 8
+      "phraseGroupId": 12
     },
     {
-      "differenceId": 17,
+      "differenceId": 28,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4147,10 +4818,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B16.57pt (331 twips)"
       },
-      "phraseGroupId": 9
+      "phraseGroupId": 13
     },
     {
-      "differenceId": 18,
+      "differenceId": 29,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -4178,7 +4849,7 @@
       }
     },
     {
-      "differenceId": 19,
+      "differenceId": 30,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4215,7 +4886,7 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B1.38pt (28 twips)"
       },
-      "phraseGroupId": 10,
+      "phraseGroupId": 14,
       "docxContext": {
         "elementType": "PARAGRAPH",
         "styleName": "Normal",
@@ -4240,7 +4911,7 @@
       }
     },
     {
-      "differenceId": 20,
+      "differenceId": 31,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4277,10 +4948,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B2.76pt (55 twips)"
       },
-      "phraseGroupId": 11
+      "phraseGroupId": 15
     },
     {
-      "differenceId": 21,
+      "differenceId": 32,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4317,10 +4988,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B4.14pt (83 twips)"
       },
-      "phraseGroupId": 12
+      "phraseGroupId": 16
     },
     {
-      "differenceId": 22,
+      "differenceId": 33,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4357,10 +5028,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B5.53pt (111 twips)"
       },
-      "phraseGroupId": 13
+      "phraseGroupId": 17
     },
     {
-      "differenceId": 23,
+      "differenceId": 34,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4397,10 +5068,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B6.9pt (138 twips)"
       },
-      "phraseGroupId": 14
+      "phraseGroupId": 18
     },
     {
-      "differenceId": 24,
+      "differenceId": 35,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4437,10 +5108,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B8.28pt (166 twips)"
       },
-      "phraseGroupId": 15
+      "phraseGroupId": 19
     },
     {
-      "differenceId": 25,
+      "differenceId": 36,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4477,10 +5148,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B9.67pt (193 twips)"
       },
-      "phraseGroupId": 16
+      "phraseGroupId": 20
     },
     {
-      "differenceId": 26,
+      "differenceId": 37,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4517,8 +5188,8 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B11.04pt (221 twips)"
       },
-      "phraseGroupId": 17,
-      "tableGroupId": 1,
+      "phraseGroupId": 21,
+      "tableGroupId": 2,
       "tableColumn": 1,
       "tableRow": 1,
       "docxContext": {
@@ -4552,7 +5223,7 @@
       }
     },
     {
-      "differenceId": 27,
+      "differenceId": 38,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4589,10 +5260,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B12.43pt (249 twips)"
       },
-      "phraseGroupId": 18
+      "phraseGroupId": 22
     },
     {
-      "differenceId": 28,
+      "differenceId": 39,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4629,10 +5300,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B13.81pt (276 twips)"
       },
-      "phraseGroupId": 19
+      "phraseGroupId": 23
     },
     {
-      "differenceId": 29,
+      "differenceId": 40,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4669,10 +5340,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B15.19pt (304 twips)"
       },
-      "phraseGroupId": 20
+      "phraseGroupId": 24
     },
     {
-      "differenceId": 30,
+      "differenceId": 41,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4709,10 +5380,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B16.57pt (331 twips)"
       },
-      "phraseGroupId": 21
+      "phraseGroupId": 25
     },
     {
-      "differenceId": 31,
+      "differenceId": 42,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4749,10 +5420,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B17.95pt (359 twips)"
       },
-      "phraseGroupId": 22
+      "phraseGroupId": 26
     },
     {
-      "differenceId": 32,
+      "differenceId": 43,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4789,10 +5460,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B19.33pt (387 twips)"
       },
-      "phraseGroupId": 23
+      "phraseGroupId": 27
     },
     {
-      "differenceId": 33,
+      "differenceId": 44,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4829,10 +5500,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B20.71pt (414 twips)"
       },
-      "phraseGroupId": 24
+      "phraseGroupId": 28
     },
     {
-      "differenceId": 34,
+      "differenceId": 45,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -4860,47 +5531,7 @@
       }
     },
     {
-      "differenceId": 35,
-      "primaryType": "POSITION_SHIFT",
-      "issues": [
-        "POSITION_SHIFT"
-      ],
-      "text": "counsel",
-      "page": 1,
-      "layoutContext": "INLINE_RUN",
-      "baseline": {
-        "x": 112.623001,
-        "y": 518.307007,
-        "font": "ArialMT",
-        "fontSize": 10,
-        "page": 1
-      },
-      "publish": {
-        "x": 90,
-        "y": 518.296997,
-        "font": "ArialMT",
-        "fontSize": 10,
-        "page": 1
-      },
-      "delta": {
-        "x": -22.6230011,
-        "y": -0.0100097656,
-        "fontSizeDiff": 0,
-        "fontChanged": false
-      },
-      "negativeCorrection": {
-        "x": 22.6230011,
-        "y": 0.0100097656,
-        "xTwips": 452,
-        "yTwips": 0,
-        "xPt": "\u002B22.62pt",
-        "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B22.62pt (452 twips)"
-      },
-      "phraseGroupId": 25
-    },
-    {
-      "differenceId": 36,
+      "differenceId": 46,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4937,10 +5568,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B23.24pt (465 twips)"
       },
-      "phraseGroupId": 25
+      "phraseGroupId": 29
     },
     {
-      "differenceId": 37,
+      "differenceId": 47,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -4977,10 +5608,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B23.86pt (477 twips)"
       },
-      "phraseGroupId": 26
+      "phraseGroupId": 29
     },
     {
-      "differenceId": 38,
+      "differenceId": 48,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5017,10 +5648,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B24.48pt (490 twips)"
       },
-      "phraseGroupId": 26
+      "phraseGroupId": 30
     },
     {
-      "differenceId": 39,
+      "differenceId": 49,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5057,10 +5688,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B25.11pt (502 twips)"
       },
-      "phraseGroupId": 27
+      "phraseGroupId": 30
     },
     {
-      "differenceId": 40,
+      "differenceId": 50,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5097,10 +5728,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B25.72pt (514 twips)"
       },
-      "phraseGroupId": 27
+      "phraseGroupId": 31
     },
     {
-      "differenceId": 41,
+      "differenceId": 51,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5137,10 +5768,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B26.34pt (527 twips)"
       },
-      "phraseGroupId": 28
+      "phraseGroupId": 31
     },
     {
-      "differenceId": 42,
+      "differenceId": 52,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5177,10 +5808,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B26.96pt (539 twips)"
       },
-      "phraseGroupId": 28
+      "phraseGroupId": 32
     },
     {
-      "differenceId": 43,
+      "differenceId": 53,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5217,10 +5848,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B27.58pt (552 twips)"
       },
-      "phraseGroupId": 29
+      "phraseGroupId": 32
     },
     {
-      "differenceId": 44,
+      "differenceId": 54,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5257,10 +5888,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B28.21pt (564 twips)"
       },
-      "phraseGroupId": 29
+      "phraseGroupId": 33
     },
     {
-      "differenceId": 45,
+      "differenceId": 55,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5297,10 +5928,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B28.83pt (577 twips)"
       },
-      "phraseGroupId": 30
+      "phraseGroupId": 33
     },
     {
-      "differenceId": 46,
+      "differenceId": 56,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5337,10 +5968,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B29.45pt (589 twips)"
       },
-      "phraseGroupId": 30
+      "phraseGroupId": 34
     },
     {
-      "differenceId": 47,
+      "differenceId": 57,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5377,10 +6008,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B30.07pt (601 twips)"
       },
-      "phraseGroupId": 31
+      "phraseGroupId": 34
     },
     {
-      "differenceId": 48,
+      "differenceId": 58,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5417,10 +6048,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B30.69pt (614 twips)"
       },
-      "phraseGroupId": 31
+      "phraseGroupId": 35
     },
     {
-      "differenceId": 49,
+      "differenceId": 59,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5457,10 +6088,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B31.3pt (626 twips)"
       },
-      "phraseGroupId": 32
+      "phraseGroupId": 35
     },
     {
-      "differenceId": 50,
+      "differenceId": 60,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5497,10 +6128,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B31.92pt (638 twips)"
       },
-      "phraseGroupId": 32
+      "phraseGroupId": 36
     },
     {
-      "differenceId": 51,
+      "differenceId": 61,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5537,10 +6168,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B32.54pt (651 twips)"
       },
-      "phraseGroupId": 33
+      "phraseGroupId": 36
     },
     {
-      "differenceId": 52,
+      "differenceId": 62,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -5557,47 +6188,7 @@
       }
     },
     {
-      "differenceId": 53,
-      "primaryType": "POSITION_SHIFT",
-      "issues": [
-        "POSITION_SHIFT"
-      ],
-      "text": "stated",
-      "page": 1,
-      "layoutContext": "INLINE_RUN",
-      "baseline": {
-        "x": 123.252998,
-        "y": 506.808014,
-        "font": "ArialMT",
-        "fontSize": 10,
-        "page": 1
-      },
-      "publish": {
-        "x": 90,
-        "y": 506.798004,
-        "font": "ArialMT",
-        "fontSize": 10,
-        "page": 1
-      },
-      "delta": {
-        "x": -33.2529984,
-        "y": -0.0100097656,
-        "fontSizeDiff": 0,
-        "fontChanged": false
-      },
-      "negativeCorrection": {
-        "x": 33.2529984,
-        "y": 0.0100097656,
-        "xTwips": 665,
-        "yTwips": 0,
-        "xPt": "\u002B33.25pt",
-        "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B33.25pt (665 twips)"
-      },
-      "phraseGroupId": 34
-    },
-    {
-      "differenceId": 54,
+      "differenceId": 63,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5634,10 +6225,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B35.36pt (707 twips)"
       },
-      "phraseGroupId": 35
+      "phraseGroupId": 37
     },
     {
-      "differenceId": 55,
+      "differenceId": 64,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5674,10 +6265,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B37.46pt (749 twips)"
       },
-      "phraseGroupId": 36
+      "phraseGroupId": 38
     },
     {
-      "differenceId": 56,
+      "differenceId": 65,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5714,10 +6305,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B39.57pt (791 twips)"
       },
-      "phraseGroupId": 37
+      "phraseGroupId": 39
     },
     {
-      "differenceId": 57,
+      "differenceId": 66,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5754,10 +6345,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B41.66pt (833 twips)"
       },
-      "phraseGroupId": 38
+      "phraseGroupId": 40
     },
     {
-      "differenceId": 58,
+      "differenceId": 67,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5794,10 +6385,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B43.77pt (875 twips)"
       },
-      "phraseGroupId": 39
+      "phraseGroupId": 41
     },
     {
-      "differenceId": 59,
+      "differenceId": 68,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5834,10 +6425,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B45.87pt (917 twips)"
       },
-      "phraseGroupId": 40
+      "phraseGroupId": 42
     },
     {
-      "differenceId": 60,
+      "differenceId": 69,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5874,10 +6465,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B47.98pt (960 twips)"
       },
-      "phraseGroupId": 41
+      "phraseGroupId": 43
     },
     {
-      "differenceId": 61,
+      "differenceId": 70,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5914,10 +6505,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B50.08pt (1002 twips)"
       },
-      "phraseGroupId": 42
+      "phraseGroupId": 44
     },
     {
-      "differenceId": 62,
+      "differenceId": 71,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5954,10 +6545,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B52.19pt (1044 twips)"
       },
-      "phraseGroupId": 43
+      "phraseGroupId": 45
     },
     {
-      "differenceId": 63,
+      "differenceId": 72,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -5994,10 +6585,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B54.29pt (1086 twips)"
       },
-      "phraseGroupId": 44
+      "phraseGroupId": 46
     },
     {
-      "differenceId": 64,
+      "differenceId": 73,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -6034,10 +6625,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B56.4pt (1128 twips)"
       },
-      "phraseGroupId": 45
+      "phraseGroupId": 47
     },
     {
-      "differenceId": 65,
+      "differenceId": 74,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -6074,10 +6665,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B58.51pt (1170 twips)"
       },
-      "phraseGroupId": 46
+      "phraseGroupId": 48
     },
     {
-      "differenceId": 66,
+      "differenceId": 75,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6094,7 +6685,7 @@
       }
     },
     {
-      "differenceId": 67,
+      "differenceId": 76,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6111,7 +6702,7 @@
       }
     },
     {
-      "differenceId": 68,
+      "differenceId": 77,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6128,7 +6719,7 @@
       }
     },
     {
-      "differenceId": 69,
+      "differenceId": 78,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6145,7 +6736,7 @@
       }
     },
     {
-      "differenceId": 70,
+      "differenceId": 79,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6162,7 +6753,7 @@
       }
     },
     {
-      "differenceId": 71,
+      "differenceId": 80,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6179,7 +6770,7 @@
       }
     },
     {
-      "differenceId": 72,
+      "differenceId": 81,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6196,7 +6787,7 @@
       }
     },
     {
-      "differenceId": 73,
+      "differenceId": 82,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6213,7 +6804,7 @@
       }
     },
     {
-      "differenceId": 74,
+      "differenceId": 83,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6230,7 +6821,7 @@
       }
     },
     {
-      "differenceId": 75,
+      "differenceId": 84,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6247,7 +6838,7 @@
       }
     },
     {
-      "differenceId": 76,
+      "differenceId": 85,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6264,7 +6855,7 @@
       }
     },
     {
-      "differenceId": 77,
+      "differenceId": 86,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -6301,10 +6892,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -30.69pt (-614 twips)"
       },
-      "phraseGroupId": 47
+      "phraseGroupId": 49
     },
     {
-      "differenceId": 78,
+      "differenceId": 87,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6321,7 +6912,7 @@
       }
     },
     {
-      "differenceId": 79,
+      "differenceId": 88,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6338,7 +6929,7 @@
       }
     },
     {
-      "differenceId": 80,
+      "differenceId": 89,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -6375,10 +6966,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -12.77pt (-255 twips)"
       },
-      "phraseGroupId": 48
+      "phraseGroupId": 50
     },
     {
-      "differenceId": 81,
+      "differenceId": 90,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6395,7 +6986,7 @@
       }
     },
     {
-      "differenceId": 82,
+      "differenceId": 91,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6412,7 +7003,7 @@
       }
     },
     {
-      "differenceId": 83,
+      "differenceId": 92,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6429,7 +7020,7 @@
       }
     },
     {
-      "differenceId": 84,
+      "differenceId": 93,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -6466,7 +7057,7 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -59.16pt (-1183 twips)"
       },
-      "phraseGroupId": 49,
+      "phraseGroupId": 51,
       "docxContext": {
         "elementType": "FOOTER",
         "styleName": "Footer",
@@ -6491,7 +7082,7 @@
       }
     },
     {
-      "differenceId": 85,
+      "differenceId": 94,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6508,7 +7099,7 @@
       }
     },
     {
-      "differenceId": 86,
+      "differenceId": 95,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6525,7 +7116,7 @@
       }
     },
     {
-      "differenceId": 87,
+      "differenceId": 96,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6542,7 +7133,7 @@
       }
     },
     {
-      "differenceId": 88,
+      "differenceId": 97,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6559,7 +7150,7 @@
       }
     },
     {
-      "differenceId": 89,
+      "differenceId": 98,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6576,7 +7167,7 @@
       }
     },
     {
-      "differenceId": 90,
+      "differenceId": 99,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6593,7 +7184,7 @@
       }
     },
     {
-      "differenceId": 91,
+      "differenceId": 100,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6610,7 +7201,7 @@
       }
     },
     {
-      "differenceId": 92,
+      "differenceId": 101,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6627,7 +7218,7 @@
       }
     },
     {
-      "differenceId": 93,
+      "differenceId": 102,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6644,7 +7235,7 @@
       }
     },
     {
-      "differenceId": 94,
+      "differenceId": 103,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -6681,10 +7272,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B46.18pt (924 twips)"
       },
-      "phraseGroupId": 50
+      "phraseGroupId": 52
     },
     {
-      "differenceId": 95,
+      "differenceId": 104,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6701,7 +7292,7 @@
       }
     },
     {
-      "differenceId": 96,
+      "differenceId": 105,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6718,7 +7309,7 @@
       }
     },
     {
-      "differenceId": 97,
+      "differenceId": 106,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6735,7 +7326,7 @@
       }
     },
     {
-      "differenceId": 98,
+      "differenceId": 107,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6752,7 +7343,7 @@
       }
     },
     {
-      "differenceId": 99,
+      "differenceId": 108,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6769,7 +7360,7 @@
       }
     },
     {
-      "differenceId": 100,
+      "differenceId": 109,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6786,7 +7377,7 @@
       }
     },
     {
-      "differenceId": 101,
+      "differenceId": 110,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6803,7 +7394,7 @@
       }
     },
     {
-      "differenceId": 102,
+      "differenceId": 111,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6820,7 +7411,7 @@
       }
     },
     {
-      "differenceId": 103,
+      "differenceId": 112,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6837,7 +7428,7 @@
       }
     },
     {
-      "differenceId": 104,
+      "differenceId": 113,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -6874,10 +7465,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B14.45pt (289 twips)"
       },
-      "phraseGroupId": 51
+      "phraseGroupId": 53
     },
     {
-      "differenceId": 105,
+      "differenceId": 114,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6894,7 +7485,7 @@
       }
     },
     {
-      "differenceId": 106,
+      "differenceId": 115,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6911,7 +7502,7 @@
       }
     },
     {
-      "differenceId": 107,
+      "differenceId": 116,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6928,7 +7519,7 @@
       }
     },
     {
-      "differenceId": 108,
+      "differenceId": 117,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6945,7 +7536,7 @@
       }
     },
     {
-      "differenceId": 109,
+      "differenceId": 118,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -6962,7 +7553,7 @@
       }
     },
     {
-      "differenceId": 110,
+      "differenceId": 119,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -6999,7 +7590,7 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B2.46pt (49 twips)"
       },
-      "phraseGroupId": 52,
+      "phraseGroupId": 54,
       "docxContext": {
         "elementType": "PARAGRAPH",
         "styleName": "Normal",
@@ -7024,7 +7615,7 @@
       }
     },
     {
-      "differenceId": 111,
+      "differenceId": 120,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7061,10 +7652,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B4.94pt (99 twips)"
       },
-      "phraseGroupId": 53
+      "phraseGroupId": 55
     },
     {
-      "differenceId": 112,
+      "differenceId": 121,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7101,10 +7692,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B7.4pt (148 twips)"
       },
-      "phraseGroupId": 54
+      "phraseGroupId": 56
     },
     {
-      "differenceId": 113,
+      "differenceId": 122,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7141,10 +7732,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B9.86pt (197 twips)"
       },
-      "phraseGroupId": 55
+      "phraseGroupId": 57
     },
     {
-      "differenceId": 114,
+      "differenceId": 123,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7181,10 +7772,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B12.34pt (247 twips)"
       },
-      "phraseGroupId": 56
+      "phraseGroupId": 58
     },
     {
-      "differenceId": 115,
+      "differenceId": 124,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7221,10 +7812,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B14.8pt (296 twips)"
       },
-      "phraseGroupId": 57
+      "phraseGroupId": 59
     },
     {
-      "differenceId": 116,
+      "differenceId": 125,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7261,10 +7852,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B17.27pt (345 twips)"
       },
-      "phraseGroupId": 58
+      "phraseGroupId": 60
     },
     {
-      "differenceId": 117,
+      "differenceId": 126,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7301,10 +7892,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B19.73pt (395 twips)"
       },
-      "phraseGroupId": 59
+      "phraseGroupId": 61
     },
     {
-      "differenceId": 118,
+      "differenceId": 127,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7341,10 +7932,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B22.2pt (444 twips)"
       },
-      "phraseGroupId": 60
+      "phraseGroupId": 62
     },
     {
-      "differenceId": 119,
+      "differenceId": 128,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7381,10 +7972,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B24.67pt (493 twips)"
       },
-      "phraseGroupId": 61
+      "phraseGroupId": 63
     },
     {
-      "differenceId": 120,
+      "differenceId": 129,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7421,10 +8012,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B27.14pt (543 twips)"
       },
-      "phraseGroupId": 62
+      "phraseGroupId": 64
     },
     {
-      "differenceId": 121,
+      "differenceId": 130,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7461,10 +8052,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B29.61pt (592 twips)"
       },
-      "phraseGroupId": 63
+      "phraseGroupId": 65
     },
     {
-      "differenceId": 122,
+      "differenceId": 131,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7501,10 +8092,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B32.07pt (641 twips)"
       },
-      "phraseGroupId": 64
+      "phraseGroupId": 66
     },
     {
-      "differenceId": 123,
+      "differenceId": 132,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7541,10 +8132,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B34.54pt (691 twips)"
       },
-      "phraseGroupId": 65
+      "phraseGroupId": 67
     },
     {
-      "differenceId": 124,
+      "differenceId": 133,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7581,10 +8172,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B37.01pt (740 twips)"
       },
-      "phraseGroupId": 66
+      "phraseGroupId": 68
     },
     {
-      "differenceId": 125,
+      "differenceId": 134,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7621,10 +8212,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B39.47pt (789 twips)"
       },
-      "phraseGroupId": 67
+      "phraseGroupId": 69
     },
     {
-      "differenceId": 126,
+      "differenceId": 135,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7661,10 +8252,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B41.94pt (839 twips)"
       },
-      "phraseGroupId": 68
+      "phraseGroupId": 70
     },
     {
-      "differenceId": 127,
+      "differenceId": 136,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7701,10 +8292,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B44.4pt (888 twips)"
       },
-      "phraseGroupId": 69
+      "phraseGroupId": 71
     },
     {
-      "differenceId": 128,
+      "differenceId": 137,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -7721,7 +8312,7 @@
       }
     },
     {
-      "differenceId": 129,
+      "differenceId": 138,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7758,50 +8349,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -12.89pt (-258 twips)"
       },
-      "phraseGroupId": 70
+      "phraseGroupId": 72
     },
     {
-      "differenceId": 130,
-      "primaryType": "POSITION_SHIFT",
-      "issues": [
-        "POSITION_SHIFT"
-      ],
-      "text": "Insured,",
-      "page": 1,
-      "layoutContext": "INLINE_RUN",
-      "baseline": {
-        "x": 134.572998,
-        "y": 312.321014,
-        "font": "ArialMT",
-        "fontSize": 10,
-        "page": 1
-      },
-      "publish": {
-        "x": 88.6800003,
-        "y": 312.311005,
-        "font": "ArialMT",
-        "fontSize": 10,
-        "page": 1
-      },
-      "delta": {
-        "x": -45.8929977,
-        "y": -0.0100097656,
-        "fontSizeDiff": 0,
-        "fontChanged": false
-      },
-      "negativeCorrection": {
-        "x": 45.8929977,
-        "y": 0.0100097656,
-        "xTwips": 918,
-        "yTwips": 0,
-        "xPt": "\u002B45.89pt",
-        "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B45.89pt (918 twips)"
-      },
-      "phraseGroupId": 71
-    },
-    {
-      "differenceId": 131,
+      "differenceId": 139,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -7818,7 +8369,7 @@
       }
     },
     {
-      "differenceId": 132,
+      "differenceId": 140,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7855,10 +8406,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B46.77pt (935 twips)"
       },
-      "phraseGroupId": 71
+      "phraseGroupId": 73
     },
     {
-      "differenceId": 133,
+      "differenceId": 141,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7895,10 +8446,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B47.2pt (944 twips)"
       },
-      "phraseGroupId": 72
+      "phraseGroupId": 73
     },
     {
-      "differenceId": 134,
+      "differenceId": 142,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7935,10 +8486,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B47.64pt (953 twips)"
       },
-      "phraseGroupId": 72
+      "phraseGroupId": 73
     },
     {
-      "differenceId": 135,
+      "differenceId": 143,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -7975,10 +8526,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B48.06pt (961 twips)"
       },
-      "phraseGroupId": 72
+      "phraseGroupId": 74
     },
     {
-      "differenceId": 136,
+      "differenceId": 144,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -8015,10 +8566,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B48.51pt (970 twips)"
       },
-      "phraseGroupId": 73
+      "phraseGroupId": 74
     },
     {
-      "differenceId": 137,
+      "differenceId": 145,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -8055,10 +8606,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B48.94pt (979 twips)"
       },
-      "phraseGroupId": 73
+      "phraseGroupId": 74
     },
     {
-      "differenceId": 138,
+      "differenceId": 146,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -8095,10 +8646,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B49.37pt (987 twips)"
       },
-      "phraseGroupId": 73
+      "phraseGroupId": 75
     },
     {
-      "differenceId": 139,
+      "differenceId": 147,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -8135,10 +8686,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B49.8pt (996 twips)"
       },
-      "phraseGroupId": 74
+      "phraseGroupId": 75
     },
     {
-      "differenceId": 140,
+      "differenceId": 148,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -8175,10 +8726,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B50.24pt (1005 twips)"
       },
-      "phraseGroupId": 74
+      "phraseGroupId": 75
     },
     {
-      "differenceId": 141,
+      "differenceId": 149,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -8215,10 +8766,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B50.67pt (1013 twips)"
       },
-      "phraseGroupId": 74
+      "phraseGroupId": 76
     },
     {
-      "differenceId": 142,
+      "differenceId": 150,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -8255,10 +8806,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B51.11pt (1022 twips)"
       },
-      "phraseGroupId": 75
+      "phraseGroupId": 76
     },
     {
-      "differenceId": 143,
+      "differenceId": 151,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -8295,10 +8846,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B51.55pt (1031 twips)"
       },
-      "phraseGroupId": 75
+      "phraseGroupId": 76
     },
     {
-      "differenceId": 144,
+      "differenceId": 152,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -8335,10 +8886,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B51.98pt (1040 twips)"
       },
-      "phraseGroupId": 75
+      "phraseGroupId": 77
     },
     {
-      "differenceId": 145,
+      "differenceId": 153,
       "primaryType": "POSITION_SHIFT",
       "issues": [
         "POSITION_SHIFT"
@@ -8375,10 +8926,10 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B52.42pt (1048 twips)"
       },
-      "phraseGroupId": 76
+      "phraseGroupId": 77
     },
     {
-      "differenceId": 146,
+      "differenceId": 154,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8395,7 +8946,7 @@
       }
     },
     {
-      "differenceId": 147,
+      "differenceId": 155,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8431,7 +8982,7 @@
       }
     },
     {
-      "differenceId": 148,
+      "differenceId": 156,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8466,7 +9017,7 @@
       }
     },
     {
-      "differenceId": 149,
+      "differenceId": 157,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8483,7 +9034,7 @@
       }
     },
     {
-      "differenceId": 150,
+      "differenceId": 158,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8518,7 +9069,7 @@
       }
     },
     {
-      "differenceId": 151,
+      "differenceId": 159,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8535,7 +9086,7 @@
       }
     },
     {
-      "differenceId": 152,
+      "differenceId": 160,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8552,7 +9103,7 @@
       }
     },
     {
-      "differenceId": 153,
+      "differenceId": 161,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8569,7 +9120,7 @@
       }
     },
     {
-      "differenceId": 154,
+      "differenceId": 162,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8586,7 +9137,7 @@
       }
     },
     {
-      "differenceId": 155,
+      "differenceId": 163,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8603,7 +9154,7 @@
       }
     },
     {
-      "differenceId": 156,
+      "differenceId": 164,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8620,7 +9171,7 @@
       }
     },
     {
-      "differenceId": 157,
+      "differenceId": 165,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8637,7 +9188,7 @@
       }
     },
     {
-      "differenceId": 158,
+      "differenceId": 166,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8654,7 +9205,7 @@
       }
     },
     {
-      "differenceId": 159,
+      "differenceId": 167,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8671,7 +9222,7 @@
       }
     },
     {
-      "differenceId": 160,
+      "differenceId": 168,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8688,7 +9239,7 @@
       }
     },
     {
-      "differenceId": 161,
+      "differenceId": 169,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8705,7 +9256,7 @@
       }
     },
     {
-      "differenceId": 162,
+      "differenceId": 170,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8722,7 +9273,7 @@
       }
     },
     {
-      "differenceId": 163,
+      "differenceId": 171,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8739,7 +9290,7 @@
       }
     },
     {
-      "differenceId": 164,
+      "differenceId": 172,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8756,7 +9307,7 @@
       }
     },
     {
-      "differenceId": 165,
+      "differenceId": 173,
       "primaryType": "MISSING",
       "issues": [
         "MISSING"
@@ -8773,7 +9324,7 @@
       }
     },
     {
-      "differenceId": 166,
+      "differenceId": 174,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -8790,7 +9341,7 @@
       }
     },
     {
-      "differenceId": 167,
+      "differenceId": 175,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -8807,7 +9358,7 @@
       }
     },
     {
-      "differenceId": 168,
+      "differenceId": 176,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -8824,7 +9375,7 @@
       }
     },
     {
-      "differenceId": 169,
+      "differenceId": 177,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -8841,7 +9392,7 @@
       }
     },
     {
-      "differenceId": 170,
+      "differenceId": 178,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -8858,7 +9409,7 @@
       }
     },
     {
-      "differenceId": 171,
+      "differenceId": 179,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -8875,7 +9426,7 @@
       }
     },
     {
-      "differenceId": 172,
+      "differenceId": 180,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -8892,7 +9443,7 @@
       }
     },
     {
-      "differenceId": 173,
+      "differenceId": 181,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -8909,7 +9460,7 @@
       }
     },
     {
-      "differenceId": 174,
+      "differenceId": 182,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -8926,7 +9477,7 @@
       }
     },
     {
-      "differenceId": 175,
+      "differenceId": 183,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -8943,7 +9494,7 @@
       }
     },
     {
-      "differenceId": 176,
+      "differenceId": 184,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -8960,7 +9511,7 @@
       }
     },
     {
-      "differenceId": 177,
+      "differenceId": 185,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -8977,7 +9528,7 @@
       }
     },
     {
-      "differenceId": 178,
+      "differenceId": 186,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -8994,7 +9545,7 @@
       }
     },
     {
-      "differenceId": 179,
+      "differenceId": 187,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9011,7 +9562,7 @@
       }
     },
     {
-      "differenceId": 180,
+      "differenceId": 188,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9028,7 +9579,7 @@
       }
     },
     {
-      "differenceId": 181,
+      "differenceId": 189,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9045,7 +9596,7 @@
       }
     },
     {
-      "differenceId": 182,
+      "differenceId": 190,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9062,7 +9613,7 @@
       }
     },
     {
-      "differenceId": 183,
+      "differenceId": 191,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9079,7 +9630,7 @@
       }
     },
     {
-      "differenceId": 184,
+      "differenceId": 192,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9096,7 +9647,7 @@
       }
     },
     {
-      "differenceId": 185,
+      "differenceId": 193,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9113,7 +9664,7 @@
       }
     },
     {
-      "differenceId": 186,
+      "differenceId": 194,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9130,7 +9681,7 @@
       }
     },
     {
-      "differenceId": 187,
+      "differenceId": 195,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9147,7 +9698,7 @@
       }
     },
     {
-      "differenceId": 188,
+      "differenceId": 196,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9164,7 +9715,7 @@
       }
     },
     {
-      "differenceId": 189,
+      "differenceId": 197,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9181,7 +9732,7 @@
       }
     },
     {
-      "differenceId": 190,
+      "differenceId": 198,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9198,7 +9749,7 @@
       }
     },
     {
-      "differenceId": 191,
+      "differenceId": 199,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9215,7 +9766,7 @@
       }
     },
     {
-      "differenceId": 192,
+      "differenceId": 200,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9232,7 +9783,7 @@
       }
     },
     {
-      "differenceId": 193,
+      "differenceId": 201,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9249,7 +9800,7 @@
       }
     },
     {
-      "differenceId": 194,
+      "differenceId": 202,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9266,7 +9817,7 @@
       }
     },
     {
-      "differenceId": 195,
+      "differenceId": 203,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9283,7 +9834,7 @@
       }
     },
     {
-      "differenceId": 196,
+      "differenceId": 204,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9300,7 +9851,7 @@
       }
     },
     {
-      "differenceId": 197,
+      "differenceId": 205,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9317,7 +9868,7 @@
       }
     },
     {
-      "differenceId": 198,
+      "differenceId": 206,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9334,7 +9885,7 @@
       }
     },
     {
-      "differenceId": 199,
+      "differenceId": 207,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9351,7 +9902,7 @@
       }
     },
     {
-      "differenceId": 200,
+      "differenceId": 208,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9368,7 +9919,7 @@
       }
     },
     {
-      "differenceId": 201,
+      "differenceId": 209,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9385,7 +9936,7 @@
       }
     },
     {
-      "differenceId": 202,
+      "differenceId": 210,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9402,7 +9953,7 @@
       }
     },
     {
-      "differenceId": 203,
+      "differenceId": 211,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9419,7 +9970,7 @@
       }
     },
     {
-      "differenceId": 204,
+      "differenceId": 212,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9436,7 +9987,7 @@
       }
     },
     {
-      "differenceId": 205,
+      "differenceId": 213,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9453,7 +10004,7 @@
       }
     },
     {
-      "differenceId": 206,
+      "differenceId": 214,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9470,7 +10021,7 @@
       }
     },
     {
-      "differenceId": 207,
+      "differenceId": 215,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9487,7 +10038,7 @@
       }
     },
     {
-      "differenceId": 208,
+      "differenceId": 216,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9504,7 +10055,7 @@
       }
     },
     {
-      "differenceId": 209,
+      "differenceId": 217,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9521,7 +10072,7 @@
       }
     },
     {
-      "differenceId": 210,
+      "differenceId": 218,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9538,7 +10089,7 @@
       }
     },
     {
-      "differenceId": 211,
+      "differenceId": 219,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9555,7 +10106,7 @@
       }
     },
     {
-      "differenceId": 212,
+      "differenceId": 220,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9572,7 +10123,7 @@
       }
     },
     {
-      "differenceId": 213,
+      "differenceId": 221,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9589,7 +10140,7 @@
       }
     },
     {
-      "differenceId": 214,
+      "differenceId": 222,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9606,7 +10157,7 @@
       }
     },
     {
-      "differenceId": 215,
+      "differenceId": 223,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9623,7 +10174,7 @@
       }
     },
     {
-      "differenceId": 216,
+      "differenceId": 224,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9640,7 +10191,7 @@
       }
     },
     {
-      "differenceId": 217,
+      "differenceId": 225,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9657,7 +10208,7 @@
       }
     },
     {
-      "differenceId": 218,
+      "differenceId": 226,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9674,7 +10225,7 @@
       }
     },
     {
-      "differenceId": 219,
+      "differenceId": 227,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9691,7 +10242,7 @@
       }
     },
     {
-      "differenceId": 220,
+      "differenceId": 228,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9708,7 +10259,7 @@
       }
     },
     {
-      "differenceId": 221,
+      "differenceId": 229,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9725,7 +10276,7 @@
       }
     },
     {
-      "differenceId": 222,
+      "differenceId": 230,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9742,7 +10293,7 @@
       }
     },
     {
-      "differenceId": 223,
+      "differenceId": 231,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9759,7 +10310,7 @@
       }
     },
     {
-      "differenceId": 224,
+      "differenceId": 232,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9776,7 +10327,7 @@
       }
     },
     {
-      "differenceId": 225,
+      "differenceId": 233,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9793,7 +10344,7 @@
       }
     },
     {
-      "differenceId": 226,
+      "differenceId": 234,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9810,7 +10361,7 @@
       }
     },
     {
-      "differenceId": 227,
+      "differenceId": 235,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9827,7 +10378,7 @@
       }
     },
     {
-      "differenceId": 228,
+      "differenceId": 236,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"
@@ -9844,7 +10395,7 @@
       }
     },
     {
-      "differenceId": 229,
+      "differenceId": 237,
       "primaryType": "EXTRA",
       "issues": [
         "EXTRA"

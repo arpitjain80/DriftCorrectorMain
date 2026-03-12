@@ -248,7 +248,7 @@ namespace AsposeFormAdjustment
                 ModifiedReportPath = Path.Combine(workDir, Program[$"AppSettings:DocumentService:Documents:Local:Customer:{customerName}:ReportFolderPathModified"])
             };
 
-            DocumentService.ExecuteDocumentComparisonWorkflow(myConfig, true, false);
+            DocumentService.ExecuteDocumentComparisonWorkflow(myConfig, true, true);
             MessageBox.Show("Completed!");
         }
 

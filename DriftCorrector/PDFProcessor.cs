@@ -108,7 +108,11 @@ namespace DocumentProcessor
             /// <summary>Difference in Y coordinate (vertical position shift).</summary>
             YDiff = 2,
             /// <summary>Word/text content difference at the same or nearby position.</summary>
-            WDiff = 4
+            WDiff = 4,
+            /// <summary>X difference that was identified but ignored (XI = X Ignore) because
+            /// the text is already aligned with the computed pivot left-margin X.
+            /// Rendered as green with "XI" label. Does not count as an unresolved diff.</summary>
+            XIgnore = 8
         }
 
         /// <summary>A single classified diff rectangle (pdf1/baseline coordinates).</summary>
@@ -678,6 +682,74 @@ namespace DocumentProcessor
         /// </summary>
         private static bool CategoryBasedIsGreen(DiffCategory cats, bool fallbackIsGreen)
             => cats != DiffCategory.None ? (cats & DiffCategory.XDiff) == 0 : fallbackIsGreen;
+
+        /// <summary>
+        /// Computes the "pivot left X" for XI (X-Ignore) reconciliation.
+        /// Returns the canonical left-margin X that leftmost text should align to.
+        ///
+        /// Priority:
+        ///   0. Clean word positions (words from IsCleanDiff=true phrase groups) — highest priority.
+        ///   A. Leftmost free text (words not in any diff rect) → mode X of leftmost words.
+        ///   B. Leftmost green rects (no XDiff) → mode X of leftmost rects.
+        ///
+        /// If neither clean positions, free text, nor green rects are available (i.e. all
+        /// leftmost rects have X diffs), no pivot is returned and XI is NOT applied — those
+        /// rects remain marked X and are corrected by the word drift corrector as normal.
+        /// </summary>
+        private static float? ComputePivotX(
+            IEnumerable<float> freeTextXValues,
+            IEnumerable<float> greenRectXValues,
+            float leftmostWindowPt = 10f,
+            float clusterTolPt = 3f,
+            IEnumerable<float> cleanPosXValues = null)
+        {
+            // Priority: freeTextX first (stable text not in any X-diff rect), then greenRectX, then cleanPosX as last resort.
+            // freeTextX must be first: if the XDiff rect bx equals the free-text minimum, the rect is AT the reference
+            // margin (not to the left of it), meaning it drifted in V23 and needs correction — so the pivot must
+            // reflect the true leftmost stable reference, not the rect's own position via cleanPosX.
+            foreach (var source in new[] { freeTextXValues?.ToList(), greenRectXValues?.ToList(), cleanPosXValues?.ToList() })
+            {
+                if (source == null || source.Count == 0) continue;
+                float minX = source.Min();
+                var leftmost = source.Where(x => x <= minX + leftmostWindowPt).ToList();
+                if (leftmost.Count == 0) continue;
+                float? pivot = ClusterModeX(leftmost, clusterTolPt);
+                if (pivot.HasValue) return pivot;
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// Returns the center of the largest X-value cluster (values within <paramref name="tol"/> of
+        /// each other). Ties are broken by choosing the leftmost (smallest) cluster anchor.
+        /// </summary>
+        private static float? ClusterModeX(IList<float> values, float tol)
+        {
+            if (values == null || values.Count == 0) return null;
+            if (values.Count == 1) return values[0];
+
+            var anchors = new List<float>();
+            var counts  = new List<int>();
+            foreach (float v in values)
+            {
+                int best = -1;
+                float bestDist = tol;
+                for (int ci = 0; ci < anchors.Count; ci++)
+                {
+                    float d = Math.Abs(anchors[ci] - v);
+                    if (d <= bestDist) { bestDist = d; best = ci; }
+                }
+                if (best >= 0) counts[best]++;
+                else { anchors.Add(v); counts.Add(1); }
+            }
+
+            int maxCount = counts.Max();
+            float pivot = float.MaxValue;
+            for (int ci = 0; ci < anchors.Count; ci++)
+                if (counts[ci] == maxCount && anchors[ci] < pivot)
+                    pivot = anchors[ci];
+            return pivot == float.MaxValue ? (float?)null : pivot;
+        }
 
         /// <summary>
         /// Removes rects that are fully contained within a larger rect on the same page.
@@ -2028,6 +2100,266 @@ namespace DocumentProcessor
                 mergedTextDiffs[i] = (mt.rect1, mt.rect2, mt.page1, mt.page2, mt.textDescriptions, cats, mt.actual1, mt.actual2, mt.wordDiffs);
             }
 
+            // ── XI: X-Ignore reconciliation — leftmost XDiff rects already at pivot X ──
+            //
+            // After all X/W/Y categories are computed, check whether leftmost-aligned XDiff
+            // rects (both text diffs AND field diffs) have their baseline position already at
+            // the canonical "pivot left X".  If so, applying an X drift correction would shift
+            // text AWAY from proper alignment.  Such rects are marked XI (XDiff cleared) and
+            // treated as green/acceptable.
+            //
+            // Pivot X is determined per-page in this priority order:
+            //   A. Leftmost baseline text NOT overlapping any diff rect → mode X of those words.
+            //   B. Leftmost green rects (no XDiff) from either text or field diffs → mode X.
+            //   C. Majority X among all XDiff rects; ties → leftmost center.
+            //
+            // Note: field diffs use rect1.X directly; text diffs prefer actual1.X (true word
+            // position) over rect1.X.  Both are baseline (V14/PDF1) coordinates.
+            {
+                const float XI_LEFTMOST_TOL = 5f;   // rects within 5pt of page min-X = "leftmost"
+                const float XI_ALIGN_TOL    = 3f;   // baseline X within 3pt of pivot = "already aligned"
+                const float XI_FREE_WINDOW  = 10f;  // leftmost free-text window
+
+                // ── Build per-page indices for both diff lists ────────────────────────
+                var pageToTextIdx = new Dictionary<int, List<int>>();
+                for (int i = 0; i < mergedTextDiffs.Count; i++)
+                {
+                    int pg = mergedTextDiffs[i].page1;
+                    if (!pageToTextIdx.TryGetValue(pg, out var lst)) { lst = new List<int>(); pageToTextIdx[pg] = lst; }
+                    lst.Add(i);
+                }
+                var pageToFieldIdx = new Dictionary<int, List<int>>();
+                for (int i = 0; i < mergedFieldDiffs.Count; i++)
+                {
+                    int pg = mergedFieldDiffs[i].page1;
+                    if (!pageToFieldIdx.TryGetValue(pg, out var lst)) { lst = new List<int>(); pageToFieldIdx[pg] = lst; }
+                    lst.Add(i);
+                }
+
+                var allPages = pageToTextIdx.Keys.Union(pageToFieldIdx.Keys).ToList();
+                _logger.Log($"[XI-ENTRY] XI block start: totalTextDiffs={mergedTextDiffs.Count} totalFieldDiffs={mergedFieldDiffs.Count} pages={string.Join(",", allPages)}");
+
+                foreach (int page in allPages)
+                {
+                    pageToTextIdx.TryGetValue(page, out var textIndices);
+                    pageToFieldIdx.TryGetValue(page, out var fieldIndices);
+                    textIndices  = textIndices  ?? new List<int>();
+                    fieldIndices = fieldIndices ?? new List<int>();
+
+                    _logger.Log($"[XI-PAGE] pg={page} textDiffs={textIndices.Count} fieldDiffs={fieldIndices.Count}");
+
+                    // Log all text diffs on this page
+                    foreach (int i in textIndices)
+                    {
+                        var mt = mergedTextDiffs[i];
+                        float bx = mt.actual1.HasValue ? mt.actual1.Value.X : mt.rect1.X;
+                        _logger.Log($"  [XI-TEXT] idx={i} rect=({mt.rect1.X:0.##},{mt.rect1.Y:0.##}) bx={bx:0.##} cats={mt.categories} actual1={( mt.actual1.HasValue ? $"({mt.actual1.Value.X:0.##},{mt.actual1.Value.Y:0.##})" : "null")}");
+                    }
+
+                    // Log all field diffs on this page
+                    foreach (int i in fieldIndices)
+                    {
+                        var mf = mergedFieldDiffs[i];
+                        _logger.Log($"  [XI-FIELD] idx={i} rect=({mf.rect1.X:0.##},{mf.rect1.Y:0.##}) bx={mf.rect1.X:0.##} cats={mf.categories} text={mf.mergedText}");
+                    }
+
+                    // Baseline X getter: text diffs prefer actual1.X; field diffs use rect1.X
+                    float TextDiffX(int i)  => mergedTextDiffs[i].actual1.HasValue
+                                                ? mergedTextDiffs[i].actual1.Value.X
+                                                : mergedTextDiffs[i].rect1.X;
+                    float FieldDiffX(int i) => mergedFieldDiffs[i].rect1.X;
+
+                    // Collect XDiff indices from both lists on this page
+                    var xDiffTextIdx  = textIndices .Where(i => (mergedTextDiffs[i] .categories & DiffCategory.XDiff) != 0).ToList();
+                    var xDiffFieldIdx = fieldIndices.Where(i => (mergedFieldDiffs[i].categories & DiffCategory.XDiff) != 0).ToList();
+                    if (xDiffTextIdx.Count == 0 && xDiffFieldIdx.Count == 0)
+                    {
+                        _logger.Log($"[XI-SKIP] pg={page} no XDiff items on this page -> skip");
+                        continue;
+                    }
+
+                    _logger.Log($"[XI-XDIFF] pg={page} xDiffText={xDiffTextIdx.Count} xDiffField={xDiffFieldIdx.Count}");
+                    foreach (int i in xDiffTextIdx)
+                        _logger.Log($"  [XI-XDIFF-TEXT] idx={i} bx={TextDiffX(i):0.##} cats={mergedTextDiffs[i].categories}");
+                    foreach (int i in xDiffFieldIdx)
+                        _logger.Log($"  [XI-XDIFF-FIELD] idx={i} bx={FieldDiffX(i):0.##} cats={mergedFieldDiffs[i].categories} text={mergedFieldDiffs[i].mergedText}");
+
+                    // Combined minimum X across all XDiff items on this page
+                    var allXDiffX = xDiffTextIdx.Select(TextDiffX).Concat(xDiffFieldIdx.Select(FieldDiffX)).ToList();
+                    float minXDiffX = allXDiffX.Min();
+
+                    // Leftmost XDiff candidates from both lists
+                    var leftmostTextIdx  = xDiffTextIdx .Where(i => TextDiffX(i)  <= minXDiffX + XI_LEFTMOST_TOL).ToList();
+                    var leftmostFieldIdx = xDiffFieldIdx.Where(i => FieldDiffX(i) <= minXDiffX + XI_LEFTMOST_TOL).ToList();
+
+                    _logger.Log($"[XI-LEFTMOST] pg={page} minXDiffX={minXDiffX:0.##} tol={XI_LEFTMOST_TOL}pt leftmostText={leftmostTextIdx.Count} leftmostField={leftmostFieldIdx.Count}");
+
+                    if (leftmostTextIdx.Count == 0 && leftmostFieldIdx.Count == 0)
+                    {
+                        _logger.Log($"[XI-SKIP] pg={page} no leftmost XDiff candidates -> skip");
+                        continue;
+                    }
+
+                    // Option A: baseline text words not inside any X-diff rect on this page.
+                    // Words inside Y-only or W-only diff rects still have a valid, unchanged X
+                    // position and are legitimate pivot references — exclude only X-diff rects.
+                    var xDiffRects1OnPage = textIndices
+                        .Where(i => (mergedTextDiffs[i].categories & DiffCategory.XDiff) != 0)
+                        .Select(i => mergedTextDiffs[i].rect1)
+                        .Concat(fieldIndices
+                            .Where(i => (mergedFieldDiffs[i].categories & DiffCategory.XDiff) != 0)
+                            .Select(i => mergedFieldDiffs[i].rect1))
+                        .ToList();
+                    var freeTextX = text1
+                        .Where(t => t.Page == page && !xDiffRects1OnPage.Any(r =>
+                            t.X >= r.X - 2f && t.X <= r.Right + 2f &&
+                            t.Y >= r.Y - 2f && t.Y <= r.Bottom + 2f))
+                        .Select(t => t.X)
+                        .ToList();
+
+                    // Option B: non-XDiff rects (green) from both lists on this page
+                    var greenRectX = textIndices .Where(i => (mergedTextDiffs[i] .categories & DiffCategory.XDiff) == 0).Select(TextDiffX)
+                              .Concat(fieldIndices.Where(i => (mergedFieldDiffs[i].categories & DiffCategory.XDiff) == 0).Select(FieldDiffX))
+                              .ToList();
+
+                    // Diagnostic: log xDiff exclusion rects and raw text1 entries on this page
+                    _logger.Log($"[XI-FREETXT-DBG] pg={page} xDiffExcludeRects={xDiffRects1OnPage.Count} text1OnPage={text1.Count(t => t.Page == page)}");
+                    foreach (var r in xDiffRects1OnPage)
+                        _logger.Log($"  [XI-EXCL-RECT] rect=({r.X:0.##},{r.Y:0.##},{r.Right:0.##},{r.Bottom:0.##})");
+                    foreach (var t in text1.Where(t => t.Page == page).OrderBy(t => t.X).Take(30))
+                    {
+                        bool excluded = xDiffRects1OnPage.Any(r =>
+                            t.X >= r.X - 2f && t.X <= r.Right + 2f &&
+                            t.Y >= r.Y - 2f && t.Y <= r.Bottom + 2f);
+                        _logger.Log($"  [XI-TEXT1] x={t.X:0.##} y={t.Y:0.##} text={t.Text} excluded={excluded}");
+                    }
+
+                    var cleanPosX = cleanWordPositions == null ? new List<float>() :
+                        cleanWordPositions.Where(p => p.page == page).Select(p => p.x).ToList();
+
+                    _logger.Log($"[XI-OPTIONS] pg={page} optClean(cleanPos)={cleanPosX.Count} optA(freeText)={freeTextX.Count} optB(green)={greenRectX.Count} (optC/XDiff removed per requirement)");
+                    if (cleanPosX.Count > 0) _logger.Log($"  [XI-OPT-CLEAN] cleanPosX min={cleanPosX.Min():0.##} values=[{string.Join(",", cleanPosX.Take(20).Select(x => x.ToString("0.##")))}]");
+                    if (freeTextX.Count > 0) _logger.Log($"  [XI-OPT-A] freeTextX min={freeTextX.Min():0.##} max={freeTextX.Max():0.##} allValues=[{string.Join(",", freeTextX.OrderBy(x => x).Select(x => x.ToString("0.##")))}]");
+                    if (greenRectX.Count > 0) _logger.Log($"  [XI-OPT-B] greenRectX values=[{string.Join(",", greenRectX.Select(x => x.ToString("0.##")))}]");
+
+                    float? pivotX = ComputePivotX(freeTextX, greenRectX, XI_FREE_WINDOW, 3f, cleanPosX);
+                    if (!pivotX.HasValue)
+                    {
+                        _logger.Log($"[XI-SKIP] pg={page} ComputePivotX returned null -> skip");
+                        continue;
+                    }
+
+                    _logger.Log($"[XI] pg={page} pivotX={pivotX.Value:0.##} leftmostText={leftmostTextIdx.Count} leftmostField={leftmostFieldIdx.Count} freeText={freeTextX.Count} green={greenRectX.Count} alignTol={XI_ALIGN_TOL}pt");
+
+                    // Clear XDiff from leftmost text diffs that are strictly LEFT of the pivot.
+                    // XI applies only when bx < pivot - tolerance (rect IS the leftmost element).
+                    // When bx == pivot the rect is AT the reference margin and V23 drift is real -> keep X.
+                    foreach (int i in leftmostTextIdx)
+                    {
+                        float tx = TextDiffX(i);
+                        if (tx < pivotX.Value - XI_ALIGN_TOL)
+                        {
+                            var mt = mergedTextDiffs[i];
+                            mergedTextDiffs[i] = (mt.rect1, mt.rect2, mt.page1, mt.page2,
+                                mt.textDescriptions, (mt.categories & ~DiffCategory.XDiff) | DiffCategory.XIgnore, mt.actual1, mt.actual2, mt.wordDiffs);
+                            _logger.Log($"[XI-TEXT-CLEAR] pg={page} idx={i} rect=({mt.rect1.X:0.##},{mt.rect1.Y:0.##}) " +
+                                $"bx={tx:0.##} pivotX={pivotX.Value:0.##} leftOf={(pivotX.Value - tx):0.##}pt -> XDiff cleared, XIgnore set (XI)");
+                        }
+                        else
+                        {
+                            var mt = mergedTextDiffs[i];
+                            _logger.Log($"[XI-TEXT-KEEP] pg={page} idx={i} rect=({mt.rect1.X:0.##},{mt.rect1.Y:0.##}) " +
+                                $"bx={tx:0.##} pivotX={pivotX.Value:0.##} notLeftOf (need bx < pivot-{XI_ALIGN_TOL}pt={pivotX.Value - XI_ALIGN_TOL:0.##}) -> keep X");
+                        }
+                    }
+
+                    // Clear XDiff from leftmost field diffs that are strictly LEFT of the pivot.
+                    foreach (int i in leftmostFieldIdx)
+                    {
+                        float fx = FieldDiffX(i);
+                        if (fx < pivotX.Value - XI_ALIGN_TOL)
+                        {
+                            var mf = mergedFieldDiffs[i];
+                            mergedFieldDiffs[i] = (mf.rect1, mf.rect2, mf.page1, mf.page2,
+                                mf.mergedText, (mf.categories & ~DiffCategory.XDiff) | DiffCategory.XIgnore);
+                            _logger.Log($"[XI-FIELD-CLEAR] pg={page} idx={i} field=({mf.rect1.X:0.##},{mf.rect1.Y:0.##}) " +
+                                $"bx={fx:0.##} pivotX={pivotX.Value:0.##} leftOf={(pivotX.Value - fx):0.##}pt -> XDiff cleared, XIgnore set (XI)");
+                        }
+                        else
+                        {
+                            var mf = mergedFieldDiffs[i];
+                            _logger.Log($"[XI-FIELD-KEEP] pg={page} idx={i} field=({mf.rect1.X:0.##},{mf.rect1.Y:0.##}) " +
+                                $"bx={fx:0.##} pivotX={pivotX.Value:0.##} notLeftOf (need bx < pivot-{XI_ALIGN_TOL}pt={pivotX.Value - XI_ALIGN_TOL:0.##}) -> keep X");
+                        }
+                    }
+                }
+            }
+
+            // ── Pass 2: Propagate XI to sibling X-diff rects in the same Word table ────
+            // If a table contains an XI rect (already-correct column), the word corrector
+            // will skip the whole table. Any other X-diff rects in that same table will
+            // therefore also never be corrected → mark them XI too (renders green).
+            // Uses phrase group IsXIgnore + TableGroupId to identify the table, then
+            // matches remaining X-diff rects by spatial overlap with that table's phrase
+            // group baseline regions.
+            if (phraseGroups != null && phraseGroups.Count > 0)
+            {
+                // Tables that contain at least one XI phrase group
+                var xiTableGroupIds = new HashSet<int>(
+                    phraseGroups
+                        .Where(pg => pg.IsXIgnore && pg.TableGroupId.HasValue)
+                        .Select(pg => pg.TableGroupId.Value));
+
+                if (xiTableGroupIds.Count > 0)
+                {
+                    // All baseline regions belonging to those XI tables (all columns/rows)
+                    var xiTableRegions = phraseGroups
+                        .Where(pg => pg.TableGroupId.HasValue &&
+                                     xiTableGroupIds.Contains(pg.TableGroupId.Value) &&
+                                     pg.BaselineRegion != null)
+                        .ToList();
+
+                    const float XI_SIB_TOL = 8f; // pt overlap tolerance
+
+                    bool RectInXiTable(int page, RectangleF rect) =>
+                        xiTableRegions.Any(pg =>
+                            pg.Page == page &&
+                            pg.BaselineRegion.XStart < rect.Right  + XI_SIB_TOL &&
+                            pg.BaselineRegion.XEnd   > rect.Left   - XI_SIB_TOL &&
+                            pg.BaselineRegion.Y      < rect.Bottom + XI_SIB_TOL &&
+                            pg.BaselineRegion.Y      > rect.Top    - XI_SIB_TOL);
+
+                    // Propagate to text diffs
+                    for (int i = 0; i < mergedTextDiffs.Count; i++)
+                    {
+                        var mt = mergedTextDiffs[i];
+                        if ((mt.categories & DiffCategory.XDiff)   == 0) continue; // no X diff
+                        if ((mt.categories & DiffCategory.XIgnore) != 0) continue; // already XI
+                        if (!RectInXiTable(mt.page1, mt.rect1)) continue;
+                        mergedTextDiffs[i] = (mt.rect1, mt.rect2, mt.page1, mt.page2,
+                            mt.textDescriptions,
+                            (mt.categories & ~DiffCategory.XDiff) | DiffCategory.XIgnore,
+                            mt.actual1, mt.actual2, mt.wordDiffs);
+                        _logger.Log($"[XI-SIBLING-TEXT] pg={mt.page1} rect=({mt.rect1.X:0.##},{mt.rect1.Y:0.##}) " +
+                            $"-> same Word table as XI phrase group -> XDiff cleared, XIgnore set (XI)");
+                    }
+
+                    // Propagate to field diffs
+                    for (int i = 0; i < mergedFieldDiffs.Count; i++)
+                    {
+                        var mf = mergedFieldDiffs[i];
+                        if ((mf.categories & DiffCategory.XDiff)   == 0) continue;
+                        if ((mf.categories & DiffCategory.XIgnore) != 0) continue;
+                        if (!RectInXiTable(mf.page1, mf.rect1)) continue;
+                        mergedFieldDiffs[i] = (mf.rect1, mf.rect2, mf.page1, mf.page2,
+                            mf.mergedText,
+                            (mf.categories & ~DiffCategory.XDiff) | DiffCategory.XIgnore);
+                        _logger.Log($"[XI-SIBLING-FIELD] pg={mf.page1} rect=({mf.rect1.X:0.##},{mf.rect1.Y:0.##}) " +
+                            $"-> same Word table as XI phrase group -> XDiff cleared, XIgnore set (XI)");
+                    }
+                }
+            }
+
             // ── Build a spatial lookup of phrase groups for rect classification ─────────
             // A rect is "clean" only if it overlaps EXCLUSIVELY IsCleanDiff phrase groups.
             // A single non-clean overlapping group forces the rect to remain red.
@@ -2141,8 +2473,12 @@ namespace DocumentProcessor
                         val = (new List<(RectangleF, DiffCategory)>(), new List<(RectangleF, DiffCategory)>(), new List<(RectangleF, DiffCategory)>(), new List<(RectangleF, DiffCategory)>(), new List<string>());
                     // In modified comparison, field diffs covered by clean phrase groups are also clean
                     // (same uncorrected positional drift that produced the word-level clean diffs).
+                    // CategoryBasedIsGreen is also checked so XI-cleared XDiff (no longer XDiff in
+                    // categories) is respected the same way text diffs are.
                     bool isFieldClean = IsModifiedComparison && IsPhraseGroupClean(item.page1, item.rect1);
-                    if (isFieldClean) { val.green1.Add((item.rect1, item.categories)); val.green2.Add((item.rect2, item.categories)); }
+                    bool effectiveFieldClean = CategoryBasedIsGreen(item.categories, isFieldClean);
+                    _logger.Log($"[BUCKET-FIELD] pg={item.page1} rect=({item.rect1.X:0.##},{item.rect1.Y:0.##}) cats={item.categories} isFieldClean={isFieldClean} effectiveFieldClean={effectiveFieldClean} IsModified={IsModifiedComparison} text={item.mergedText}");
+                    if (effectiveFieldClean) { val.green1.Add((item.rect1, item.categories)); val.green2.Add((item.rect2, item.categories)); }
                     else { val.red1.Add((item.rect1, item.categories)); val.red2.Add((item.rect2, item.categories)); }
                     val.descriptions.Add(item.mergedText);
                     pageBuckets[key] = val;
@@ -2618,14 +2954,15 @@ namespace DocumentProcessor
         {
             if (cats == DiffCategory.None || !ShowXYWInDiffReport) return;
             var parts = new System.Collections.Generic.List<string>();
-            if ((cats & DiffCategory.XDiff) != 0) parts.Add("X");
+            if ((cats & DiffCategory.XIgnore) != 0) parts.Add("XI");
+            else if ((cats & DiffCategory.XDiff) != 0) parts.Add("X");
             if ((cats & DiffCategory.YDiff) != 0) parts.Add("Y");
             if ((cats & DiffCategory.WDiff) != 0) parts.Add("W");
             string label = string.Join(",", parts);
             using var font = new Font("Arial", 8f, FontStyle.Bold, GraphicsUnit.Point);
             var size = g.MeasureString(label, font);
-            float lx = rectX + 2;
-            float ly = rectY + 2;
+            float lx = rectX;
+            float ly = rectY - size.Height - 2;
             // Semi-transparent black background for readability
             using var bgBrush = new SolidBrush(System.Drawing.Color.FromArgb(180, 0, 0, 0));
             g.FillRectangle(bgBrush, lx - 1, ly - 1, size.Width + 2, size.Height + 2);
@@ -4723,18 +5060,19 @@ namespace DocumentProcessor
                     bool isReflow = dx < -REFLOW_MIN_LEFT_JSON &&
                                     pubX <= pageMinX + REFLOW_MAX_MARGIN_JSON;
 
-                    // Gate 2: In-cell paragraph — ApplyParagraphCorrection skips these entirely.
-                    // • tableGroupId set + TABLE_CELL/PARAGRAPH/LIST_ITEM/MERGE_FIELD layout context
-                    //   → confirmed layout-table cell (most common case).
-                    // • INLINE_RUN regardless of tableGroupId → word was purged from a table group
-                    //   because Word DOM didn't confirm it; the Word corrector still skips it
-                    //   because it lives inside a table cell in the source paragraph.
-                    bool isInCellPara = pg.LayoutContext == "INLINE_RUN" ||
-                                        (pg.TableGroupId.HasValue &&
-                                         (pg.LayoutContext == "TABLE_CELL" ||
-                                          pg.LayoutContext == "PARAGRAPH" ||
-                                          pg.LayoutContext == "LIST_ITEM" ||
-                                          pg.LayoutContext == "MERGE_FIELD"));
+                    // Gate 2 (partial — table-cell arm deferred to Phase 3 below):
+                    // • INLINE_RUN: word was purged from its table group by the Word DOM check.
+                    //   ApplyParagraphCorrection still skips it (it lives in a table cell).
+                    //   Applied here unconditionally — INLINE_RUN groups never have significant
+                    //   X drift from an uncorrected table, so they cannot be XI candidates.
+                    //
+                    // • tableGroupId set + TABLE_CELL/PARAGRAPH/LIST_ITEM/MERGE_FIELD:
+                    //   Deferred to Phase 3 (after XI detection) so that XI detection can see
+                    //   uncorrected-table phrase groups in BOTH original AND modified comparisons.
+                    //   If applied here, Gate 2 would set IsCleanDiff=true on all table groups
+                    //   before the XI check runs, causing !pg.IsCleanDiff in xDriftPGs to exclude
+                    //   them → IsXIgnore never set → pass-2 in GenerateHtmlReport finds nothing.
+                    bool isInCellPara = pg.LayoutContext == "INLINE_RUN";
 
                     // Gate 3: non-table phrase groups are ALWAYS clean in the MODIFIED comparison.
                     // Paragraphs, footers, and inline-runs that have no tableGroupId are never
@@ -4764,6 +5102,149 @@ namespace DocumentProcessor
                     // Also record baseline word positions for Gate 2 and Gate 3 phrase
                     // groups so IsPhraseGroupClean can match by position as a fallback.
                     if (pg.IsCleanDiff && pg.WordIds != null)
+                    {
+                        foreach (int wid in pg.WordIds)
+                        {
+                            var wd = wordDiffs.FirstOrDefault(w => w.DifferenceId == wid);
+                            if (wd?.Baseline != null)
+                                cleanWordPositions.Add((wd.Baseline.Page, wd.Baseline.X, wd.Baseline.Y));
+                        }
+                    }
+                }
+
+                // ── XI: X-Ignore reconciliation for phrase groups ─────────────────────
+                //
+                // After all IsCleanDiff gates are stamped, check whether leftmost-aligned
+                // phrase groups with X drift have their baseline text already at the pivot
+                // left X.  Such groups must not receive an X correction from WordDriftCorrector
+                // (correcting them would shift text away from the correct position).
+                // Mark them IsCleanDiff=true (XI) so the corrector skips them.
+                //
+                // Pivot X priority per page:
+                //   A. Leftmost baseline words NOT covered by any phrase group → mode X.
+                //   B. Leftmost phrase groups with negligible X drift → mode XStart.
+                //   C. Majority XStart among X-drift phrase groups; ties → leftmost.
+                {
+                    const float XI_XDRIFT_THRESH = 2f;    // |dx| >= this = "has X drift"
+                    const float XI_LEFTMOST_TOL  = 5f;    // within 5pt of page min-X = "leftmost"
+                    const float XI_ALIGN_TOL     = 3f;    // within 3pt of pivot = "already aligned"
+                    const float XI_FREE_WINDOW   = 10f;   // leftmost free-text window
+
+                    // Build a lookup: baseline (page, X, Y) positions of X-DRIFT phrase group words only.
+                    // Words inside non-X-drift (clean) phrase groups still have valid X positions and
+                    // are legitimate pivot references — we must not exclude them from free text.
+                    var xDriftPGWordPositions = new HashSet<(int page, float x, float y)>();
+                    foreach (var pg in phraseGroups.Where(p =>
+                        !p.IsCleanDiff &&
+                        p.BaselineRegion != null &&
+                        p.SharedDelta != null &&
+                        Math.Abs(p.SharedDelta.X) >= XI_XDRIFT_THRESH))
+                    {
+                        if (pg.WordIds == null) continue;
+                        foreach (int wid in pg.WordIds)
+                        {
+                            var wd = wordDiffs.FirstOrDefault(w => w.DifferenceId == wid);
+                            if (wd?.Baseline != null)
+                                xDriftPGWordPositions.Add((wd.Baseline.Page, wd.Baseline.X, wd.Baseline.Y));
+                        }
+                    }
+
+                    foreach (int page in phraseGroups.Select(pg => pg.Page).Distinct().ToList())
+                    {
+                        var pagePGs = phraseGroups.Where(pg => pg.Page == page).ToList();
+
+                        // X-drift phrase groups: not already clean AND significant |dx|
+                        var xDriftPGs = pagePGs
+                            .Where(pg => !pg.IsCleanDiff &&
+                                         pg.BaselineRegion != null &&
+                                         pg.SharedDelta != null &&
+                                         Math.Abs(pg.SharedDelta.X) >= XI_XDRIFT_THRESH)
+                            .ToList();
+                        if (xDriftPGs.Count == 0) continue;
+
+                        // Leftmost X-drift phrase groups
+                        float minXDriftBx = xDriftPGs.Min(pg => pg.BaselineRegion.XStart);
+                        var leftmostXDrift = xDriftPGs
+                            .Where(pg => pg.BaselineRegion.XStart <= minXDriftBx + XI_LEFTMOST_TOL)
+                            .ToList();
+                        if (leftmostXDrift.Count == 0) continue;
+
+                        // Option A: baseline words not covered by any X-drift phrase group on this page.
+                        // Words in non-X-drift phrase groups have valid X positions and count as reference.
+                        var freeTextX = validText1
+                            .Where(t => t.Page == page && !xDriftPGWordPositions.Contains((t.Page, t.X, t.Y)))
+                            .Select(t => t.X)
+                            .ToList();
+
+                        // Option B: phrase groups with negligible X drift (green baseline)
+                        var greenPGX = pagePGs
+                            .Where(pg => pg.BaselineRegion != null &&
+                                         (pg.SharedDelta == null || Math.Abs(pg.SharedDelta.X) < XI_XDRIFT_THRESH))
+                            .Select(pg => pg.BaselineRegion.XStart)
+                            .ToList();
+
+                        // Option C removed: if only XDiff rects exist as pivot source, do not apply XI.
+                        // Those rects stay marked X and are corrected by the word drift corrector as normal.
+                        float? pivotX = ComputePivotX(freeTextX, greenPGX, XI_FREE_WINDOW, 3f);
+                        if (!pivotX.HasValue) continue;
+
+                        _logger.Log($"[XI-GJDR] pg={page} pivotX={pivotX.Value:0.##} leftmostXDrift={leftmostXDrift.Count} freeText={freeTextX.Count} green={greenPGX.Count}");
+
+                        // XI applies only when bx < pivot - tolerance (rect IS the leftmost element).
+                        // When bx == pivot the rect is AT the reference margin and V23 drift is real -> keep X.
+                        foreach (var pg in leftmostXDrift)
+                        {
+                            float bx = pg.BaselineRegion.XStart;
+                            if (bx < pivotX.Value - XI_ALIGN_TOL)
+                            {
+                                pg.IsCleanDiff = true;
+                                pg.IsXIgnore = true;
+                                _logger.Log($"[XI-GJDR-CLEAN] pg={page} PhraseGroup={pg.GroupId} bx={bx:0.##} " +
+                                    $"pivotX={pivotX.Value:0.##} leftOf={(pivotX.Value - bx):0.##}pt -> IsCleanDiff=true IsXIgnore=true (XI)");
+
+                                // Record baseline positions so IsPhraseGroupClean position-fallback works
+                                if (pg.WordIds != null)
+                                {
+                                    foreach (int wid in pg.WordIds)
+                                    {
+                                        var wd = wordDiffs.FirstOrDefault(w => w.DifferenceId == wid);
+                                        if (wd?.Baseline != null)
+                                            cleanWordPositions.Add((wd.Baseline.Page, wd.Baseline.X, wd.Baseline.Y));
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                _logger.Log($"[XI-GJDR-KEEP] pg={page} PhraseGroup={pg.GroupId} bx={bx:0.##} " +
+                                    $"pivotX={pivotX.Value:0.##} notLeftOf (need bx < pivot-{XI_ALIGN_TOL}pt={pivotX.Value - XI_ALIGN_TOL:0.##}) -> keep X");
+                            }
+                        }
+                    }
+                }
+
+                // ── Phase 3: Apply Gate 2 table-cell to non-XI phrase groups ──────────
+                // Now that XI detection has run, stamp the remaining table phrase groups
+                // as IsCleanDiff=true. Skips any group already marked IsXIgnore so that
+                // XI groups keep their IsXIgnore flag intact. Applies to BOTH original and
+                // modified comparisons (PATH 3 already guards with !p.TableGroupId.HasValue
+                // so these groups are never double-corrected via paragraph correction).
+                foreach (var pg in phraseGroups)
+                {
+                    if (pg.IsXIgnore) continue;   // XI detection already handled this group
+                    if (pg.IsCleanDiff) continue; // already clean from Gate 1 / 3 / 4 / INLINE_RUN
+                    if (!pg.TableGroupId.HasValue) continue; // only table-affiliated groups
+                    bool isTableCell = pg.LayoutContext == "TABLE_CELL" ||
+                                       pg.LayoutContext == "PARAGRAPH"  ||
+                                       pg.LayoutContext == "LIST_ITEM"  ||
+                                       pg.LayoutContext == "MERGE_FIELD";
+                    if (!isTableCell) continue;
+
+                    pg.IsCleanDiff = true;
+                    _logger.Log($"[GATE2-PHASE3] PhraseGroup={pg.GroupId} pg={pg.Page} layoutCtx='{pg.LayoutContext}' " +
+                        $"tableGroupId={pg.TableGroupId} -> IsCleanDiff=true (Gate 2, Phase 3)");
+
+                    // Record baseline positions for IsPhraseGroupClean position-fallback
+                    if (pg.WordIds != null)
                     {
                         foreach (int wid in pg.WordIds)
                         {
@@ -5470,6 +5951,16 @@ namespace DocumentProcessor
         [JsonPropertyName("isCleanDiff")]
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
         public bool IsCleanDiff { get; set; }
+
+        /// <summary>
+        /// True ONLY when this phrase group was classified as XI (X-Ignore) — i.e. the leftmost
+        /// X-drift group is already aligned at the pivot X and must NOT receive an X correction.
+        /// Unlike IsCleanDiff (which covers Y-drift, reflow, in-cell etc.), IsXIgnore is exclusively
+        /// set by the XI reconciliation pass and is what WordDriftCorrector uses to skip X correction.
+        /// </summary>
+        [JsonPropertyName("isXIgnore")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+        public bool IsXIgnore { get; set; }
     }
 
     public class PhraseRegion

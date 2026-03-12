@@ -366,6 +366,24 @@ namespace DocumentProcessor
             var correctedDocxTables = new HashSet<int>();
             var handledPhraseGroupIds = new HashSet<int>();
 
+            // Build a set of phrase group IDs that must block table correction.
+            // A table must NOT be corrected if it contains a phrase group that is already
+            // at the correct position (XI / XIgnore). Moving the whole table would shift
+            // that block away from its correct location.
+            //
+            // Detection uses IsXIgnore (primary, set by GJDR XI logic for leftmost-column
+            // phrase groups). IsCleanDiff is NOT used here because in the ORIGINAL comparison
+            // Gate 2 is now disabled for table groups, so only genuine XI groups (leftmost,
+            // already-correct column) get IsCleanDiff=true via the XI detection block.
+            // In the MODIFIED comparison Gate 2 still fires, marking all table groups as
+            // clean — but the word corrector runs against the ORIGINAL comparison JSON,
+            // so modified-comparison JSON is never seen here.
+            var xiPhraseGroupIds = new HashSet<int>(
+                report.PhraseGroups?.Where(p => p.IsXIgnore).Select(p => p.GroupId)
+                ?? Enumerable.Empty<int>());
+
+            _logger.Log($"[XI-TABLE] xiPhraseGroupIds count={xiPhraseGroupIds.Count}: [{string.Join(",", xiPhraseGroupIds)}]");
+
             // ── PATH 1: docxContext table corrections ─────────────────────────────────
             var byDocxTable = shiftedWords
                 .Where(w => w.DocxContext?.TableIndex != null)
@@ -390,6 +408,27 @@ namespace DocumentProcessor
                 if (plan == null) continue;
 
                 int listIdx = grp.Key - 1;
+
+                // If any phrase group in this Word table is marked XI, do NOT correct
+                // the table. The XI block is already at the correct position; moving
+                // the whole table would shift it away from that position.
+                var grpXiIds = grp
+                    .Where(w => w.PhraseGroupId.HasValue && xiPhraseGroupIds.Contains(w.PhraseGroupId.Value))
+                    .Select(w => w.PhraseGroupId.Value)
+                    .Distinct()
+                    .ToList();
+                if (grpXiIds.Count > 0)
+                {
+                    _logger.Log($"[XI-TABLE-SKIP] PATH1 Table={plan.TableIndex} contains XI phrase group(s) [{string.Join(",", grpXiIds)}] -> table NOT corrected");
+                    result.Warnings.Add($"[TABLE {plan.TableIndex}] Skipped: table contains XI phrase group(s) — already at correct position.");
+                    correctedDocxTables.Add(grp.Key);
+                    correctedTableListIndices.Add(listIdx);
+                    foreach (var w in grp)
+                        if (w.PhraseGroupId.HasValue)
+                            handledPhraseGroupIds.Add(w.PhraseGroupId.Value);
+                    continue;
+                }
+
                 float ancestorX = GetAncestorAppliedXPt(listIdx, ancestryMap, appliedXPerTableListIdx);
                 float effectiveDriftX = plan.UniformDriftXPt - ancestorX;
 
@@ -471,6 +510,20 @@ namespace DocumentProcessor
                                       jt.PhraseGroupIds.All(id => handledPhraseGroupIds.Contains(id));
                     if (allHandled) continue;
 
+                    // If any phrase group in this table group is XI, skip the correction.
+                    var jtXiIds = jt.PhraseGroupIds?.Where(id => xiPhraseGroupIds.Contains(id)).ToList()
+                                  ?? new List<int>();
+                    if (jtXiIds.Count > 0)
+                    {
+                        _logger.Log($"[XI-TABLE-SKIP] PATH2 TableGroup={jt.TableId} contains XI phrase group(s) [{string.Join(",", jtXiIds)}] -> table NOT corrected");
+                        result.Warnings.Add($"[TABLE GROUP {jt.TableId}] Skipped: table contains XI phrase group(s) — already at correct position.");
+                        correctedTableListIndices.Add(listIdxP2);
+                        if (jt.PhraseGroupIds != null)
+                            foreach (int pgId in jt.PhraseGroupIds)
+                                handledPhraseGroupIds.Add(pgId);
+                        continue;
+                    }
+
                     var plan = BuildTablePlanFromJsonGroup(jt);
                     if (plan == null) continue;
 
@@ -516,6 +569,7 @@ namespace DocumentProcessor
             foreach (var pg in report.PhraseGroups
                         ?.Where(p => !p.TableGroupId.HasValue &&
                                      !handledPhraseGroupIds.Contains(p.GroupId) &&
+                                     !p.IsCleanDiff &&
                                      IsParaType(p.LayoutContext))
                         ?? Enumerable.Empty<PhraseDiffGroup>())
             {
@@ -529,6 +583,7 @@ namespace DocumentProcessor
             // ── PATH 4: Header/footer corrections ─────────────────────────────────────
             foreach (var pg in report.PhraseGroups
                         ?.Where(p => !handledPhraseGroupIds.Contains(p.GroupId) &&
+                                     !p.IsCleanDiff &&
                                      (p.LayoutContext == "HEADER" || p.LayoutContext == "FOOTER"))
                         ?? Enumerable.Empty<PhraseDiffGroup>())
             {
