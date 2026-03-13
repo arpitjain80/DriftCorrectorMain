@@ -1,6 +1,6 @@
 {
   "reportMetadata": {
-    "generatedAt": "2026-03-12T15:34:03",
+    "generatedAt": "2026-03-12T20:44:20",
     "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Fixed\\Static\\SSSMPLDOENDCW6171016.pdf",
     "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V23\\Fixed\\Static\\SSSMPLDOENDCW6171016.pdf",
     "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Fixed\\Static",
@@ -253,6 +253,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 0,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -301,6 +302,7 @@
       "tableGroupId": 1,
       "tableColumn": 1,
       "tableRow": 0,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -348,6 +350,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 1,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -397,6 +400,7 @@
       "tableGroupId": 1,
       "tableColumn": 1,
       "tableRow": 1,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -1232,6 +1236,7 @@
       "tableGroupId": 1,
       "tableColumn": 1,
       "tableRow": 0,
+      "docxTableIndex": 2,
       "isCleanDiff": true
     },
     {
@@ -1321,6 +1326,7 @@
       "tableGroupId": 2,
       "tableColumn": 0,
       "tableRow": 0,
+      "docxTableIndex": 3,
       "isCleanDiff": true
     },
     {
@@ -1413,6 +1419,7 @@
       "tableGroupId": 1,
       "tableColumn": 1,
       "tableRow": 1,
+      "docxTableIndex": 2,
       "isCleanDiff": true
     },
     {
@@ -1502,6 +1509,7 @@
       "tableGroupId": 3,
       "tableColumn": 0,
       "tableRow": 0,
+      "docxTableIndex": 4,
       "isCleanDiff": true
     },
     {
@@ -1592,6 +1600,7 @@
       "tableGroupId": 1,
       "tableColumn": 1,
       "tableRow": 2,
+      "docxTableIndex": 2,
       "isCleanDiff": true
     },
     {
@@ -1681,6 +1690,7 @@
       "tableGroupId": 4,
       "tableColumn": 0,
       "tableRow": 0,
+      "docxTableIndex": 5,
       "isCleanDiff": true
     },
     {

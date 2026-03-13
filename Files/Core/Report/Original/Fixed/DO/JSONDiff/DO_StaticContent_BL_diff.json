@@ -1,6 +1,6 @@
 {
   "reportMetadata": {
-    "generatedAt": "2026-03-12T15:34:01",
+    "generatedAt": "2026-03-12T20:44:16",
     "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Fixed\\DO\\DO_StaticContent_BL.pdf",
     "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V23\\Fixed\\DO\\DO_StaticContent_BL.pdf",
     "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Fixed\\DO",
@@ -114,6 +114,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 0,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {

@@ -1,6 +1,6 @@
 {
   "reportMetadata": {
-    "generatedAt": "2026-03-12T15:34:01",
+    "generatedAt": "2026-03-12T20:44:16",
     "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Fixed\\DO\\DO_PrimaryPrivate_1.pdf",
     "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V23\\Fixed\\DO\\DO_PrimaryPrivate_1.pdf",
     "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Fixed\\DO",
@@ -155,6 +155,7 @@
       "tableGroupId": 1,
       "tableColumn": 3,
       "tableRow": 0,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -203,6 +204,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 0,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -291,6 +293,7 @@
       "tableGroupId": 1,
       "tableColumn": 2,
       "tableRow": 0,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -339,6 +342,7 @@
       "tableGroupId": 1,
       "tableColumn": 3,
       "tableRow": 1,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -391,6 +395,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 1,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -437,6 +442,7 @@
       "tableGroupId": 1,
       "tableColumn": 4,
       "tableRow": 1,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -483,6 +489,7 @@
       "tableGroupId": 1,
       "tableColumn": 3,
       "tableRow": 3,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -533,6 +540,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 3,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -622,6 +630,7 @@
       "tableGroupId": 1,
       "tableColumn": 4,
       "tableRow": 2,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {

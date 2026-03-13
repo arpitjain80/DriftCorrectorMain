@@ -2005,6 +2005,94 @@ namespace DocumentProcessor
                 }
             }
 
+            // ── Secondary merge pass: pair MISSING-only groups with EXTRA-only groups ────
+            // When MISSING (V14 only) and EXTRA (V23 only) words for the same text appear
+            // at different Y positions (Y diff > 10pt primary tolerance), they end up in
+            // separate mergedTextDiff groups and XDiff detection cannot pair them.
+            // This pass merges such groups on the same page when they share matching text
+            // and their actual X extents are close — enabling the existing XDiff logic to
+            // detect the horizontal shift.
+            {
+                // Identify pure-MISSING and pure-EXTRA groups by index
+                var missingOnlyIdx = new List<int>();
+                var extraOnlyIdx   = new List<int>();
+                for (int i = 0; i < mergedTextDiffs.Count; i++)
+                {
+                    var mt = mergedTextDiffs[i];
+                    bool allMissing = mt.wordDiffs.Count > 0 && mt.wordDiffs.All(d => d.Info1 != null && d.Info2 == null);
+                    bool allExtra   = mt.wordDiffs.Count > 0 && mt.wordDiffs.All(d => d.Info1 == null && d.Info2 != null);
+                    if (allMissing) missingOnlyIdx.Add(i);
+                    else if (allExtra) extraOnlyIdx.Add(i);
+                }
+
+                var mergedAwayIdx = new HashSet<int>();
+
+                foreach (int mi in missingOnlyIdx)
+                {
+                    if (mergedAwayIdx.Contains(mi)) continue;
+                    var missing = mergedTextDiffs[mi];
+
+                    // Build text set from MISSING side (Info1)
+                    var missingTexts = new HashSet<string>(
+                        missing.wordDiffs.Select(d => d.Info1?.Text).Where(t => t != null),
+                        StringComparer.Ordinal);
+
+                    foreach (int ei in extraOnlyIdx)
+                    {
+                        if (mergedAwayIdx.Contains(ei)) continue;
+                        var extra = mergedTextDiffs[ei];
+
+                        // Must be on the same page
+                        if (extra.page1 != missing.page1) continue;
+
+                        // At least one word text must match between the two groups
+                        bool hasTextMatch = extra.wordDiffs.Any(
+                            d => d.Info2?.Text != null && missingTexts.Contains(d.Info2.Text));
+                        if (!hasTextMatch) continue;
+
+                        // Actual X extents must overlap or be within 30pt (guards against
+                        // unrelated words that happen to share a common short text token)
+                        const float X_CROSS_TOL = 30f;
+                        bool xClose = missing.actual1.HasValue && extra.actual2.HasValue &&
+                            missing.actual1.Value.Right  + X_CROSS_TOL > extra.actual2.Value.Left &&
+                            extra.actual2.Value.Right    + X_CROSS_TOL > missing.actual1.Value.Left;
+                        if (!xClose) continue;
+
+                        // Merge the EXTRA group into the MISSING group
+                        var combinedDesc = missing.textDescriptions
+                            .Concat(extra.textDescriptions)
+                            .Distinct()
+                            .ToList();
+                        var combinedWords = missing.wordDiffs.Concat(extra.wordDiffs).ToList();
+
+                        mergedTextDiffs[mi] = (
+                            RectangleF.Union(missing.rect1, extra.rect1),
+                            RectangleF.Union(missing.rect2, extra.rect2),
+                            missing.page1, missing.page2,
+                            combinedDesc,
+                            missing.categories | extra.categories,
+                            UnionNullable(missing.actual1, extra.actual1),
+                            UnionNullable(missing.actual2, extra.actual2),
+                            combinedWords);
+
+                        // Update local reference for subsequent EXTRA candidates
+                        missing = mergedTextDiffs[mi];
+                        missingTexts.UnionWith(
+                            extra.wordDiffs.Select(d => d.Info2?.Text).Where(t => t != null));
+
+                        mergedAwayIdx.Add(ei);
+                        _logger.Log($"[CROSS-GROUP-MERGE] pg={missing.page1} merged EXTRA group " +
+                            $"(rect=({extra.rect2.X:0.##},{extra.rect2.Y:0.##}), {extra.wordDiffs.Count} word(s)) " +
+                            $"into MISSING group (rect=({mergedTextDiffs[mi].rect1.X:0.##},{mergedTextDiffs[mi].rect1.Y:0.##})) " +
+                            $"— Y-displaced MISSING+EXTRA pair, enables XDiff detection");
+                    }
+                }
+
+                // Remove groups that were merged away (descending order to preserve lower indices)
+                foreach (int idx in mergedAwayIdx.OrderByDescending(x => x))
+                    mergedTextDiffs.RemoveAt(idx);
+            }
+
             // ── Post-process mergedTextDiffs: compute XDiff/YDiff ─────────────────────────
             //
             // XDiff — text-content pairing (reliable at any shift magnitude, no false positives):
@@ -2299,27 +2387,84 @@ namespace DocumentProcessor
             // If a table contains an XI rect (already-correct column), the word corrector
             // will skip the whole table. Any other X-diff rects in that same table will
             // therefore also never be corrected → mark them XI too (renders green).
-            // Uses phrase group IsXIgnore + TableGroupId to identify the table, then
-            // matches remaining X-diff rects by spatial overlap with that table's phrase
-            // group baseline regions.
+            //
+            // Hybrid identification strategy:
+            //   PRIMARY  — DocxTableIndex (Word document table index, precise):
+            //     Phrase groups whose words have docxContext.TableIndex set carry a
+            //     DocxTableIndex.  When available, use this to identify which Word table
+            //     an XI group belongs to, and propagate only to phrase groups with the
+            //     SAME DocxTableIndex.  This prevents cross-table contamination when
+            //     DetectTableGroups spatially clusters groups from different Word tables
+            //     into the same TableGroupId (e.g. Company/Insured tableIdx=1 and Firm
+            //     Name tableIdx=2 sharing TableGroupId=1 on the same PDF page).
+            //
+            //   FALLBACK — TableGroupId (PDF spatial cluster):
+            //     Merge-field tokens (e.g. «PolicyNumber», «CompanyName») often have no
+            //     docxContext match, so DocxTableIndex is null.  For these groups fall back
+            //     to TableGroupId: include any phrase group whose DocxTableIndex is null
+            //     AND whose TableGroupId appears in the XI groups' TableGroupId set.
+            //     This preserves the original behaviour for documents where docx matching
+            //     is unavailable — Policy Number and Endorsement Date still inherit XI.
             if (phraseGroups != null && phraseGroups.Count > 0)
             {
-                // Tables that contain at least one XI phrase group
+                // XI Word tables by DocxTableIndex (primary, precise)
+                var xiDocxTableIndices = new HashSet<int>(
+                    phraseGroups
+                        .Where(pg => pg.IsXIgnore && pg.DocxTableIndex.HasValue)
+                        .Select(pg => pg.DocxTableIndex.Value));
+
+                // XI table clusters by TableGroupId (fallback for groups without DocxTableIndex)
                 var xiTableGroupIds = new HashSet<int>(
                     phraseGroups
                         .Where(pg => pg.IsXIgnore && pg.TableGroupId.HasValue)
                         .Select(pg => pg.TableGroupId.Value));
 
-                if (xiTableGroupIds.Count > 0)
-                {
-                    // All baseline regions belonging to those XI tables (all columns/rows)
-                    var xiTableRegions = phraseGroups
-                        .Where(pg => pg.TableGroupId.HasValue &&
-                                     xiTableGroupIds.Contains(pg.TableGroupId.Value) &&
-                                     pg.BaselineRegion != null)
-                        .ToList();
+                // Tier 3: Y-row proximity to Pass 1 XI rects.
+                // When phrase groups are reclassified as INLINE_RUN (table group removed by
+                // AugmentTableGroups because docxContext couldn't confirm Word table membership),
+                // they lose their TableGroupId and IsXIgnore flags.  Pass 1 of GenerateHtmlReport
+                // still correctly marks the leftmost column's rects as XI (DiffCategory.XIgnore)
+                // by operating directly on rects.  To propagate that XI to the other-column rects
+                // in the same visual row (e.g. Policy Number at same Y as Company «XI»), collect
+                // the Y extents of all Pass 1 XI rects.  Any phrase group on the same page within
+                // XI_SIB_TOL pt in Y of a Pass 1 XI rect is treated as a sibling anchor — its
+                // baseline region is added to xiTableRegions so RectInXiTable can cover it.
+                var xiRectYRanges = mergedTextDiffs
+                    .Where(mt => (mt.categories & DiffCategory.XIgnore) != 0)
+                    .Select(mt => (page: mt.page1, top: mt.rect1.Top, bottom: mt.rect1.Bottom))
+                    .Concat(mergedFieldDiffs
+                        .Where(mf => (mf.categories & DiffCategory.XIgnore) != 0)
+                        .Select(mf => (page: mf.page1, top: mf.rect1.Top, bottom: mf.rect1.Bottom)))
+                    .ToList();
 
-                    const float XI_SIB_TOL = 8f; // pt overlap tolerance
+                const float XI_SIB_TOL = 8f; // pt overlap tolerance
+
+                if (xiDocxTableIndices.Count > 0 || xiTableGroupIds.Count > 0 || xiRectYRanges.Count > 0)
+                {
+                    // All baseline regions belonging to XI tables — three-tier membership:
+                    //   Tier 1: DocxTableIndex IS set → match by docx table index (cross-table-safe)
+                    //   Tier 2: DocxTableIndex is null → fallback to TableGroupId spatial cluster
+                    //   Tier 3: phrase group Y is within XI_SIB_TOL of any Pass 1 XI rect on same page
+                    //           (catches INLINE_RUN groups that lost their table group identifier)
+                    var xiTableRegions = phraseGroups
+                        .Where(pg => pg.BaselineRegion != null &&
+                                     (
+                                         // Tier 1: same Word table by docx index
+                                         (pg.DocxTableIndex.HasValue &&
+                                          xiDocxTableIndices.Contains(pg.DocxTableIndex.Value))
+                                         ||
+                                         // Tier 2: no docx context — use spatial cluster
+                                         (!pg.DocxTableIndex.HasValue &&
+                                          pg.TableGroupId.HasValue &&
+                                          xiTableGroupIds.Contains(pg.TableGroupId.Value))
+                                         ||
+                                         // Tier 3: same Y-row as a Pass 1 XI rect
+                                         xiRectYRanges.Any(r =>
+                                             r.page == pg.Page &&
+                                             r.bottom + XI_SIB_TOL > pg.BaselineRegion.Y &&
+                                             r.top    - XI_SIB_TOL < pg.BaselineRegion.Y)
+                                     ))
+                        .ToList();
 
                     bool RectInXiTable(int page, RectangleF rect) =>
                         xiTableRegions.Any(pg =>
@@ -3580,6 +3725,24 @@ namespace DocumentProcessor
                         if (genuineColGroups.Count > 0)
                         {
                             var updatedColDrifts = new List<TableColumnDrift>();
+
+                            // For COLUMN_WIDTHS strategy where no col[0] drift is observed
+                            // (only higher-index columns have shifted), prepend a synthetic
+                            // col[0] entry with avgDeltaX=0. This ensures that ApplyColumnWidths
+                            // (via BuildTablePlanFromJsonGroup) does not shift the table indent —
+                            // only the preceding column's width is adjusted.
+                            if (tg.CorrectionStrategy == "COLUMN_WIDTHS" && genuineColGroups[0].Key > 0)
+                            {
+                                updatedColDrifts.Add(new TableColumnDrift
+                                {
+                                    ColumnIndex = 0,
+                                    BaselineXStart = 0f,
+                                    AvgDeltaX = 0f,
+                                    WidthCorrectionTwips = 0,
+                                    WidthCorrectionPt = "0pt"
+                                });
+                            }
+
                             float prevColDx = 0f;
                             foreach (var cg in genuineColGroups)
                             {
@@ -3911,6 +4074,24 @@ namespace DocumentProcessor
                        (tableInd < 0f
                            ? "\r\n  Note: table has negative indent (intentional margin positioning)."
                            : "");
+            }
+            else if (xByCol.Count == 1 && xByCol.Keys.Single() > 0)
+            {
+                // ── COLUMN_WIDTHS (single non-first column drift) ─────────────────────
+                // Only one column's drift is observed AND it is not col[0].
+                // Root cause: the preceding column's width changed between versions,
+                // which pushed this column's content left or right. Shifting the entire
+                // table indent (TABLE_INDENT_FALLBACK) would wrongly move ALL columns,
+                // including col[0] content that was never displaced.
+                // Correct fix: adjust col[K-1] width by -drift so that col[K] returns
+                // to its original X position while col[0..K-1] content is untouched.
+                int singleColKey = xByCol.Keys.Single();
+                strategy = "COLUMN_WIDTHS";
+                hint = $"WORD TABLE CORRECTIONS (COLUMN_WIDTHS strategy — single non-first column drift):\r\n" +
+                       $"  Only Col[{singleColKey}] has observed drift: {avgX:+0.##;-0.##}pt.\r\n" +
+                       $"  Root cause: Col[{singleColKey - 1}] width changed between versions, shifting Col[{singleColKey}] content.\r\n" +
+                       $"  Fix: widen Col[{singleColKey - 1}] by {-avgX:+0.##;-0.##}pt ({(int)Math.Round(-avgX * 20)} twips).\r\n" +
+                       $"  Do NOT shift Table.LeftIndent — Col[0] content is correctly positioned.";
             }
             else
             {
@@ -4413,6 +4594,15 @@ namespace DocumentProcessor
                 };
 
                 foreach (var w in groupWords) w.PhraseGroupId = groupId;
+
+                // Populate DocxTableIndex: consensus Word table index for the phrase group.
+                // If all words agree on the same tableIndex, record it; mixed-table groups get null.
+                var tableIndices = groupWords
+                    .Select(w => w.DocxContext?.TableIndex)
+                    .Where(t => t.HasValue)
+                    .Distinct()
+                    .ToList();
+                pg.DocxTableIndex = tableIndices.Count == 1 ? tableIndices[0] : (int?)null;
 
                 groups.Add(pg);
                 groupId++;
@@ -5942,6 +6132,19 @@ namespace DocumentProcessor
 
         [JsonPropertyName("tableRow")]
         public int? TableRow { get; set; }
+
+        /// <summary>
+        /// The Word document table index (1-based, from DocxContext.TableIndex) that all words
+        /// in this phrase group belong to. Null when words come from different Word tables or
+        /// when no DocxContext data is available.
+        ///
+        /// This is distinct from TableGroupId (which is a PDF-layer spatial cluster). Using this
+        /// field in Pass 2 sibling propagation ensures XI propagation stays within the same Word
+        /// table rather than bleeding into adjacent Word tables that share a PDF TableGroupId.
+        /// </summary>
+        [JsonPropertyName("docxTableIndex")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+        public int? DocxTableIndex { get; set; }
 
         /// <summary>
         /// True when this phrase group is intentionally not corrected by WordDriftCorrector

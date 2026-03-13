@@ -1,6 +1,6 @@
 {
   "reportMetadata": {
-    "generatedAt": "2026-03-12T15:34:05",
+    "generatedAt": "2026-03-12T20:44:22",
     "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\GeneralLiability\\Forms\\Multistate\\SSCSANCTIONSENDCW0823.pdf",
     "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V23\\GeneralLiability\\Forms\\Multistate\\SSCSANCTIONSENDCW0823.pdf",
     "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\GeneralLiability\\Forms\\Multistate",
@@ -19,7 +19,7 @@
   },
   "tableGroups": [
     {
-      "correctionStrategy": "TABLE_INDENT_FALLBACK",
+      "correctionStrategy": "COLUMN_WIDTHS",
       "tableId": 1,
       "page": 1,
       "rowCount": 2,
@@ -68,7 +68,7 @@
         "y": 723.376953,
         "fontSize": 0
       },
-      "wordCorrectionHint": "WORD TABLE CORRECTIONS (TABLE_INDENT_FALLBACK strategy):\r\n  Uniform drift of 5.4pt across all 1 columns.\r\n  Root cause unclear (cell padding and table indent do not match drift).\r\n  Fix: reduce Table.LeftIndent by 5.4pt (108 twips).\r\n  This shifts the entire table left as a unit \u2014 do NOT apply per word or per phrase.\r\n  Verify: Table.LeftIndent in source .docx = 0pt. New value should be -5.4pt.",
+      "wordCorrectionHint": "WORD TABLE CORRECTIONS (COLUMN_WIDTHS strategy \u2014 single non-first column drift):\r\n  Only Col[1] has observed drift: \u002B5.4pt.\r\n  Root cause: Col[0] width changed between versions, shifting Col[1] content.\r\n  Fix: widen Col[0] by -5.4pt (-108 twips).\r\n  Do NOT shift Table.LeftIndent \u2014 Col[0] content is correctly positioned.",
       "phraseGroupIds": [
         1,
         2,

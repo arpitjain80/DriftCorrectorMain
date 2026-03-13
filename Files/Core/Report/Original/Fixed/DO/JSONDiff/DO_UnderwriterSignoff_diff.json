@@ -1,6 +1,6 @@
 {
   "reportMetadata": {
-    "generatedAt": "2026-03-12T15:34:01",
+    "generatedAt": "2026-03-12T20:44:17",
     "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Fixed\\DO\\DO_UnderwriterSignoff.pdf",
     "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V23\\Fixed\\DO\\DO_UnderwriterSignoff.pdf",
     "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Fixed\\DO",
@@ -100,6 +100,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 0,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -146,6 +147,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 1,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -235,6 +237,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 3,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -298,6 +301,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 5,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {

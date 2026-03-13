@@ -1,6 +1,6 @@
 {
   "reportMetadata": {
-    "generatedAt": "2026-03-12T15:33:58",
+    "generatedAt": "2026-03-12T20:44:12",
     "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Fixed\\UnderwriterSignOffBinderLetter.pdf",
     "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V23\\Fixed\\UnderwriterSignOffBinderLetter.pdf",
     "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Fixed",
@@ -102,6 +102,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 0,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -148,6 +149,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 1,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -194,6 +196,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 2,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -244,6 +247,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 3,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -291,6 +295,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 4,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -353,6 +358,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 6,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {

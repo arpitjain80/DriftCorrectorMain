@@ -1,6 +1,6 @@
 {
   "reportMetadata": {
-    "generatedAt": "2026-03-12T15:33:59",
+    "generatedAt": "2026-03-12T20:44:14",
     "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Fixed\\Binder\\Invoice_1.pdf",
     "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V23\\Fixed\\Binder\\Invoice_1.pdf",
     "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Fixed\\Binder",
@@ -423,6 +423,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 0,
+      "docxTableIndex": 1,
       "isCleanDiff": true
     },
     {
@@ -722,6 +723,7 @@
       "tableGroupId": 2,
       "tableColumn": 0,
       "tableRow": 0,
+      "docxTableIndex": 3,
       "isCleanDiff": true
     },
     {
@@ -768,6 +770,7 @@
       "tableGroupId": 2,
       "tableColumn": 0,
       "tableRow": 1,
+      "docxTableIndex": 3,
       "isCleanDiff": true
     },
     {
@@ -814,6 +817,7 @@
       "tableGroupId": 2,
       "tableColumn": 0,
       "tableRow": 2,
+      "docxTableIndex": 3,
       "isCleanDiff": true
     },
     {
@@ -862,6 +866,7 @@
       "tableGroupId": 2,
       "tableColumn": 0,
       "tableRow": 3,
+      "docxTableIndex": 3,
       "isCleanDiff": true
     },
     {
@@ -908,6 +913,7 @@
       "tableGroupId": 2,
       "tableColumn": 0,
       "tableRow": 4,
+      "docxTableIndex": 3,
       "isCleanDiff": true
     },
     {
@@ -954,6 +960,7 @@
       "tableGroupId": 3,
       "tableColumn": 0,
       "tableRow": 0,
+      "docxTableIndex": 4,
       "isCleanDiff": true
     },
     {
@@ -1044,6 +1051,7 @@
       "tableGroupId": 3,
       "tableColumn": 0,
       "tableRow": 2,
+      "docxTableIndex": 4,
       "isCleanDiff": true
     },
     {
@@ -1146,6 +1154,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 0,
+      "docxTableIndex": 5,
       "isCleanDiff": true
     },
     {
@@ -1195,6 +1204,7 @@
       "tableGroupId": 1,
       "tableColumn": 1,
       "tableRow": 0,
+      "docxTableIndex": 5,
       "isCleanDiff": true
     },
     {
@@ -1241,6 +1251,7 @@
       "tableGroupId": 1,
       "tableColumn": 2,
       "tableRow": 0,
+      "docxTableIndex": 5,
       "isCleanDiff": true
     },
     {
@@ -1287,6 +1298,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 1,
+      "docxTableIndex": 5,
       "isCleanDiff": true
     },
     {
@@ -1335,6 +1347,7 @@
       "tableGroupId": 1,
       "tableColumn": 1,
       "tableRow": 1,
+      "docxTableIndex": 5,
       "isCleanDiff": true
     },
     {
@@ -1381,6 +1394,7 @@
       "tableGroupId": 1,
       "tableColumn": 2,
       "tableRow": 1,
+      "docxTableIndex": 5,
       "isCleanDiff": true
     },
     {
@@ -1427,6 +1441,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 2,
+      "docxTableIndex": 5,
       "isCleanDiff": true
     },
     {
@@ -1516,6 +1531,7 @@
       "tableGroupId": 1,
       "tableColumn": 2,
       "tableRow": 2,
+      "docxTableIndex": 5,
       "isCleanDiff": true
     },
     {
@@ -1562,6 +1578,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 3,
+      "docxTableIndex": 5,
       "isCleanDiff": true
     },
     {
@@ -1650,6 +1667,7 @@
       "tableGroupId": 1,
       "tableColumn": 2,
       "tableRow": 3,
+      "docxTableIndex": 5,
       "isCleanDiff": true
     },
     {
@@ -1696,6 +1714,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 4,
+      "docxTableIndex": 5,
       "isCleanDiff": true
     },
     {
@@ -1743,6 +1762,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 6,
+      "docxTableIndex": 5,
       "isCleanDiff": true
     },
     {
@@ -1832,6 +1852,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 7,
+      "docxTableIndex": 5,
       "isCleanDiff": true
     },
     {
@@ -1878,6 +1899,7 @@
       "tableGroupId": 1,
       "tableColumn": 1,
       "tableRow": 7,
+      "docxTableIndex": 5,
       "isCleanDiff": true
     },
     {
@@ -2016,6 +2038,7 @@
       "tableGroupId": 1,
       "tableColumn": 0,
       "tableRow": 9,
+      "docxTableIndex": 5,
       "isCleanDiff": true
     },
     {
@@ -2174,6 +2197,7 @@
       "tableGroupId": 5,
       "tableColumn": 0,
       "tableRow": 0,
+      "docxTableIndex": 7,
       "isCleanDiff": true
     },
     {
@@ -2272,6 +2296,7 @@
       "tableGroupId": 6,
       "tableColumn": 0,
       "tableRow": 0,
+      "docxTableIndex": 8,
       "isCleanDiff": true
     },
     {
@@ -2377,6 +2402,7 @@
       "tableGroupId": 5,
       "tableColumn": 0,
       "tableRow": 2,
+      "docxTableIndex": 7,
       "isCleanDiff": true
     },
     {
@@ -2474,6 +2500,7 @@
       "tableGroupId": 5,
       "tableColumn": 0,
       "tableRow": 4,
+      "docxTableIndex": 7,
       "isCleanDiff": true
     }
   ],

@@ -702,6 +702,12 @@ namespace DocumentProcessor
                 _ => DeriveStrategy(isU, avgX, cellPad, tableInd)
             };
 
+            // For COLUMN_WIDTHS where only non-first columns have observed drift,
+            // add a synthetic col[0] with drift=0 so that ApplyColumnWidths does not
+            // shift the table indent — only the preceding column's width is widened.
+            if (strat == CorrectionStrategy.ColumnWidths && xByCol.Count > 0 && !xByCol.ContainsKey(0))
+                xByCol[0] = 0f;
+
             return new TableCorrectionPlan
             {
                 TableIndex = docxTableIdx,
@@ -738,6 +744,12 @@ namespace DocumentProcessor
                 "TABLE_INDENT_FALLBACK" => CorrectionStrategy.TableIndentFallback,
                 _ => CorrectionStrategy.TableIndent
             };
+
+            // For COLUMN_WIDTHS where only non-first columns have observed drift,
+            // add a synthetic col[0] with drift=0 so that ApplyColumnWidths does not
+            // shift the table indent — only the preceding column's width is widened.
+            if (strat == CorrectionStrategy.ColumnWidths && xByCol.Count > 0 && !xByCol.ContainsKey(0))
+                xByCol[0] = 0f;
 
             return new TableCorrectionPlan
             {
