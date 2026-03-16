@@ -1,5 +1,6 @@
 ﻿using DocumentConversion;
 using System;
+using System.Configuration;
 using System.IO;
 
 namespace AsposeOldConsole
@@ -7,8 +8,8 @@ namespace AsposeOldConsole
     internal class Program
     {
         // Restored internal license path
-        private const string AsposeLicenseKeyPath = @"C:\Personal\Project\DriftCorrector\Files\Key\Aspose.Words.NET.lic";
-        
+        private static string AsposeLicenseKeyPath = ConfigurationManager.AppSettings["AsposeKeyFilePath"];
+
         static void Main(string[] args)
         {
             if (args.Length == 0)

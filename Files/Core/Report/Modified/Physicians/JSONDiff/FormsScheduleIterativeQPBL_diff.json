@@ -1,0 +1,23 @@
+{
+  "reportMetadata": {
+    "generatedAt": "2026-03-16T14:53:12",
+    "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Physicians\\FormsScheduleIterativeQPBL.pdf",
+    "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\Modified\\Physicians\\FormsScheduleIterativeQPBL.pdf",
+    "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\Physicians",
+    "publishFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\Modified\\Physicians"
+  },
+  "summary": {
+    "totalWordDifferences": 0,
+    "positionShifts": 0,
+    "fontDifferences": 0,
+    "fontSizeDifferences": 0,
+    "missingFromPublish": 0,
+    "extraInPublish": 0,
+    "totalPhraseGroups": 0,
+    "totalTableGroups": 0,
+    "isClean": true
+  },
+  "tableGroups": [],
+  "phraseGroups": [],
+  "wordLevelDifferences": []
+}

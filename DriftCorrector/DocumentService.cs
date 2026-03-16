@@ -561,10 +561,10 @@ namespace DocumentProcessor
         }
 
 
-        public static async Task RunExternalExeAsync(string exePath, string arguments)
+        public static async Task<string> RunExternalExeAsync(string exePath, string arguments)
         {
             string safePath = Path.GetFullPath(exePath);
-
+            string returnMsg = "";
             ProcessStartInfo startInfo = new ProcessStartInfo
             {
                 FileName = safePath,
@@ -588,7 +588,7 @@ namespace DocumentProcessor
 
                 string outputText = await outputTask;
                 string errorText = await errorTask;
-
+                returnMsg = $"Processing Output : {outputText}";
                 if (process.ExitCode != 0 || !string.IsNullOrEmpty(errorText))
                 {
                     // LOG THIS: This is where you'd write to your app's log file or database
@@ -603,6 +603,7 @@ namespace DocumentProcessor
                 // Optional: Log successful output too
                 File.AppendAllText("app_log.txt", $"{DateTime.Now}: Success - {outputText}");
             }
+            return returnMsg;
         }
 
         private static string GetWin32LongPath(string path)

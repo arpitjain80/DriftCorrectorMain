@@ -1,0 +1,1715 @@
+{
+  "reportMetadata": {
+    "generatedAt": "2026-03-16T14:52:00",
+    "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\ProfessionalAndManagementLiability\\DirectorsAndOfficers\\DO_ManagementLiability_QP_FIExcess.pdf",
+    "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V23\\ProfessionalAndManagementLiability\\DirectorsAndOfficers\\DO_ManagementLiability_QP_FIExcess.pdf",
+    "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\ProfessionalAndManagementLiability\\DirectorsAndOfficers",
+    "publishFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V23\\ProfessionalAndManagementLiability\\DirectorsAndOfficers"
+  },
+  "summary": {
+    "totalWordDifferences": 21,
+    "positionShifts": 21,
+    "fontDifferences": 0,
+    "fontSizeDifferences": 0,
+    "missingFromPublish": 0,
+    "extraInPublish": 0,
+    "totalPhraseGroups": 10,
+    "totalTableGroups": 1,
+    "isClean": false
+  },
+  "tableGroups": [
+    {
+      "correctionStrategy": "TABLE_INDENT_FALLBACK",
+      "tableId": 1,
+      "page": 1,
+      "rowCount": 1,
+      "columnCount": 3,
+      "columnDrifts": [
+        {
+          "columnIndex": 0,
+          "baselineXStart": 58.25,
+          "avgDeltaX": 1.75,
+          "widthCorrectionTwips": -35,
+          "widthCorrectionPt": "-1.75pt"
+        },
+        {
+          "columnIndex": 1,
+          "baselineXStart": 138.800003,
+          "avgDeltaX": 1.75,
+          "widthCorrectionTwips": 0,
+          "widthCorrectionPt": "0pt"
+        },
+        {
+          "columnIndex": 2,
+          "baselineXStart": 406.019989,
+          "avgDeltaX": 1.9800415,
+          "widthCorrectionTwips": -5,
+          "widthCorrectionPt": "-0.23pt"
+        }
+      ],
+      "rowDrifts": [
+        {
+          "rowIndex": 0,
+          "baselineY": 586.031006,
+          "avgDeltaY": 0,
+          "heightCorrectionTwips": 0,
+          "heightCorrectionPt": "0pt"
+        }
+      ],
+      "baselineBounds": {
+        "xStart": 58.25,
+        "xEnd": 534.640015,
+        "y": 586.031006,
+        "fontSize": 0
+      },
+      "publishBounds": {
+        "xStart": 60,
+        "xEnd": 536.390015,
+        "y": 586.031006,
+        "fontSize": 0
+      },
+      "wordCorrectionHint": "WORD TABLE CORRECTIONS (TABLE_INDENT_FALLBACK strategy):\r\n  Uniform drift of 1.83pt across all 3 columns.\r\n  Root cause unclear (cell padding and table indent do not match drift).\r\n  Fix: reduce Table.LeftIndent by 1.83pt (37 twips).\r\n  This shifts the entire table left as a unit \u2014 do NOT apply per word or per phrase.\r\n  Verify: Table.LeftIndent in source .docx = -0.25pt. New value should be -2.08pt.",
+      "phraseGroupIds": [
+        2,
+        3,
+        4,
+        7,
+        8,
+        9,
+        10
+      ]
+    }
+  ],
+  "phraseGroups": [
+    {
+      "groupId": 1,
+      "page": 1,
+      "phraseText": "Excess Follow Form",
+      "wordCount": 3,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "PARAGRAPH",
+      "baselineRegion": {
+        "xStart": 250.744995,
+        "xEnd": 392.175995,
+        "y": 619.54303,
+        "font": "CenturyGothic-Bold",
+        "fontSize": 16
+      },
+      "publishRegion": {
+        "xStart": 252.494995,
+        "xEnd": 393.919006,
+        "y": 619.54303,
+        "font": "CenturyGothic-Bold",
+        "fontSize": 16
+      },
+      "sharedDelta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "wordIds": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "groupId": 2,
+      "page": 1,
+      "phraseText": "Insured:",
+      "wordCount": 1,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "TABLE_CELL",
+      "baselineRegion": {
+        "xStart": 58.25,
+        "xEnd": 98.25,
+        "y": 586.031006,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 60,
+        "xEnd": 100,
+        "y": 586.031006,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Table 1, Col 0, Row 0: see tableGroups for column/row corrections"
+      },
+      "wordIds": [
+        4
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 2,
+      "docxTableIndex": 1,
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 3,
+      "page": 1,
+      "phraseText": "\u00ABNamedInsured\u00BB",
+      "wordCount": 1,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "TABLE_CELL",
+      "baselineRegion": {
+        "xStart": 138.800003,
+        "xEnd": 208.800003,
+        "y": 586.031006,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 140.550003,
+        "xEnd": 210.550003,
+        "y": 586.031006,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Table 1, Col 1, Row 0: see tableGroups for column/row corrections"
+      },
+      "wordIds": [
+        5
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 2,
+      "docxTableIndex": 1,
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 4,
+      "page": 1,
+      "phraseText": "Commission: \u00ABCommission\u00BB%",
+      "wordCount": 2,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "TABLE_CELL",
+      "baselineRegion": {
+        "xStart": 406.019989,
+        "xEnd": 534.640015,
+        "y": 586.031006,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 408.000031,
+        "xEnd": 536.390015,
+        "y": 586.031006,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 1.9800415,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.9800415,
+        "y": -0,
+        "xTwips": -40,
+        "yTwips": 0,
+        "xPt": "-1.98pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Table 1, Col 2, Row 0: see tableGroups for column/row corrections"
+      },
+      "wordIds": [
+        6,
+        7
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 3,
+      "tableRow": 2,
+      "docxTableIndex": 1,
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 5,
+      "page": 1,
+      "phraseText": "\u00ABInsuredAddress\u00BB\u00ABComma1\u00BB\u00ABAddress2",
+      "wordCount": 1,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "PARAGRAPH",
+      "baselineRegion": {
+        "xStart": 138.800003,
+        "xEnd": 303.799988,
+        "y": 571.93103,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 140.550003,
+        "xEnd": 305.549988,
+        "y": 571.93103,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "wordIds": [
+        8
+      ]
+    },
+    {
+      "groupId": 6,
+      "page": 1,
+      "phraseText": "\u00BB",
+      "wordCount": 1,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "PARAGRAPH",
+      "baselineRegion": {
+        "xStart": 138.800003,
+        "xEnd": 143.800003,
+        "y": 557.831055,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 140.550003,
+        "xEnd": 145.550003,
+        "y": 557.831055,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "wordIds": [
+        9
+      ]
+    },
+    {
+      "groupId": 7,
+      "page": 1,
+      "phraseText": "\u00ABCity\u00BB, \u00ABState\u00BB \u00ABZipcode\u00BB",
+      "wordCount": 3,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "TABLE_CELL",
+      "baselineRegion": {
+        "xStart": 138.800003,
+        "xEnd": 253.069,
+        "y": 543.731018,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 140.550003,
+        "xEnd": 254.820007,
+        "y": 543.731018,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Table cell: see tableGroups for column/row width correction"
+      },
+      "wordIds": [
+        10,
+        11,
+        12
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 2,
+      "docxTableIndex": 1,
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 8,
+      "page": 1,
+      "phraseText": "Policy Period: \u00ABInceptionDate\u00BB to \u00ABExpirationDate1\u00BB",
+      "wordCount": 5,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "TABLE_CELL",
+      "baselineRegion": {
+        "xStart": 58.25,
+        "xEnd": 318.118011,
+        "y": 505.109039,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 60,
+        "xEnd": 319.869995,
+        "y": 505.109039,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Table cell: see tableGroups for column/row width correction"
+      },
+      "wordIds": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 4,
+      "docxTableIndex": 1,
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 9,
+      "page": 1,
+      "phraseText": "Quotation#: \u00ABQuoteNumber\u00BB \u00ABRevisionNo\u00BB",
+      "wordCount": 3,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "TABLE_CELL",
+      "baselineRegion": {
+        "xStart": 58.25,
+        "xEnd": 280.475006,
+        "y": 490.396027,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "publishRegion": {
+        "xStart": 60,
+        "xEnd": 282.220001,
+        "y": 490.396027,
+        "font": "CenturyGothic",
+        "fontSize": 10
+      },
+      "sharedDelta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Table cell: see tableGroups for column/row width correction"
+      },
+      "wordIds": [
+        18,
+        19,
+        20
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 5,
+      "docxTableIndex": 1,
+      "isCleanDiff": true
+    },
+    {
+      "groupId": 10,
+      "page": 1,
+      "phraseText": "\u00ABBoldText\u00BB",
+      "wordCount": 1,
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "layoutContext": "TABLE_CELL",
+      "baselineRegion": {
+        "xStart": 58.25,
+        "xEnd": 113.25,
+        "y": 459.807068,
+        "font": "Calibri-Bold",
+        "fontSize": 11
+      },
+      "publishRegion": {
+        "xStart": 60,
+        "xEnd": 115,
+        "y": 459.796051,
+        "font": "Calibri-Bold",
+        "fontSize": 11
+      },
+      "sharedDelta": {
+        "x": 1.75,
+        "y": -0.0110168457,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": 0.0110168457,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Table cell: see tableGroups for column/row width correction"
+      },
+      "wordIds": [
+        21
+      ],
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 7,
+      "docxTableIndex": 1,
+      "isCleanDiff": true
+    }
+  ],
+  "wordLevelDifferences": [
+    {
+      "differenceId": 1,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Excess",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 250.744995,
+        "y": 619.54303,
+        "font": "CenturyGothic-Bold",
+        "fontSize": 16,
+        "page": 1
+      },
+      "publish": {
+        "x": 252.494995,
+        "y": 619.54303,
+        "font": "CenturyGothic-Bold",
+        "fontSize": 16,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "phraseGroupId": 1
+    },
+    {
+      "differenceId": 2,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Follow",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 307.065979,
+        "y": 619.54303,
+        "font": "CenturyGothic-Bold",
+        "fontSize": 16,
+        "page": 1
+      },
+      "publish": {
+        "x": 308.815002,
+        "y": 619.54303,
+        "font": "CenturyGothic-Bold",
+        "fontSize": 16,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.74902344,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.74902344,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "phraseGroupId": 1
+    },
+    {
+      "differenceId": 3,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Form",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 360.175995,
+        "y": 619.54303,
+        "font": "CenturyGothic-Bold",
+        "fontSize": 16,
+        "page": 1
+      },
+      "publish": {
+        "x": 361.919006,
+        "y": 619.54303,
+        "font": "CenturyGothic-Bold",
+        "fontSize": 16,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.74301147,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.74301147,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.74pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.74pt (-35 twips)"
+      },
+      "phraseGroupId": 1
+    },
+    {
+      "differenceId": 4,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Insured:",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 58.25,
+        "y": 586.031006,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 60,
+        "y": 586.031006,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "phraseGroupId": 2,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 2,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 13.8000002,
+        "tableIndex": 1,
+        "rowIndex": 2,
+        "colIndex": 0,
+        "colWidthPt": 80.5500031,
+        "rowHeightPt": 9.69999981,
+        "cellLeftPaddingPt": 1.5,
+        "tableLeftIndentPt": -0.25,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "CellFormat.LeftPadding",
+            "axis": "X",
+            "currentValuePt": 1.5,
+            "newValuePt": 0,
+            "currentValueTwips": 30,
+            "newValueTwips": 0,
+            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 1.5pt \u2192 0pt to cancel \u002B1.75pt drift. Apply once to all rows/cells \u2014 NOT per word."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 5,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "\u00ABNamedInsured\u00BB",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 138.800003,
+        "y": 586.031006,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 140.550003,
+        "y": 586.031006,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "phraseGroupId": 3,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 2,
+      "docxContext": {
+        "elementType": "MERGE_FIELD",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "mergeFieldName": "NamedInsured",
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 13.8000002,
+        "tableIndex": 1,
+        "rowIndex": 2,
+        "colIndex": 1,
+        "colWidthPt": 188.649994,
+        "rowHeightPt": 9.69999981,
+        "cellLeftPaddingPt": 1.5,
+        "tableLeftIndentPt": -0.25,
+        "columnOffsetPt": 80.5500031,
+        "correctionTargets": [
+          {
+            "property": "CellFormat.LeftPadding",
+            "axis": "X",
+            "currentValuePt": 1.5,
+            "newValuePt": 0,
+            "currentValueTwips": 30,
+            "newValueTwips": 0,
+            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 1.5pt \u2192 0pt to cancel \u002B1.75pt drift. Apply once to all rows/cells \u2014 NOT per word."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 6,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Commission:",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 406.019989,
+        "y": 586.031006,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 408.000031,
+        "y": 586.031006,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.9800415,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.9800415,
+        "y": -0,
+        "xTwips": -40,
+        "yTwips": 0,
+        "xPt": "-1.98pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.98pt (-40 twips)"
+      },
+      "phraseGroupId": 4,
+      "tableGroupId": 1,
+      "tableColumn": 3,
+      "tableRow": 2,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 1,
+        "rowIndex": 2,
+        "colIndex": 3,
+        "colWidthPt": 242.350006,
+        "rowHeightPt": 9.69999981,
+        "cellLeftPaddingPt": 1.5,
+        "tableLeftIndentPt": -0.25,
+        "columnOffsetPt": 273.25,
+        "correctionTargets": [
+          {
+            "property": "CellFormat.LeftPadding",
+            "axis": "X",
+            "currentValuePt": 1.5,
+            "newValuePt": 0,
+            "currentValueTwips": 30,
+            "newValueTwips": 0,
+            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 1.5pt \u2192 0pt to cancel \u002B1.98pt drift. Apply once to all rows/cells \u2014 NOT per word."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 7,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "\u00ABCommission\u00BB%",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 469.640015,
+        "y": 586.031006,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 471.390015,
+        "y": 586.031006,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "phraseGroupId": 4,
+      "tableGroupId": 1,
+      "tableColumn": 3,
+      "tableRow": 2
+    },
+    {
+      "differenceId": 8,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "\u00ABInsuredAddress\u00BB\u00ABComma1\u00BB\u00ABAddress2",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 138.800003,
+        "y": 571.93103,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 140.550003,
+        "y": 571.93103,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "phraseGroupId": 5
+    },
+    {
+      "differenceId": 9,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "\u00BB",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 138.800003,
+        "y": 557.831055,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 140.550003,
+        "y": 557.831055,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "phraseGroupId": 6
+    },
+    {
+      "differenceId": 10,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "\u00ABCity\u00BB,",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 138.800003,
+        "y": 543.731018,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 140.550003,
+        "y": 543.731018,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "phraseGroupId": 7,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 2,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 13.8000002,
+        "tableIndex": 1,
+        "rowIndex": 2,
+        "colIndex": 1,
+        "colWidthPt": 188.649994,
+        "rowHeightPt": 9.69999981,
+        "cellLeftPaddingPt": 1.5,
+        "tableLeftIndentPt": -0.25,
+        "columnOffsetPt": 80.5500031,
+        "correctionTargets": [
+          {
+            "property": "CellFormat.LeftPadding",
+            "axis": "X",
+            "currentValuePt": 1.5,
+            "newValuePt": 0,
+            "currentValueTwips": 30,
+            "newValueTwips": 0,
+            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 1.5pt \u2192 0pt to cancel \u002B1.75pt drift. Apply once to all rows/cells \u2014 NOT per word."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 11,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "\u00ABState\u00BB",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 171.716003,
+        "y": 543.731018,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 173.470001,
+        "y": 543.731018,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.7539978,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.7539978,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "phraseGroupId": 7,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 2
+    },
+    {
+      "differenceId": 12,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "\u00ABZipcode\u00BB",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 208.069,
+        "y": 543.731018,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 209.820007,
+        "y": 543.731018,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.75100708,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75100708,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "phraseGroupId": 7,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 2
+    },
+    {
+      "differenceId": 13,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Policy",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 58.25,
+        "y": 505.109039,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 60,
+        "y": 505.109039,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "phraseGroupId": 8,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 4,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 1,
+        "rowIndex": 4,
+        "colIndex": 0,
+        "colWidthPt": 80.5500031,
+        "rowHeightPt": 9.69999981,
+        "cellLeftPaddingPt": 1.5,
+        "tableLeftIndentPt": -0.25,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "CellFormat.LeftPadding",
+            "axis": "X",
+            "currentValuePt": 1.5,
+            "newValuePt": 0,
+            "currentValueTwips": 30,
+            "newValueTwips": 0,
+            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 1.5pt \u2192 0pt to cancel \u002B1.75pt drift. Apply once to all rows/cells \u2014 NOT per word."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 14,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Period:",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 89.3199997,
+        "y": 505.109039,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 91.0699997,
+        "y": 505.109039,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "phraseGroupId": 8,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 4
+    },
+    {
+      "differenceId": 15,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "\u00ABInceptionDate\u00BB",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 138.800003,
+        "y": 505.109039,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 140.550003,
+        "y": 505.109039,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "phraseGroupId": 8,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 4,
+      "docxContext": {
+        "elementType": "MERGE_FIELD",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "mergeFieldName": "InceptionDate",
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 1,
+        "rowIndex": 4,
+        "colIndex": 1,
+        "colWidthPt": 344,
+        "rowHeightPt": 9.69999981,
+        "cellLeftPaddingPt": 1.5,
+        "tableLeftIndentPt": -0.25,
+        "columnOffsetPt": 80.5500031,
+        "correctionTargets": [
+          {
+            "property": "CellFormat.LeftPadding",
+            "axis": "X",
+            "currentValuePt": 1.5,
+            "newValuePt": 0,
+            "currentValueTwips": 30,
+            "newValueTwips": 0,
+            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 1.5pt \u2192 0pt to cancel \u002B1.75pt drift. Apply once to all rows/cells \u2014 NOT per word."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 16,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "to",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 220.412003,
+        "y": 505.109039,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 222.160019,
+        "y": 505.109039,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.74801636,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.74801636,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "phraseGroupId": 8,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 4
+    },
+    {
+      "differenceId": 17,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "\u00ABExpirationDate1\u00BB",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 233.118011,
+        "y": 505.109039,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 234.87001,
+        "y": 505.109039,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.7519989,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.7519989,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "phraseGroupId": 8,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 4
+    },
+    {
+      "differenceId": 18,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "Quotation#:",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 58.25,
+        "y": 490.396027,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 60,
+        "y": 490.396027,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "phraseGroupId": 9,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 5,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 1,
+        "rowIndex": 5,
+        "colIndex": 0,
+        "colWidthPt": 80.5500031,
+        "rowHeightPt": 9.69999981,
+        "cellLeftPaddingPt": 1.5,
+        "tableLeftIndentPt": -0.25,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "CellFormat.LeftPadding",
+            "axis": "X",
+            "currentValuePt": 1.5,
+            "newValuePt": 0,
+            "currentValueTwips": 30,
+            "newValueTwips": 0,
+            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 1.5pt \u2192 0pt to cancel \u002B1.75pt drift. Apply once to all rows/cells \u2014 NOT per word."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 19,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "\u00ABQuoteNumber\u00BB",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 138.800003,
+        "y": 490.396027,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 140.550003,
+        "y": 490.396027,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.75,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "phraseGroupId": 9,
+      "tableGroupId": 1,
+      "tableColumn": 1,
+      "tableRow": 5,
+      "docxContext": {
+        "elementType": "MERGE_FIELD",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "mergeFieldName": "QuoteNumber",
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 1,
+        "rowIndex": 5,
+        "colIndex": 1,
+        "colWidthPt": 188.649994,
+        "rowHeightPt": 9.69999981,
+        "cellLeftPaddingPt": 1.5,
+        "tableLeftIndentPt": -0.25,
+        "columnOffsetPt": 80.5500031,
+        "correctionTargets": [
+          {
+            "property": "CellFormat.LeftPadding",
+            "axis": "X",
+            "currentValuePt": 1.5,
+            "newValuePt": 0,
+            "currentValueTwips": 30,
+            "newValueTwips": 0,
+            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 1.5pt \u2192 0pt to cancel \u002B1.75pt drift. Apply once to all rows/cells \u2014 NOT per word."
+          }
+        ]
+      }
+    },
+    {
+      "differenceId": 20,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "\u00ABRevisionNo\u00BB",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 220.475006,
+        "y": 490.396027,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "publish": {
+        "x": 222.220001,
+        "y": 490.396027,
+        "font": "CenturyGothic",
+        "fontSize": 10,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.74499512,
+        "y": 0,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.74499512,
+        "y": -0,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.74pt",
+        "yPt": "0pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.74pt (-35 twips)"
+      },
+      "phraseGroupId": 9,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 5
+    },
+    {
+      "differenceId": 21,
+      "primaryType": "POSITION_SHIFT",
+      "issues": [
+        "POSITION_SHIFT"
+      ],
+      "text": "\u00ABBoldText\u00BB",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 58.25,
+        "y": 459.807068,
+        "font": "Calibri-Bold",
+        "fontSize": 11,
+        "page": 1
+      },
+      "publish": {
+        "x": 60,
+        "y": 459.796051,
+        "font": "Calibri-Bold",
+        "fontSize": 11,
+        "page": 1
+      },
+      "delta": {
+        "x": 1.75,
+        "y": -0.0110168457,
+        "fontSizeDiff": 0,
+        "fontChanged": false
+      },
+      "negativeCorrection": {
+        "x": -1.75,
+        "y": 0.0110168457,
+        "xTwips": -35,
+        "yTwips": 0,
+        "xPt": "-1.75pt",
+        "yPt": "\u002B0.01pt",
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.75pt (-35 twips)"
+      },
+      "phraseGroupId": 10,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 7,
+      "docxContext": {
+        "elementType": "MERGE_FIELD",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "mergeFieldName": "BoldText",
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 1,
+        "rowIndex": 7,
+        "colIndex": 0,
+        "colWidthPt": 535.5,
+        "rowHeightPt": 9.69999981,
+        "cellLeftPaddingPt": 1.5,
+        "tableLeftIndentPt": -0.25,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "CellFormat.LeftPadding",
+            "axis": "X",
+            "currentValuePt": 1.5,
+            "newValuePt": 0,
+            "currentValueTwips": 30,
+            "newValueTwips": 0,
+            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 1.5pt \u2192 0pt to cancel \u002B1.75pt drift. Apply once to all rows/cells \u2014 NOT per word."
+          }
+        ]
+      }
+    }
+  ]
+}

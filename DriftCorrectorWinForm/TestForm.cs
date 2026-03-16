@@ -183,8 +183,8 @@ namespace AsposeFormAdjustment
                 string V14PDFFolder = Path.Combine(WorkDir, Program[$"AppSettings:DocumentService:Documents:Local:Customer:{customerName}:PolicyFormsPDFV14"]);
                 string JsonProcessingStateFile = Path.Combine(WorkDir, Program[$"AppSettings:DocumentService:Documents:Local:Customer:{customerName}:ProcessingStateFilePathPDFV14"]);
 
-                await DocumentService.RunExternalExeAsync(policyFormsWordToV14PDFConverterExePath, $"convert \"{policyFormsFolder}\" \"{V14PDFFolder}\" \"{JsonProcessingStateFile}\"");
-                MessageBox.Show("Conversion Finished!");
+                string output = await DocumentService.RunExternalExeAsync(policyFormsWordToV14PDFConverterExePath, $"convert \"{policyFormsFolder}\" \"{V14PDFFolder}\" \"{JsonProcessingStateFile}\"");
+                MessageBox.Show($"Conversion Finished! Output : {output}");
             }
             catch (Exception ex)
             {

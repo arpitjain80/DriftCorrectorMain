@@ -37,6 +37,7 @@
       <HintPath>packages\Aspose.Words.14.2.0\lib\net3.5-client\Aspose.Words.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
