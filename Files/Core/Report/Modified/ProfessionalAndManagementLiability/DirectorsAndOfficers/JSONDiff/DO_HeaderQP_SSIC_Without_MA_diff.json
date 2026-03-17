@@ -1,6 +1,6 @@
 {
   "reportMetadata": {
-    "generatedAt": "2026-03-17T14:49:50",
+    "generatedAt": "2026-03-17T18:03:14",
     "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\ProfessionalAndManagementLiability\\DirectorsAndOfficers\\DO_HeaderQP_SSIC_Without_MA.pdf",
     "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\Modified\\ProfessionalAndManagementLiability\\DirectorsAndOfficers\\DO_HeaderQP_SSIC_Without_MA.pdf",
     "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\ProfessionalAndManagementLiability\\DirectorsAndOfficers",
@@ -14,10 +14,84 @@
     "missingFromPublish": 5,
     "extraInPublish": 5,
     "totalPhraseGroups": 60,
-    "totalTableGroups": 0,
+    "totalTableGroups": 1,
     "isClean": false
   },
-  "tableGroups": [],
+  "tableGroups": [
+    {
+      "correctionStrategy": "TABLE_INDENT_FALLBACK",
+      "tableId": 1,
+      "page": 1,
+      "rowCount": 5,
+      "columnCount": 16,
+      "columnDrifts": [
+        {
+          "columnIndex": 0,
+          "baselineXStart": 82.6640015,
+          "avgDeltaX": -10.7238007,
+          "widthCorrectionTwips": 214,
+          "widthCorrectionPt": "\u002B10.72pt"
+        }
+      ],
+      "rowDrifts": [
+        {
+          "rowIndex": 0,
+          "baselineY": 353.273987,
+          "avgDeltaY": 0,
+          "heightCorrectionTwips": 0,
+          "heightCorrectionPt": "0pt"
+        },
+        {
+          "rowIndex": 1,
+          "baselineY": 252.333038,
+          "avgDeltaY": 0,
+          "heightCorrectionTwips": 0,
+          "heightCorrectionPt": "0pt"
+        },
+        {
+          "rowIndex": 2,
+          "baselineY": 240.072037,
+          "avgDeltaY": 0,
+          "heightCorrectionTwips": 0,
+          "heightCorrectionPt": "0pt"
+        },
+        {
+          "rowIndex": 3,
+          "baselineY": 154.506027,
+          "avgDeltaY": 0,
+          "heightCorrectionTwips": 0,
+          "heightCorrectionPt": "0pt"
+        },
+        {
+          "rowIndex": 4,
+          "baselineY": 142.24501,
+          "avgDeltaY": 0,
+          "heightCorrectionTwips": 0,
+          "heightCorrectionPt": "0pt"
+        }
+      ],
+      "baselineBounds": {
+        "xStart": 80.052002,
+        "xEnd": 567.879028,
+        "y": 142.24501,
+        "fontSize": 0
+      },
+      "publishBounds": {
+        "xStart": 64.6200027,
+        "xEnd": 556.039917,
+        "y": 142.24501,
+        "fontSize": 0
+      },
+      "wordCorrectionHint": "WORD TABLE CORRECTIONS (TABLE_INDENT_FALLBACK strategy):\r\n  Uniform drift of -10.72pt across all 1 columns.\r\n  Root cause unclear (cell padding and table indent do not match drift).\r\n  Fix: reduce Table.LeftIndent by -10.72pt (-214 twips).\r\n  This shifts the entire table left as a unit \u2014 do NOT apply per word or per phrase.\r\n  Verify: Table.LeftIndent in source .docx = 0pt. New value should be 10.72pt.",
+      "phraseGroupIds": [
+        1,
+        3,
+        23,
+        39,
+        60
+      ]
+    }
+  ],
   "phraseGroups": [
     {
       "groupId": 1,
@@ -27,7 +101,7 @@
       "issues": [
         "POSITION_SHIFT"
       ],
-      "layoutContext": "INLINE_RUN",
+      "layoutContext": "TABLE_CELL",
       "baselineRegion": {
         "xStart": 80.3939972,
         "xEnd": 100.393997,
@@ -55,11 +129,15 @@
         "yTwips": 0,
         "xPt": "\u002B0.68pt",
         "yPt": "0pt",
-        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+        "wordCorrectionHint": "Table 1, Col 0, Row 0: see tableGroups for column/row corrections"
       },
       "wordIds": [
         1
       ],
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 3,
+      "docxTableIndex": 6,
       "isCleanDiff": true
     },
     {
@@ -113,7 +191,7 @@
       "issues": [
         "POSITION_SHIFT"
       ],
-      "layoutContext": "INLINE_RUN",
+      "layoutContext": "TABLE_CELL",
       "baselineRegion": {
         "xStart": 130.161011,
         "xEnd": 145.161011,
@@ -141,11 +219,15 @@
         "yTwips": 0,
         "xPt": "\u002B2.96pt",
         "yPt": "0pt",
-        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+        "wordCorrectionHint": "Table 1, Col 2, Row 0: see tableGroups for column/row corrections"
       },
       "wordIds": [
         3
       ],
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 1,
+      "docxTableIndex": 6,
       "isCleanDiff": true
     },
     {
@@ -986,7 +1068,7 @@
       "issues": [
         "POSITION_SHIFT"
       ],
-      "layoutContext": "INLINE_RUN",
+      "layoutContext": "TABLE_CELL",
       "baselineRegion": {
         "xStart": 87.5460052,
         "xEnd": 102.546005,
@@ -1014,11 +1096,15 @@
         "yTwips": 0,
         "xPt": "\u002B14.17pt",
         "yPt": "0pt",
-        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+        "wordCorrectionHint": "Table 1, Col 0, Row 2: see tableGroups for column/row corrections"
       },
       "wordIds": [
         38
       ],
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 7,
+      "docxTableIndex": 6,
       "isCleanDiff": true
     },
     {
@@ -1674,7 +1760,7 @@
       "issues": [
         "POSITION_SHIFT"
       ],
-      "layoutContext": "INLINE_RUN",
+      "layoutContext": "TABLE_CELL",
       "baselineRegion": {
         "xStart": 107.543999,
         "xEnd": 171.955002,
@@ -1702,12 +1788,16 @@
         "yTwips": 0,
         "xPt": "\u002B1.18pt",
         "yPt": "0pt",
-        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
+        "wordCorrectionHint": "Table 1, Col 1, Row 3: see tableGroups for column/row corrections"
       },
       "wordIds": [
         55,
         56
       ],
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 13,
+      "docxTableIndex": 6,
       "isCleanDiff": true
     },
     {
@@ -2584,7 +2674,7 @@
       "issues": [
         "POSITION_SHIFT"
       ],
-      "layoutContext": "PARAGRAPH",
+      "layoutContext": "TABLE_CELL",
       "baselineRegion": {
         "xStart": 118.024002,
         "xEnd": 145.730011,
@@ -2612,12 +2702,16 @@
         "yTwips": 0,
         "xPt": "\u002B34.62pt",
         "yPt": "0pt",
-        "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B34.62pt (692 twips)"
+        "wordCorrectionHint": "Table cell: see tableGroups for column/row width correction"
       },
       "wordIds": [
         85,
         86
       ],
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 15,
+      "docxTableIndex": 6,
       "isCleanDiff": true
     }
   ],
@@ -2630,7 +2724,7 @@
       ],
       "text": "note",
       "page": 1,
-      "layoutContext": "INLINE_RUN",
+      "layoutContext": "TABLE_CELL",
       "baseline": {
         "x": 80.3939972,
         "y": 353.273987,
@@ -2660,7 +2754,40 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B0.68pt (14 twips)"
       },
-      "phraseGroupId": 1
+      "phraseGroupId": 1,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 3,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 6,
+        "rowIndex": 3,
+        "colIndex": 0,
+        "colWidthPt": 535.5,
+        "rowHeightPt": 30.75,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": 0,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "Table.LeftIndent",
+            "axis": "X",
+            "currentValuePt": 0,
+            "newValuePt": 0.683990479,
+            "currentValueTwips": 0,
+            "newValueTwips": 14,
+            "description": "[TABLE_INDENT_FALLBACK] Table.LeftIndent: 0pt \u2192 0.68pt. Root cause unknown; padding and indent did not match drift."
+          }
+        ]
+      }
     },
     {
       "differenceId": 2,
@@ -2710,7 +2837,7 @@
       ],
       "text": "the",
       "page": 1,
-      "layoutContext": "INLINE_RUN",
+      "layoutContext": "TABLE_CELL",
       "baseline": {
         "x": 130.161011,
         "y": 353.273987,
@@ -2740,7 +2867,40 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B2.96pt (59 twips)"
       },
-      "phraseGroupId": 3
+      "phraseGroupId": 3,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 1,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 8,
+        "lineSpacingPt": 12,
+        "tableIndex": 6,
+        "rowIndex": 1,
+        "colIndex": 0,
+        "colWidthPt": 535.5,
+        "rowHeightPt": 35.5499992,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": 0,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "Table.LeftIndent",
+            "axis": "X",
+            "currentValuePt": 0,
+            "newValuePt": 2.96101379,
+            "currentValueTwips": 0,
+            "newValueTwips": 59,
+            "description": "[TABLE_INDENT_FALLBACK] Table.LeftIndent: 0pt \u2192 2.96pt. Root cause unknown; padding and indent did not match drift."
+          }
+        ]
+      }
     },
     {
       "differenceId": 4,
@@ -3190,13 +3350,32 @@
       ],
       "text": "be",
       "page": 1,
-      "layoutContext": "PARAGRAPH",
+      "layoutContext": "TABLE_CELL",
       "baseline": {
         "x": 45,
         "y": 341.013,
         "font": "CenturyGothic",
         "fontSize": 10,
         "page": 1
+      },
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 6,
+        "rowIndex": 11,
+        "colIndex": 0,
+        "colWidthPt": 535.5,
+        "rowHeightPt": 54.75,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": 0,
+        "columnOffsetPt": 0
       }
     },
     {
@@ -4047,13 +4226,32 @@
       ],
       "text": "of",
       "page": 1,
-      "layoutContext": "PARAGRAPH",
+      "layoutContext": "TABLE_CELL",
       "baseline": {
         "x": 45,
         "y": 240.072037,
         "font": "CenturyGothic",
         "fontSize": 10,
         "page": 1
+      },
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 6,
+        "rowIndex": 5,
+        "colIndex": 0,
+        "colWidthPt": 535.5,
+        "rowHeightPt": 39.75,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": 0,
+        "columnOffsetPt": 0
       }
     },
     {
@@ -4064,7 +4262,7 @@
       ],
       "text": "and",
       "page": 1,
-      "layoutContext": "INLINE_RUN",
+      "layoutContext": "TABLE_CELL",
       "baseline": {
         "x": 87.5460052,
         "y": 240.072037,
@@ -4094,7 +4292,40 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B14.17pt (283 twips)"
       },
-      "phraseGroupId": 23
+      "phraseGroupId": 23,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 7,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 6,
+        "rowIndex": 7,
+        "colIndex": 0,
+        "colWidthPt": 535.5,
+        "rowHeightPt": 41.25,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": 0,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "Table.LeftIndent",
+            "axis": "X",
+            "currentValuePt": 0,
+            "newValuePt": 14.1660004,
+            "currentValueTwips": 0,
+            "newValueTwips": 283,
+            "description": "[TABLE_INDENT_FALLBACK] Table.LeftIndent: 0pt \u2192 14.17pt. Root cause unknown; padding and indent did not match drift."
+          }
+        ]
+      }
     },
     {
       "differenceId": 39,
@@ -4721,7 +4952,7 @@
       ],
       "text": "the",
       "page": 1,
-      "layoutContext": "INLINE_RUN",
+      "layoutContext": "TABLE_CELL",
       "baseline": {
         "x": 107.543999,
         "y": 154.506027,
@@ -4751,7 +4982,40 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B1.18pt (24 twips)"
       },
-      "phraseGroupId": 39
+      "phraseGroupId": 39,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 13,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 6,
+        "rowIndex": 13,
+        "colIndex": 0,
+        "colWidthPt": 535.5,
+        "rowHeightPt": 87.75,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": 0,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "Table.LeftIndent",
+            "axis": "X",
+            "currentValuePt": 0,
+            "newValuePt": 1.18399811,
+            "currentValueTwips": 0,
+            "newValueTwips": 24,
+            "description": "[TABLE_INDENT_FALLBACK] Table.LeftIndent: 0pt \u2192 1.18pt. Root cause unknown; padding and indent did not match drift."
+          }
+        ]
+      }
     },
     {
       "differenceId": 56,
@@ -4761,7 +5025,7 @@
       ],
       "text": "Applicant",
       "page": 1,
-      "layoutContext": "INLINE_RUN",
+      "layoutContext": "TABLE_CELL",
       "baseline": {
         "x": 126.955002,
         "y": 154.506027,
@@ -4791,7 +5055,10 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B2.01pt (40 twips)"
       },
-      "phraseGroupId": 39
+      "phraseGroupId": 39,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 13
     },
     {
       "differenceId": 57,
@@ -5281,13 +5548,32 @@
       ],
       "text": "of",
       "page": 1,
-      "layoutContext": "PARAGRAPH",
+      "layoutContext": "TABLE_CELL",
       "baseline": {
         "x": 45,
         "y": 142.24501,
         "font": "CenturyGothic",
         "fontSize": 10,
         "page": 1
+      },
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 6,
+        "rowIndex": 9,
+        "colIndex": 0,
+        "colWidthPt": 535.5,
+        "rowHeightPt": 14.3999996,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": 0,
+        "columnOffsetPt": 0
       }
     },
     {
@@ -5875,7 +6161,7 @@
       ],
       "text": "to",
       "page": 1,
-      "layoutContext": "PARAGRAPH",
+      "layoutContext": "TABLE_CELL",
       "baseline": {
         "x": 118.024002,
         "y": 129.984024,
@@ -5905,7 +6191,40 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B34.62pt (692 twips)"
       },
-      "phraseGroupId": 60
+      "phraseGroupId": 60,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 15,
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 6,
+        "rowIndex": 15,
+        "colIndex": 0,
+        "colWidthPt": 535.5,
+        "rowHeightPt": 55.5,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": 0,
+        "columnOffsetPt": 0,
+        "correctionTargets": [
+          {
+            "property": "Table.LeftIndent",
+            "axis": "X",
+            "currentValuePt": 0,
+            "newValuePt": 34.6240005,
+            "currentValueTwips": 0,
+            "newValueTwips": 692,
+            "description": "[TABLE_INDENT_FALLBACK] Table.LeftIndent: 0pt \u2192 34.62pt. Root cause unknown; padding and indent did not match drift."
+          }
+        ]
+      }
     },
     {
       "differenceId": 86,
@@ -5915,7 +6234,7 @@
       ],
       "text": "the",
       "page": 1,
-      "layoutContext": "PARAGRAPH",
+      "layoutContext": "TABLE_CELL",
       "baseline": {
         "x": 130.730011,
         "y": 129.984024,
@@ -5945,7 +6264,10 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by \u002B34.62pt (692 twips)"
       },
-      "phraseGroupId": 60
+      "phraseGroupId": 60,
+      "tableGroupId": 1,
+      "tableColumn": 0,
+      "tableRow": 15
     },
     {
       "differenceId": 87,

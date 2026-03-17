@@ -2175,8 +2175,19 @@ namespace DocumentProcessor
                     bool sameDir = (mean > 0 && leftmost.delta > 0) || (mean < 0 && leftmost.delta < 0);
                     float firstPairRatio = (sameDir && Math.Abs(mean) > 0f)
                         ? Math.Abs(leftmost.delta) / Math.Abs(mean) : 0f;
+                    // XDiff gate: paired word deltas show consistent block-level X shift.
+                    // Additional left-edge guard: a genuine block shift moves the entire block,
+                    // so actual1.X (leftmost V14 position in the group) and actual2.X (leftmost
+                    // V23 position) diverge by approximately the shift amount.
+                    // When only downstream words shift (e.g. a word insertion pushes subsequent
+                    // same-text words right), actual1.X ≈ actual2.X because the pre-insertion
+                    // POSITION_SHIFT words anchor the left edge of both actuals at the same margin.
+                    // Require the left edges to differ by >= 4pt to confirm a real block shift.
+                    const float XDIFF_EDGE_TOL = 4f;
+                    bool leftEdgeShifted = !mt.actual1.HasValue || !mt.actual2.HasValue
+                        || Math.Abs(mt.actual1.Value.X - mt.actual2.Value.X) >= XDIFF_EDGE_TOL;
                     if (pairRatio >= 0.5f && Math.Abs(mean) > 4f && Math.Abs(mean) < 50f
-                        && stddev < 2f && firstPairRatio > 0.6f)
+                        && stddev < 2f && firstPairRatio > 0.6f && leftEdgeShifted)
                         cats |= DiffCategory.XDiff;
                 }
 
