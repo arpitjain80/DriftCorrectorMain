@@ -1,5 +1,6 @@
 # PROJECT MEMORY — DriftCorrector
-> Auto-maintained by Claude. Last updated: 2026-03-16 (full PDFProcessor.cs read complete)
+> Auto-maintained by Claude. Last updated: 2026-03-16
+> [2026-03-16] — Updated: Section 6 (NormSearch nuance) because PATH 3 false-substring-match fix added
 > PURPOSE: This file is Claude's persistent memory. It captures architecture,
 > logic flows, and non-obvious nuances so future sessions never start from scratch.
 
@@ -287,6 +288,8 @@ iText7 `IEventListener` that processes `RENDER_TEXT` events per character:
 **File:** `WordDriftCorrector.cs`
 
 Phrase text from JSON is normalized before matching document paragraph text. Minimum 5 characters (`TEXT_MATCH_MIN = 5`). PATH 3 matches the FIRST paragraph in the document body (not cell, not header/footer) that contains the normalized key — this means if the same phrase appears in multiple places, only the first match is corrected.
+
+**False substring match guard:** If the paragraph text is more than 4× the key length AND the paragraph does NOT start with the key, the match is suppressed. Without this, a short phrase like "Prior Policy" (12 chars) intended to match a table header cell (in a cell, skipped by Pass 1) would instead match a long body paragraph that merely contains "Prior Policy" as a substring (e.g. "...the Prior Policy are more favorable..."), applying the correction to the wrong paragraph. The same guard applies in `ApplyHeaderFooterCorrection`.
 
 ### MAX_PARAGRAPH_X_DRIFT_PT = 10pt cap (PATH 3 only)
 **File:** `WordDriftCorrector.cs`, `ApplyParagraphCorrection()`

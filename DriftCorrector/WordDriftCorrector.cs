@@ -276,10 +276,22 @@ namespace DocumentProcessor
 
                     var doc = new Document(templatePath);
                     ApplyCorrectionsToDocument(doc, report, result);
-                    doc.Save(outputPath);
+
+                    if (result.CorrectionLog.Count > 0)
+                    {
+                        doc.Save(outputPath);
+                        Console.WriteLine($"   → Saved: {outputPath}");
+                    }
+                    else
+                    {
+                        // No corrections were applied — copy original to avoid Aspose round-trip
+                        // artifacts (e.g. Aspose adds explicit tblInd negative values on save).
+                        File.Copy(templatePath, outputPath, overwrite: true);
+                        result.Warnings.Add("No corrections applied — copied original unchanged to avoid round-trip artifacts.");
+                        Console.WriteLine($"   → No corrections applied. Copied original template unchanged.");
+                    }
 
                     result.Success = true;
-                    Console.WriteLine($"   → Saved: {outputPath}");
                     Console.WriteLine($"   → Corrections: {result.CorrectionsApplied.Count} | Warnings: {result.Warnings.Count}");
                 }
                 catch (Exception ex)
@@ -1217,6 +1229,14 @@ namespace DocumentProcessor
                 string paraText = GetParaText(para);
                 string normParaText = NormSearch(paraText);
                 bool matches = normParaText.Contains(key, StringComparison.OrdinalIgnoreCase);
+                // Guard: prevent a short phrase (e.g. "Prior Policy") from matching a long body
+                // paragraph that only contains those words as a substring (e.g. "...the Prior Policy
+                // are more favorable...").  If the paragraph is >4x longer than the key AND does not
+                // START with the key, treat it as a false substring match and skip.
+                if (matches
+                    && normParaText.Length > key.Length * 4
+                    && !normParaText.StartsWith(key, StringComparison.OrdinalIgnoreCase))
+                    matches = false;
                 if (isSubpoena && matches) _logger.Log($"[WordDrift] Path 3 matched docx paragraph: '{paraText}'");
 
                 if (!matches) continue;
@@ -1284,7 +1304,10 @@ namespace DocumentProcessor
                 foreach (HeaderFooter hf in sec.HeadersFooters)
                     foreach (Paragraph para in hf.GetChildNodes(NodeType.Paragraph, true))
                     {
-                        if (!NormSearch(GetParaText(para)).Contains(key, StringComparison.OrdinalIgnoreCase)) continue;
+                        string hfNorm = NormSearch(GetParaText(para));
+                        bool hfMatches = hfNorm.Contains(key, StringComparison.OrdinalIgnoreCase)
+                            && !(hfNorm.Length > key.Length * 4 && !hfNorm.StartsWith(key, StringComparison.OrdinalIgnoreCase));
+                        if (!hfMatches) continue;
 
                         if (Math.Abs(dx) >= MIN_DRIFT)
                         {
