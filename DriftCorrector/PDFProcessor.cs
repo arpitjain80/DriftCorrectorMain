@@ -2298,16 +2298,69 @@ namespace DocumentProcessor
                             .Where(i => (mergedFieldDiffs[i].categories & DiffCategory.XDiff) != 0)
                             .Select(i => mergedFieldDiffs[i].rect1))
                         .ToList();
+                    // ── Single-object guard (GHR): same logic as GJDR XI to prevent self-referential pivot.
+                    // If all content is in one table, the non-drifting columns of that same table must
+                    // not serve as pivot — doing so would incorrectly mark real drift as XI.
+                    const float XI_GHR_TABLE_BBOX_Y_PAD = 30f;
+                    var xDriftPGsOnPageGHR = phraseGroups?.Where(pg =>
+                            pg.Page == page && pg.BaselineRegion != null &&
+                            !pg.IsCleanDiff && pg.SharedDelta != null &&
+                            Math.Abs(pg.SharedDelta.X) >= 2f)
+                        .ToList() ?? new List<PhraseDiffGroup>();
+                    var xDriftTGIds_GHR   = new HashSet<int>(xDriftPGsOnPageGHR.Where(pg => pg.TableGroupId.HasValue)  .Select(pg => (int)pg.TableGroupId!));
+                    var xDriftDocxTIs_GHR = new HashSet<int>(xDriftPGsOnPageGHR.Where(pg => pg.DocxTableIndex.HasValue).Select(pg => (int)pg.DocxTableIndex!));
+
+                    var xDriftTableBboxes_GHR = new List<(float x1, float x2, float y1, float y2)>();
+                    if (phraseGroups != null && xDriftTGIds_GHR.Count > 0)
+                    {
+                        var pagePhraseGroupsGHR = phraseGroups.Where(pg => pg.Page == page && pg.BaselineRegion != null).ToList();
+                        foreach (int tgid in xDriftTGIds_GHR)
+                        {
+                            var tblPGs = pagePhraseGroupsGHR.Where(p => p.TableGroupId == tgid).ToList();
+                            if (tblPGs.Count == 0) continue;
+                            xDriftTableBboxes_GHR.Add((
+                                tblPGs.Min(p => p.BaselineRegion!.XStart) - 5f,
+                                tblPGs.Max(p => p.BaselineRegion!.XEnd)   + 5f,
+                                tblPGs.Min(p => p.BaselineRegion!.Y)      - XI_GHR_TABLE_BBOX_Y_PAD,
+                                tblPGs.Max(p => p.BaselineRegion!.Y)      + XI_GHR_TABLE_BBOX_Y_PAD));
+                        }
+                    }
+                    bool IsInsideXDriftTableGHR(float x, float y) =>
+                        xDriftTableBboxes_GHR.Count > 0 && xDriftTableBboxes_GHR.Any(b =>
+                            x >= b.x1 && x <= b.x2 && y >= b.y1 && y <= b.y2);
+
+                    // Baseline regions of same-table green phrase groups — for greenRectX filtering.
+                    var sameTableGreenPGsGHR = phraseGroups?.Where(pg =>
+                            pg.Page == page && pg.BaselineRegion != null &&
+                            (pg.SharedDelta == null || Math.Abs(pg.SharedDelta.X) < 2f) &&
+                            ((pg.TableGroupId.HasValue   && xDriftTGIds_GHR.Contains(pg.TableGroupId.Value)) ||
+                             (pg.DocxTableIndex.HasValue && xDriftDocxTIs_GHR.Contains(pg.DocxTableIndex.Value))))
+                        .ToList() ?? new List<PhraseDiffGroup>();
+                    bool IsInSameTableGreenRegionGHR(RectangleF rect) =>
+                        sameTableGreenPGsGHR.Any(pg =>
+                            rect.X >= pg.BaselineRegion!.XStart - 5f &&
+                            rect.X <= pg.BaselineRegion!.XEnd   + 5f &&
+                            Math.Abs(rect.Y - pg.BaselineRegion!.Y) < 20f);
+
                     var freeTextX = text1
-                        .Where(t => t.Page == page && !xDiffRects1OnPage.Any(r =>
-                            t.X >= r.X - 2f && t.X <= r.Right + 2f &&
-                            t.Y >= r.Y - 2f && t.Y <= r.Bottom + 2f))
+                        .Where(t => t.Page == page &&
+                                    !xDiffRects1OnPage.Any(r =>
+                                        t.X >= r.X - 2f && t.X <= r.Right + 2f &&
+                                        t.Y >= r.Y - 2f && t.Y <= r.Bottom + 2f) &&
+                                    !IsInsideXDriftTableGHR(t.X, t.Y))
                         .Select(t => t.X)
                         .ToList();
 
-                    // Option B: non-XDiff rects (green) from both lists on this page
-                    var greenRectX = textIndices .Where(i => (mergedTextDiffs[i] .categories & DiffCategory.XDiff) == 0).Select(TextDiffX)
-                              .Concat(fieldIndices.Where(i => (mergedFieldDiffs[i].categories & DiffCategory.XDiff) == 0).Select(FieldDiffX))
+                    // Option B: non-XDiff rects (green) from both lists on this page,
+                    // excluding rects that fall within same-table green phrase group regions.
+                    var greenRectX = textIndices
+                              .Where(i => (mergedTextDiffs[i].categories & DiffCategory.XDiff) == 0 &&
+                                          !IsInSameTableGreenRegionGHR(mergedTextDiffs[i].rect1))
+                              .Select(TextDiffX)
+                              .Concat(fieldIndices
+                              .Where(i => (mergedFieldDiffs[i].categories & DiffCategory.XDiff) == 0 &&
+                                          !IsInSameTableGreenRegionGHR(mergedFieldDiffs[i].rect1))
+                              .Select(FieldDiffX))
                               .ToList();
 
                     // Diagnostic: log xDiff exclusion rects and raw text1 entries on this page
@@ -5321,8 +5374,8 @@ namespace DocumentProcessor
                     const float XI_FREE_WINDOW   = 10f;   // leftmost free-text window
 
                     // Build a lookup: baseline (page, X, Y) positions of X-DRIFT phrase group words only.
-                    // Words inside non-X-drift (clean) phrase groups still have valid X positions and
-                    // are legitimate pivot references — we must not exclude them from free text.
+                    // Used as fallback word-level exclusion for non-table phrase groups; table-affiliated
+                    // X-drift groups additionally use per-page bounding-box exclusion computed below.
                     var xDriftPGWordPositions = new HashSet<(int page, float x, float y)>();
                     foreach (var pg in phraseGroups.Where(p =>
                         !p.IsCleanDiff &&
@@ -5359,17 +5412,56 @@ namespace DocumentProcessor
                             .ToList();
                         if (leftmostXDrift.Count == 0) continue;
 
-                        // Option A: baseline words not covered by any X-drift phrase group on this page.
-                        // Words in non-X-drift phrase groups have valid X positions and count as reference.
+                        // ── Single-object guard: prevent self-referential pivot ──────────────
+                        // When a page contains only one table, the non-drifting columns of that
+                        // same table would otherwise provide Option A / Option B pivot values,
+                        // causing the drifting leftmost column to be wrongly marked XI.
+                        // Fix: compute the bounding box of each table that owns an xDrift phrase
+                        // group and exclude all words/phrase-groups inside those boxes from the
+                        // pivot computation.  Only truly external content (free text or phrase
+                        // groups from a different table) can serve as an independent reference.
+                        const float XI_TABLE_BBOX_Y_PAD = 30f;
+                        var xDriftTGIds   = new HashSet<int>(xDriftPGs.Where(pg => pg.TableGroupId.HasValue)  .Select(pg => (int)pg.TableGroupId!));
+                        var xDriftDocxTIs = new HashSet<int>(xDriftPGs.Where(pg => pg.DocxTableIndex.HasValue).Select(pg => (int)pg.DocxTableIndex!));
+
+                        // One bounding box per distinct TableGroupId in xDrift groups on this page.
+                        var xDriftTableBboxes = new List<(float x1, float x2, float y1, float y2)>();
+                        foreach (int tgid in xDriftTGIds)
+                        {
+                            var tblPGs = pagePGs.Where(p => p.TableGroupId == tgid && p.BaselineRegion != null).ToList();
+                            if (tblPGs.Count == 0) continue;
+                            xDriftTableBboxes.Add((
+                                tblPGs.Min(p => p.BaselineRegion.XStart) - 5f,
+                                tblPGs.Max(p => p.BaselineRegion.XEnd)   + 5f,
+                                tblPGs.Min(p => p.BaselineRegion.Y)      - XI_TABLE_BBOX_Y_PAD,
+                                tblPGs.Max(p => p.BaselineRegion.Y)      + XI_TABLE_BBOX_Y_PAD));
+                        }
+                        _logger.Log($"[XI-GJDR-FILTER] pg={page} xDriftTGIds=[{string.Join(",", xDriftTGIds)}] tableBboxes={xDriftTableBboxes.Count}");
+
+                        // Option A: baseline words not inside any X-drift table's bounding box
+                        // and not covered by any X-drift phrase group word position.
+                        // Bounding-box exclusion covers perfectly-aligned cells (no phrase group).
+                        // Word-position exclusion covers standalone (non-table) X-drift phrase groups.
                         var freeTextX = validText1
-                            .Where(t => t.Page == page && !xDriftPGWordPositions.Contains((t.Page, t.X, t.Y)))
+                            .Where(t => t.Page == page &&
+                                        !xDriftPGWordPositions.Contains((t.Page, t.X, t.Y)) &&
+                                        (xDriftTableBboxes.Count == 0 || !xDriftTableBboxes.Any(b =>
+                                            t.X >= b.x1 && t.X <= b.x2 &&
+                                            t.Y >= b.y1 && t.Y <= b.y2)))
                             .Select(t => t.X)
                             .ToList();
 
-                        // Option B: phrase groups with negligible X drift (green baseline)
+                        // Option B: phrase groups with negligible X drift (green baseline),
+                        // excluding same-table phrase groups.  On a single-object page the only
+                        // green groups belong to the same table as the xDrift groups — using them
+                        // as pivot would suppress correction of real drift.  Multi-table pages
+                        // are unaffected: green groups from OTHER tables have different TableGroupIds
+                        // and are retained as valid external references.
                         var greenPGX = pagePGs
                             .Where(pg => pg.BaselineRegion != null &&
-                                         (pg.SharedDelta == null || Math.Abs(pg.SharedDelta.X) < XI_XDRIFT_THRESH))
+                                         (pg.SharedDelta == null || Math.Abs(pg.SharedDelta.X) < XI_XDRIFT_THRESH) &&
+                                         !(pg.TableGroupId.HasValue   && xDriftTGIds.Contains(pg.TableGroupId.Value)) &&
+                                         !(pg.DocxTableIndex.HasValue && xDriftDocxTIs.Contains(pg.DocxTableIndex.Value)))
                             .Select(pg => pg.BaselineRegion.XStart)
                             .ToList();
 

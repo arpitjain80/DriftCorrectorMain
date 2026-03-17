@@ -1,6 +1,6 @@
 {
   "reportMetadata": {
-    "generatedAt": "2026-03-16T17:52:56",
+    "generatedAt": "2026-03-17T14:48:09",
     "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\ProfessionalAndManagementLiability\\DirectorsAndOfficers\\DO_HeaderQP_NYFTZ_SNIC_Without_MA.pdf",
     "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V23\\ProfessionalAndManagementLiability\\DirectorsAndOfficers\\DO_HeaderQP_NYFTZ_SNIC_Without_MA.pdf",
     "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\ProfessionalAndManagementLiability\\DirectorsAndOfficers",
@@ -2077,7 +2077,9 @@
         150,
         151,
         152
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 40,
@@ -3136,7 +3138,9 @@
         201,
         202,
         203
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 64,
@@ -3196,7 +3200,9 @@
         220,
         221,
         222
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 65,
@@ -3254,7 +3260,9 @@
         237,
         238,
         239
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 66,
@@ -3316,7 +3324,9 @@
         258,
         259,
         260
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 67,
@@ -3372,7 +3382,9 @@
         273,
         274,
         275
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 68,
@@ -3422,7 +3434,9 @@
         282,
         283,
         284
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 69,
@@ -3481,7 +3495,9 @@
         300,
         301,
         302
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 70,
@@ -3538,7 +3554,9 @@
         316,
         317,
         318
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 71,
@@ -3593,7 +3611,9 @@
         330,
         331,
         332
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 72,
@@ -3640,7 +3660,8 @@
       "tableColumn": 0,
       "tableRow": 17,
       "docxTableIndex": 7,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 73,
@@ -3687,7 +3708,8 @@
       "tableColumn": 0,
       "tableRow": 0,
       "docxTableIndex": 8,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 74,
@@ -3734,7 +3756,8 @@
       "tableColumn": 0,
       "tableRow": 1,
       "docxTableIndex": 8,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 75,
@@ -3776,7 +3799,9 @@
       },
       "wordIds": [
         336
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 76,
@@ -3824,7 +3849,8 @@
       "tableColumn": 0,
       "tableRow": 3,
       "docxTableIndex": 8,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 77,
@@ -3882,7 +3908,9 @@
         353,
         354,
         355
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 78,
@@ -3926,7 +3954,9 @@
         356,
         357,
         358
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     }
   ],
   "wordLevelDifferences": [

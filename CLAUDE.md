@@ -1,5 +1,6 @@
 # PROJECT MEMORY — DriftCorrector
-> Auto-maintained by Claude. Last updated: 2026-03-16
+> Auto-maintained by Claude. Last updated: 2026-03-17
+> [2026-03-17] — Updated: Section 3 (Flow B XI pivot logic) and Section 6 (single-object XI guard) because XI pivot now excludes same-table content
 > [2026-03-16] — Updated: Section 6 (NormSearch nuance) because PATH 3 false-substring-match fix added
 > PURPOSE: This file is Claude's persistent memory. It captures architecture,
 > logic flows, and non-obvious nuances so future sessions never start from scratch.
@@ -129,9 +130,14 @@ Stamp IsCleanDiff on each PhraseDiffGroup (4 gates):
    Note: TABLE_CELL groups deliberately deferred to Phase 3 so XI detection can still see them
          ↓
 XI reconciliation (same 3-option pivot logic as GenerateHtmlReport):
-   Option A: mode of free-text X (words not in any X-drift phrase group)
-   Option B: mode of green (low-drift) phrase group XStart values
+   Option A: mode of free-text X — words NOT inside any X-drift table's bounding box AND
+             not covered by any X-drift phrase group word position.
+             Bounding-box exclusion covers perfectly-aligned cells that have no phrase group.
+   Option B: mode of green (low-drift) phrase group XStart values, EXCLUDING phrase groups
+             whose TableGroupId/DocxTableIndex matches any X-drift group on the page.
    Option C: removed (no XDiff-only pivot)
+   Single-object guard: if all pivot sources are internal to the same single table, both
+   Option A and Option B return empty → ComputePivotX returns null → XI not applied.
    Leftmost X-drift groups where bx < pivotX - 3pt → IsCleanDiff=true, IsXIgnore=true
          ↓
 Phase 3: Remaining table-affiliated (TABLE_CELL/PARAGRAPH/LIST_ITEM/MERGE_FIELD) phrase groups
@@ -300,6 +306,19 @@ X drift > 10pt is skipped for body paragraph corrections. This prevents large ac
 **File:** `PDFProcessor.cs`, `TagInlineRuns()`
 
 Groups phrase groups by (page, Y within 3pt). Lines with 2+ phrase groups having **distinct** X-deltas (rounded to 1dp) are inline runs (separate tab segments on one line). All non-TABLE_CELL phrase groups on such lines are marked `LayoutContext = "INLINE_RUN"`. INLINE_RUN groups are cleaned early in Gate 2 (before XI detection) because they have already been purged from any table group by `AugmentTableGroupsFromDocxContext` and cannot be XI candidates.
+
+### XI single-object guard — self-referential pivot prevention
+**File:** `PDFProcessor.cs`, GJDR XI section (~line 5362) and GHR Pass 1 XI section (~line 2301)
+
+**Problem:** When a page contains only ONE table (e.g., a form template with a single field table), the non-drifting columns of that same table would otherwise provide the XI pivot. Example: column A drifts 4pt right, column B has no drift at X=200pt → pivot=200pt → column A's baseline at 36pt is far left of pivot → XI fires, suppressing real correction.
+
+**Fix (GJDR):** After identifying `xDriftPGs`, compute one bounding box per distinct `TableGroupId` in those groups (using `XStart/XEnd/Y ± pad` of all phrase groups in that table on the page). For `freeTextX`, any `validText1` word inside a bounding box is excluded — this covers perfectly-aligned cells that have no phrase group. For `greenPGX`, phrase groups sharing a `TableGroupId` or `DocxTableIndex` with any xDrift group are excluded.
+
+**Fix (GHR Pass 1):** Identical approach: `IsInsideXDriftTableGHR` (bounding-box) filters `freeTextX`; `IsInSameTableGreenRegionGHR` (spatial match against `PhraseRegion`) filters `greenRectX`.
+
+**Multi-table safety:** Only the tables *owning* xDrift phrase groups have their bounding boxes in the exclusion set. Green phrase groups from OTHER tables (different `TableGroupId`) still contribute to `greenPGX`/`greenRectX` → multi-table XI behavior unchanged.
+
+**Standalone paragraph safety:** When `xDriftTGIds` is empty (all xDrift groups have null `TableGroupId`), `xDriftTableBboxes` is empty → the bbox filter is a no-op → `freeTextX` unchanged → original behavior preserved.
 
 ### `GenerateJsonDiffReport` — 4-gate IsCleanDiff ordering rationale
 **File:** `PDFProcessor.cs`, ~line 5230

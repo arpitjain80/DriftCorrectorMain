@@ -1,6 +1,6 @@
 {
   "reportMetadata": {
-    "generatedAt": "2026-03-16T17:52:42",
+    "generatedAt": "2026-03-17T14:47:49",
     "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\ProfessionalAndManagementLiability\\DirectorsAndOfficers\\DO_AM_PFL.pdf",
     "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V23\\ProfessionalAndManagementLiability\\DirectorsAndOfficers\\DO_AM_PFL.pdf",
     "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\ProfessionalAndManagementLiability\\DirectorsAndOfficers",
@@ -257,8 +257,7 @@
       "tableColumn": 0,
       "tableRow": 0,
       "docxTableIndex": 1,
-      "isCleanDiff": true,
-      "isXIgnore": true
+      "isCleanDiff": true
     },
     {
       "groupId": 5,
