@@ -1,6 +1,6 @@
 {
   "reportMetadata": {
-    "generatedAt": "2026-03-17T18:01:59",
+    "generatedAt": "2026-03-24T16:36:21",
     "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\ProfessionalAndManagementLiability\\DirectorsAndOfficers\\DO_HeaderQP_SSIC_Without_MA.pdf",
     "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V23\\ProfessionalAndManagementLiability\\DirectorsAndOfficers\\DO_HeaderQP_SSIC_Without_MA.pdf",
     "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\ProfessionalAndManagementLiability\\DirectorsAndOfficers",
@@ -287,7 +287,8 @@
       "tableColumn": 0,
       "tableRow": 0,
       "docxTableIndex": 3,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 2,
@@ -384,7 +385,8 @@
       "tableColumn": 0,
       "tableRow": 0,
       "docxTableIndex": 4,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 4,
@@ -624,7 +626,8 @@
       "tableColumn": 0,
       "tableRow": 0,
       "docxTableIndex": 5,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 9,
@@ -765,7 +768,8 @@
       "tableColumn": 0,
       "tableRow": 2,
       "docxTableIndex": 5,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 12,
@@ -813,7 +817,8 @@
       "tableColumn": 0,
       "tableRow": 3,
       "docxTableIndex": 5,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 13,
@@ -863,7 +868,8 @@
       "tableColumn": 0,
       "tableRow": 4,
       "docxTableIndex": 5,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 14,
@@ -912,7 +918,8 @@
       "tableColumn": 0,
       "tableRow": 5,
       "docxTableIndex": 5,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 15,
@@ -1002,7 +1009,8 @@
       "tableColumn": 0,
       "tableRow": 0,
       "docxTableIndex": 6,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 17,
@@ -1062,7 +1070,8 @@
       "tableColumn": 0,
       "tableRow": 1,
       "docxTableIndex": 6,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 18,
@@ -1107,7 +1116,9 @@
         51,
         52,
         53
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 19,
@@ -1154,7 +1165,8 @@
       "tableColumn": 0,
       "tableRow": 3,
       "docxTableIndex": 6,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 20,
@@ -1828,7 +1840,8 @@
       "tableColumn": 0,
       "tableRow": 13,
       "docxTableIndex": 6,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 35,
@@ -1882,7 +1895,9 @@
         103,
         104,
         105
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 36,
@@ -1927,7 +1942,9 @@
         107,
         108,
         109
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 37,
@@ -1975,7 +1992,8 @@
       "tableColumn": 0,
       "tableRow": 17,
       "docxTableIndex": 6,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 38,
@@ -3021,7 +3039,9 @@
         150,
         151,
         152
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 62,
@@ -3083,7 +3103,9 @@
         171,
         172,
         173
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 63,
@@ -4137,7 +4159,9 @@
         221,
         222,
         223
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 87,
@@ -4197,7 +4221,9 @@
         240,
         241,
         242
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 88,
@@ -4255,7 +4281,9 @@
         257,
         258,
         259
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 89,
@@ -4317,7 +4345,9 @@
         278,
         279,
         280
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 90,
@@ -4373,7 +4403,9 @@
         293,
         294,
         295
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 91,
@@ -4423,7 +4455,9 @@
         302,
         303,
         304
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 92,
@@ -4482,7 +4516,9 @@
         320,
         321,
         322
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 93,
@@ -4539,7 +4575,9 @@
         336,
         337,
         338
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 94,
@@ -4594,7 +4632,9 @@
         350,
         351,
         352
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 95,
@@ -4641,7 +4681,8 @@
       "tableColumn": 0,
       "tableRow": 17,
       "docxTableIndex": 6,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 96,
@@ -4688,7 +4729,8 @@
       "tableColumn": 0,
       "tableRow": 0,
       "docxTableIndex": 7,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 97,
@@ -4735,7 +4777,8 @@
       "tableColumn": 0,
       "tableRow": 1,
       "docxTableIndex": 7,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 98,
@@ -4777,7 +4820,9 @@
       },
       "wordIds": [
         356
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 99,
@@ -4825,7 +4870,8 @@
       "tableColumn": 0,
       "tableRow": 3,
       "docxTableIndex": 7,
-      "isCleanDiff": true
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 100,
@@ -4883,7 +4929,9 @@
         373,
         374,
         375
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     },
     {
       "groupId": 101,
@@ -4927,7 +4975,9 @@
         376,
         377,
         378
-      ]
+      ],
+      "isCleanDiff": true,
+      "isXIgnore": true
     }
   ],
   "wordLevelDifferences": [

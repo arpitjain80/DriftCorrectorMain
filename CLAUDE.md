@@ -1,5 +1,8 @@
 # PROJECT MEMORY — DriftCorrector
 > Auto-maintained by Claude. Last updated: 2026-03-17
+> [2026-03-17] — Updated: Section 6 (GHR Pass 2 Tier 4) because modified-comparison PARAGRAPH groups are now propagated to XI in HTML report
+> [2026-03-17] — Updated: Section 6 (XI single-object guard) because left-pivot uniform fallback added for pages where stable content (e.g. notice box) is FURTHER LEFT than all drifting tables
+> [2026-03-17] — Updated: Section 6 (XI single-object guard) because uniform page-shift fallback added for all-table pages with no external pivot reference
 > [2026-03-17] — Updated: Section 3 (Flow B XI pivot logic) and Section 6 (single-object XI guard) because XI pivot now excludes same-table content
 > [2026-03-16] — Updated: Section 6 (NormSearch nuance) because PATH 3 false-substring-match fix added
 > PURPOSE: This file is Claude's persistent memory. It captures architecture,
@@ -297,6 +300,15 @@ Phrase text from JSON is normalized before matching document paragraph text. Min
 
 **False substring match guard:** If the paragraph text is more than 4× the key length AND the paragraph does NOT start with the key, the match is suppressed. Without this, a short phrase like "Prior Policy" (12 chars) intended to match a table header cell (in a cell, skipped by Pass 1) would instead match a long body paragraph that merely contains "Prior Policy" as a substring (e.g. "...the Prior Policy are more favorable..."), applying the correction to the wrong paragraph. The same guard applies in `ApplyHeaderFooterCorrection`.
 
+### GHR Pass 2 Tier 4 — modified comparison PARAGRAPH propagation
+**File:** `PDFProcessor.cs`, `GenerateHtmlReport()`, Pass 2 block (~line 2523)
+
+In a modified comparison, Gate 3 marks all non-table PARAGRAPH phrase groups `isCleanDiff=True` (condition: `IsModifiedComparison && !TableGroupId.HasValue`). These groups carry no `IsXIgnore` flag and no `TableGroupId`/`DocxTableIndex`, so Tiers 1-3 of GHR Pass 2 never pick them up. Without Tier 4, their text diff rects remain red X in the HTML report even though they are intentionally skipped by the corrector.
+
+**Tier 4 guard:** `IsModifiedComparison && pg.IsCleanDiff && !pg.IsXIgnore && !pg.TableGroupId.HasValue && !pg.DocxTableIndex.HasValue`. Only fires in modified comparisons; original comparisons are unaffected. The tight filter (`!TG && !DI`) ensures table groups already covered by Tiers 1-2 are not double-included.
+
+**When the inner guard fires only via hasTier4:** If a modified comparison page has ZERO IsXIgnore groups but has Gate 3 PARAGRAPH groups, the new `hasTier4` boolean allows entering the `xiTableRegions` block even when `xiDocxTableIndices.Count == 0 && xiTableGroupIds.Count == 0 && xiRectYRanges.Count == 0`.
+
 ### MAX_PARAGRAPH_X_DRIFT_PT = 10pt cap (PATH 3 only)
 **File:** `WordDriftCorrector.cs`, `ApplyParagraphCorrection()`
 
@@ -319,6 +331,12 @@ Groups phrase groups by (page, Y within 3pt). Lines with 2+ phrase groups having
 **Multi-table safety:** Only the tables *owning* xDrift phrase groups have their bounding boxes in the exclusion set. Green phrase groups from OTHER tables (different `TableGroupId`) still contribute to `greenPGX`/`greenRectX` → multi-table XI behavior unchanged.
 
 **Standalone paragraph safety:** When `xDriftTGIds` is empty (all xDrift groups have null `TableGroupId`), `xDriftTableBboxes` is empty → the bbox filter is a no-op → `freeTextX` unchanged → original behavior preserved.
+
+**Left-pivot uniform fallback (GJDR + GHR):** Some document types have a full-width stable layout element (e.g. a NOTICE box at X=28pt) that sits to the LEFT of all drifting table content (which starts at X=45pt). This wider element is excluded from xDrift table bboxes (its Y range is above all tables) so its V14 words appear in `freeTextX` and provide a pivot of X=28. Since table bx=45 > 28-3=25, the standard condition `bx < pivot - tolerance` always fails and XI never fires.
+
+**GJDR fix:** After the main pivot is computed, if `pivotX < minXDriftBx - XI_ALIGN_TOL` (pivot is LEFT of all drifting bx) AND `xDriftTGIds.Count > 1` AND the leftmost xDrift groups have uniform dx (variance ≤ 1.5pt), synthesise a pivot just above the rightmost xDrift bx → all leftmostXDrift groups satisfy `bx < synthPivot - tol` → XI fires. Uniformity is checked only for `leftmostXDrift` groups (not outlier groups with very different dx like a paragraph drifting -10pt).
+
+**GHR fix:** After GJDR fires and produces IsXIgnore groups, GHR Pass 1 adds a mirror check: if `pivotX < minXDiffX - XI_ALIGN_TOL` AND any phrase group on this page has `IsXIgnore=True` (GJDR already confirmed the uniform shift), synthesise `minXDiffX + tolerance + 1` as the pivot → leftmost XDiff rects pass the condition → XIgnore set → GHR Pass 2 then propagates XI to all sibling table rects.
 
 ### `GenerateJsonDiffReport` — 4-gate IsCleanDiff ordering rationale
 **File:** `PDFProcessor.cs`, ~line 5230

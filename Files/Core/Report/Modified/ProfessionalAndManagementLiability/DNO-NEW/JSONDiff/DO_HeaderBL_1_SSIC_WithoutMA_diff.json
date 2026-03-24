@@ -1,0 +1,742 @@
+{
+  "reportMetadata": {
+    "generatedAt": "2026-03-24T16:37:50",
+    "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\ProfessionalAndManagementLiability\\DNO-NEW\\DO_HeaderBL_1_SSIC_WithoutMA.pdf",
+    "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\Modified\\ProfessionalAndManagementLiability\\DNO-NEW\\DO_HeaderBL_1_SSIC_WithoutMA.pdf",
+    "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\ProfessionalAndManagementLiability\\DNO-NEW",
+    "publishFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\Modified\\ProfessionalAndManagementLiability\\DNO-NEW"
+  },
+  "summary": {
+    "totalWordDifferences": 40,
+    "positionShifts": 0,
+    "fontDifferences": 0,
+    "fontSizeDifferences": 0,
+    "missingFromPublish": 20,
+    "extraInPublish": 20,
+    "totalPhraseGroups": 0,
+    "totalTableGroups": 0,
+    "isClean": false
+  },
+  "tableGroups": [],
+  "phraseGroups": [],
+  "wordLevelDifferences": [
+    {
+      "differenceId": 1,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "Core",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 30.8999996,
+        "y": 43.5580254,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": -5.0999999,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12.8000002,
+        "tableIndex": 6,
+        "rowIndex": 5,
+        "colIndex": 0,
+        "colWidthPt": 574,
+        "rowHeightPt": 30.8500004,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": 0,
+        "columnOffsetPt": 0
+      }
+    },
+    {
+      "differenceId": 2,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "Specialty",
+      "page": 1,
+      "layoutContext": "TABLE_CELL",
+      "baseline": {
+        "x": 55.3529968,
+        "y": 43.5580254,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 1
+      },
+      "docxContext": {
+        "elementType": "TABLE_CELL",
+        "styleName": "Normal",
+        "isInHeader": false,
+        "isInFooter": false,
+        "isList": false,
+        "paragraphLeftIndentPt": 0,
+        "spaceBeforePt": 0,
+        "spaceAfterPt": 0,
+        "lineSpacingPt": 12,
+        "tableIndex": 5,
+        "rowIndex": 2,
+        "colIndex": 0,
+        "colWidthPt": 584.799988,
+        "rowHeightPt": 27,
+        "cellLeftPaddingPt": 5.4000001,
+        "tableLeftIndentPt": -13.5,
+        "columnOffsetPt": 0
+      }
+    },
+    {
+      "differenceId": 3,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "offers",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 98.7070007,
+        "y": 43.5580254,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 4,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "a",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 126.495003,
+        "y": 43.5580254,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 5,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "diversified",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 134.834991,
+        "y": 43.5580254,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 6,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "range",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 182.632996,
+        "y": 43.5580254,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 7,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "of",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 210.987,
+        "y": 43.5580254,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 8,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "specialty",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 222.104996,
+        "y": 43.5580254,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 9,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "insurance",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 263.789001,
+        "y": 43.5580254,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 10,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "products",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 309.925995,
+        "y": 43.5580254,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 11,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "for",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 351.057983,
+        "y": 43.5580254,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 12,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "small",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 365.505981,
+        "y": 43.5580254,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 13,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "to",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 391.618988,
+        "y": 43.5580254,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 14,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "mid-sized",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 402.737,
+        "y": 43.5580254,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 15,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "businesses.",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 448.303009,
+        "y": 43.5580254,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 16,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "Check",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 503.889008,
+        "y": 43.5580254,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 17,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "out",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 535.012024,
+        "y": 43.5580254,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 18,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "our",
+      "page": 1,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 551.69104,
+        "y": 43.5580254,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 1
+      }
+    },
+    {
+      "differenceId": 19,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "website",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 31.7999992,
+        "y": 731.082031,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 20,
+      "primaryType": "MISSING",
+      "issues": [
+        "MISSING"
+      ],
+      "text": "at",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "baseline": {
+        "x": 68.4839935,
+        "y": 731.082031,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 21,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "Core",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 30.8999996,
+        "y": 731.072021,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 22,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "Specialty",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 55.3499985,
+        "y": 731.072021,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 23,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "offers",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 98.7100067,
+        "y": 731.072021,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 24,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "a",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 126.5,
+        "y": 731.072021,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 25,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "diversified",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 134.839996,
+        "y": 731.072021,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 26,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "range",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 182.62999,
+        "y": 731.072021,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 27,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "of",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 210.989975,
+        "y": 731.072021,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 28,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "specialty",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 222.109985,
+        "y": 731.072021,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 29,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "insurance",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 263.789978,
+        "y": 731.072021,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 30,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "products",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 309.929993,
+        "y": 731.072021,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 31,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "for",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 351.059998,
+        "y": 731.072021,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 32,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "small",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 365.51001,
+        "y": 731.072021,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 33,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "to",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 391.619995,
+        "y": 731.072021,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 34,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "mid-sized",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 402.73999,
+        "y": 731.072021,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 35,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "businesses.",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 448.299988,
+        "y": 731.072021,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 36,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "Check",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 503.889984,
+        "y": 731.072021,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 37,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "out",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 535.01001,
+        "y": 731.072021,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 38,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "our",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 551.690063,
+        "y": 731.072021,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 39,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "website",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 31.7999992,
+        "y": 718.807007,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    },
+    {
+      "differenceId": 40,
+      "primaryType": "EXTRA",
+      "issues": [
+        "EXTRA"
+      ],
+      "text": "at",
+      "page": 2,
+      "layoutContext": "PARAGRAPH",
+      "publish": {
+        "x": 68.4799957,
+        "y": 718.807007,
+        "font": "Arial-ItalicMT",
+        "fontSize": 10,
+        "page": 2
+      }
+    }
+  ]
+}

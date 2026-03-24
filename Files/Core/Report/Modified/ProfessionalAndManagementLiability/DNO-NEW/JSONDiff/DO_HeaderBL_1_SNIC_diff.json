@@ -1,0 +1,23 @@
+{
+  "reportMetadata": {
+    "generatedAt": "2026-03-24T16:37:49",
+    "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\ProfessionalAndManagementLiability\\DNO-NEW\\DO_HeaderBL_1_SNIC.pdf",
+    "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\Modified\\ProfessionalAndManagementLiability\\DNO-NEW\\DO_HeaderBL_1_SNIC.pdf",
+    "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\ProfessionalAndManagementLiability\\DNO-NEW",
+    "publishFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\Modified\\ProfessionalAndManagementLiability\\DNO-NEW"
+  },
+  "summary": {
+    "totalWordDifferences": 0,
+    "positionShifts": 0,
+    "fontDifferences": 0,
+    "fontSizeDifferences": 0,
+    "missingFromPublish": 0,
+    "extraInPublish": 0,
+    "totalPhraseGroups": 0,
+    "totalTableGroups": 0,
+    "isClean": true
+  },
+  "tableGroups": [],
+  "phraseGroups": [],
+  "wordLevelDifferences": []
+}

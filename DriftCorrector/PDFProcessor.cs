@@ -2401,6 +2401,23 @@ namespace DocumentProcessor
                         continue;
                     }
 
+                    // ── GHR left-pivot uniform fallback ──────────────────────────────────────────
+                    // Mirror of GJDR left-pivot check: when the pivot comes from a wider stable
+                    // element (e.g. notice box at left margin) that sits LEFT of all X-diff rects,
+                    // and GJDR already XIed phrase groups on this page (confirming the uniform page
+                    // shift was already detected), synthesise a pivot just above minXDiffX so the
+                    // leftmost-aligned drifting rects satisfy bx < pivot - tolerance → XI fires.
+                    if (pivotX.Value < minXDiffX - XI_ALIGN_TOL &&
+                        phraseGroups != null &&
+                        phraseGroups.Any(pg => pg.Page == page && pg.IsXIgnore))
+                    {
+                        float synthPivot = minXDiffX + XI_ALIGN_TOL + 1f;
+                        _logger.Log($"[XI-GHR-LEFTPIVOT] pg={page} stable pivotX={pivotX.Value:0.##} < minXDiffX={minXDiffX:0.##}: " +
+                                    $"GJDR confirmed uniform shift (IsXIgnore groups on page). " +
+                                    $"Synth pivotX={synthPivot:0.##}");
+                        pivotX = synthPivot;
+                    }
+
                     _logger.Log($"[XI] pg={page} pivotX={pivotX.Value:0.##} leftmostText={leftmostTextIdx.Count} leftmostField={leftmostFieldIdx.Count} freeText={freeTextX.Count} green={greenRectX.Count} alignTol={XI_ALIGN_TOL}pt");
 
                     // Clear XDiff from leftmost text diffs that are strictly LEFT of the pivot.
@@ -2503,13 +2520,28 @@ namespace DocumentProcessor
 
                 const float XI_SIB_TOL = 8f; // pt overlap tolerance
 
-                if (xiDocxTableIndices.Count > 0 || xiTableGroupIds.Count > 0 || xiRectYRanges.Count > 0)
+                // Tier 4: in a modified comparison, Gate 3 marks all non-table PARAGRAPH
+                // phrase groups isCleanDiff=True (IsModifiedComparison && !TableGroupId).
+                // These groups carry no IsXIgnore flag and no TableGroupId/DocxTableIndex,
+                // so Tiers 1-3 never pick them up. Their text diff rects should render
+                // green (XI) in the HTML report because the corrector intentionally skipped
+                // them — they are not fixable text-flow differences, not real red errors.
+                // Only active when IsModifiedComparison=true to avoid touching original reports.
+                bool hasTier4 = IsModifiedComparison &&
+                                 phraseGroups.Any(pg => pg.IsCleanDiff &&
+                                                        !pg.IsXIgnore &&
+                                                        !pg.TableGroupId.HasValue &&
+                                                        !pg.DocxTableIndex.HasValue);
+
+                if (xiDocxTableIndices.Count > 0 || xiTableGroupIds.Count > 0 || xiRectYRanges.Count > 0 || hasTier4)
                 {
-                    // All baseline regions belonging to XI tables — three-tier membership:
+                    // All baseline regions belonging to XI tables — four-tier membership:
                     //   Tier 1: DocxTableIndex IS set → match by docx table index (cross-table-safe)
                     //   Tier 2: DocxTableIndex is null → fallback to TableGroupId spatial cluster
                     //   Tier 3: phrase group Y is within XI_SIB_TOL of any Pass 1 XI rect on same page
                     //           (catches INLINE_RUN groups that lost their table group identifier)
+                    //   Tier 4: modified comparison only — all isCleanDiff non-XI paragraph groups
+                    //           (no TableGroupId, no DocxTableIndex) whose rects should be green
                     var xiTableRegions = phraseGroups
                         .Where(pg => pg.BaselineRegion != null &&
                                      (
@@ -2527,6 +2559,13 @@ namespace DocumentProcessor
                                              r.page == pg.Page &&
                                              r.bottom + XI_SIB_TOL > pg.BaselineRegion.Y &&
                                              r.top    - XI_SIB_TOL < pg.BaselineRegion.Y)
+                                         ||
+                                         // Tier 4: modified comparison — isCleanDiff paragraph groups
+                                         (IsModifiedComparison &&
+                                          pg.IsCleanDiff &&
+                                          !pg.IsXIgnore &&
+                                          !pg.TableGroupId.HasValue &&
+                                          !pg.DocxTableIndex.HasValue)
                                      ))
                         .ToList();
 
@@ -5479,7 +5518,71 @@ namespace DocumentProcessor
                         // Option C removed: if only XDiff rects exist as pivot source, do not apply XI.
                         // Those rects stay marked X and are corrected by the word drift corrector as normal.
                         float? pivotX = ComputePivotX(freeTextX, greenPGX, XI_FREE_WINDOW, 3f);
-                        if (!pivotX.HasValue) continue;
+                        if (!pivotX.HasValue)
+                        {
+                            // ── Uniform page-shift fallback ──────────────────────────────────────────
+                            // When ALL page content sits inside X-drift table bounding boxes and all
+                            // drifting tables share the same uniform X shift, no external reference
+                            // exists to anchor the pivot.  This indicates a page-level layout shift
+                            // (e.g. left-margin change between V14 and V23 templates): every table
+                            // moved by the same amount.  No individual table correction should be
+                            // applied; mark all leftmost groups XI instead.
+                            // Guard: require >1 distinct drifting TableGroupIds to avoid interfering
+                            // with the single-table single-object guard, which intentionally yields a
+                            // null pivot to block false XI on internal column drift within one table.
+                            if (freeTextX.Count == 0 && greenPGX.Count == 0 && xDriftTGIds.Count > 1)
+                            {
+                                var dxVals = xDriftPGs
+                                    .Where(pg => pg.SharedDelta != null)
+                                    .Select(pg => (double)pg.SharedDelta.X)
+                                    .ToList();
+                                if (dxVals.Count > 1)
+                                {
+                                    double meanDx = dxVals.Average();
+                                    if (dxVals.All(dx => Math.Abs(dx - meanDx) <= 1.5))
+                                    {
+                                        // Synthesise a pivot just above the rightmost baseline X so
+                                        // every group in leftmostXDrift satisfies bx < pivotX - XI_ALIGN_TOL.
+                                        float synthPivot = xDriftPGs.Max(pg => pg.BaselineRegion.XStart)
+                                                           + XI_ALIGN_TOL + 1f;
+                                        pivotX = synthPivot;
+                                        _logger.Log($"[XI-GJDR-UNIFORM] pg={page} uniform shift dx≈{meanDx:0.##}pt " +
+                                                    $"across {xDriftTGIds.Count} tables -> synth pivotX={synthPivot:0.##}");
+                                    }
+                                }
+                            }
+                            if (!pivotX.HasValue) continue;
+                        }
+
+                        // ── Left-pivot uniform fallback (GJDR) ────────────────────────────────────
+                        // When the computed pivot comes from a wider stable layout element (e.g. a
+                        // full-width notice box) that sits to the LEFT of all drifting table content,
+                        // the standard condition (bx < pivot - tol) can never fire: the tables are
+                        // intentionally indented from the notice box margin.  If the leftmost
+                        // drifting groups across multiple distinct Word tables all share the same
+                        // uniform X shift, treat this as a page-level shift and synthesise a pivot
+                        // just above the rightmost drifting bx so every leftmostXDrift group passes.
+                        if (pivotX.Value < minXDriftBx - XI_ALIGN_TOL && xDriftTGIds.Count > 1)
+                        {
+                            var leftmostDxVals = leftmostXDrift
+                                .Where(pg => pg.SharedDelta != null)
+                                .Select(pg => (double)pg.SharedDelta.X)
+                                .ToList();
+                            if (leftmostDxVals.Count > 1)
+                            {
+                                double meanLeftDx = leftmostDxVals.Average();
+                                if (leftmostDxVals.All(dx => Math.Abs(dx - meanLeftDx) <= 1.5))
+                                {
+                                    float synthPivot = xDriftPGs.Max(pg => pg.BaselineRegion.XStart)
+                                                       + XI_ALIGN_TOL + 1f;
+                                    _logger.Log($"[XI-GJDR-LEFTPIVOT] pg={page} stable pivotX={pivotX.Value:0.##} " +
+                                                $"< minXDriftBx={minXDriftBx:0.##}: wider layout ref (e.g. notice box). " +
+                                                $"Uniform dx≈{meanLeftDx:0.##}pt across {xDriftTGIds.Count} tables " +
+                                                $"-> synth pivotX={synthPivot:0.##}");
+                                    pivotX = synthPivot;
+                                }
+                            }
+                        }
 
                         _logger.Log($"[XI-GJDR] pg={page} pivotX={pivotX.Value:0.##} leftmostXDrift={leftmostXDrift.Count} freeText={freeTextX.Count} green={greenPGX.Count}");
 

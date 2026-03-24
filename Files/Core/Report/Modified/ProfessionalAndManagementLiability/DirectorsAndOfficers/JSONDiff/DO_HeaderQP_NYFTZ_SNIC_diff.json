@@ -1,6 +1,6 @@
 {
   "reportMetadata": {
-    "generatedAt": "2026-03-17T18:03:11",
+    "generatedAt": "2026-03-24T16:37:31",
     "baselinePdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\ProfessionalAndManagementLiability\\DirectorsAndOfficers\\DO_HeaderQP_NYFTZ_SNIC.pdf",
     "publishPdf": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\Modified\\ProfessionalAndManagementLiability\\DirectorsAndOfficers\\DO_HeaderQP_NYFTZ_SNIC.pdf",
     "baselineFolder": "C:\\Personal\\Project\\DriftCorrectorMain\\Files\\Core\\PDF\\V14\\ProfessionalAndManagementLiability\\DirectorsAndOfficers",
@@ -14,102 +14,10 @@
     "missingFromPublish": 3,
     "extraInPublish": 3,
     "totalPhraseGroups": 64,
-    "totalTableGroups": 2,
+    "totalTableGroups": 0,
     "isClean": false
   },
-  "tableGroups": [
-    {
-      "correctionStrategy": "TABLE_INDENT_FALLBACK",
-      "tableId": 1,
-      "page": 1,
-      "rowCount": 2,
-      "columnCount": 2,
-      "columnDrifts": [
-        {
-          "columnIndex": 0,
-          "baselineXStart": 45,
-          "avgDeltaX": 5.02099943,
-          "widthCorrectionTwips": -100,
-          "widthCorrectionPt": "-5.02pt"
-        }
-      ],
-      "rowDrifts": [
-        {
-          "rowIndex": 0,
-          "baselineY": 274.943024,
-          "avgDeltaY": 0,
-          "heightCorrectionTwips": 0,
-          "heightCorrectionPt": "0pt"
-        },
-        {
-          "rowIndex": 1,
-          "baselineY": 205.507004,
-          "avgDeltaY": 0,
-          "heightCorrectionTwips": 0,
-          "heightCorrectionPt": "0pt"
-        }
-      ],
-      "baselineBounds": {
-        "xStart": 45,
-        "xEnd": 210.044006,
-        "y": 205.507004,
-        "fontSize": 0
-      },
-      "publishBounds": {
-        "xStart": 50.4000015,
-        "xEnd": 215.444,
-        "y": 205.507004,
-        "fontSize": 0
-      },
-      "wordCorrectionHint": "WORD TABLE CORRECTIONS (TABLE_INDENT_FALLBACK strategy):\r\n  Uniform drift of 4.98pt across all 1 columns.\r\n  Root cause unclear (cell padding and table indent do not match drift).\r\n  Fix: reduce Table.LeftIndent by 4.98pt (100 twips).\r\n  This shifts the entire table left as a unit \u2014 do NOT apply per word or per phrase.\r\n  Verify: Table.LeftIndent in source .docx = 0pt. New value should be -4.98pt.",
-      "phraseGroupIds": [
-        2,
-        5,
-        3,
-        8,
-        20,
-        23,
-        24,
-        26,
-        58
-      ]
-    },
-    {
-      "correctionStrategy": "TABLE_INDENT_FALLBACK",
-      "tableId": 3,
-      "page": 2,
-      "rowCount": 3,
-      "columnCount": 1,
-      "columnDrifts": [
-        {
-          "columnIndex": 0,
-          "baselineXStart": 44.4000015,
-          "avgDeltaX": 5.40000153,
-          "widthCorrectionTwips": -108,
-          "widthCorrectionPt": "-5.4pt"
-        }
-      ],
-      "rowDrifts": [],
-      "baselineBounds": {
-        "xStart": 44.4000015,
-        "xEnd": 148.399994,
-        "y": 419.890991,
-        "fontSize": 0
-      },
-      "publishBounds": {
-        "xStart": 49.8000031,
-        "xEnd": 153.800003,
-        "y": 419.881989,
-        "fontSize": 0
-      },
-      "wordCorrectionHint": "WORD TABLE CORRECTIONS (TABLE_INDENT_FALLBACK strategy):\r\n  Uniform drift of 5.4pt across all 1 columns.\r\n  Root cause unclear (cell padding and table indent do not match drift).\r\n  Fix: reduce Table.LeftIndent by 5.4pt (108 twips).\r\n  This shifts the entire table left as a unit \u2014 do NOT apply per word or per phrase.\r\n  Verify: Table.LeftIndent in source .docx = 0pt. New value should be -5.4pt.",
-      "phraseGroupIds": [
-        59,
-        60,
-        62
-      ]
-    }
-  ],
+  "tableGroups": [],
   "phraseGroups": [
     {
       "groupId": 1,
@@ -162,7 +70,7 @@
       "issues": [
         "POSITION_SHIFT"
       ],
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "INLINE_RUN",
       "baselineRegion": {
         "xStart": 45,
         "xEnd": 75,
@@ -190,15 +98,11 @@
         "yTwips": 0,
         "xPt": "-5.4pt",
         "yPt": "0pt",
-        "wordCorrectionHint": "Table 1, Col 0, Row 0: see tableGroups for column/row corrections"
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
         2
       ],
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 0,
-      "docxTableIndex": 8,
       "isCleanDiff": true
     },
     {
@@ -209,7 +113,7 @@
       "issues": [
         "POSITION_SHIFT"
       ],
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baselineRegion": {
         "xStart": 45,
         "xEnd": 531.372986,
@@ -237,7 +141,7 @@
         "yTwips": 0,
         "xPt": "-5.4pt",
         "yPt": "0pt",
-        "wordCorrectionHint": "Table cell: see tableGroups for column/row width correction"
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
       "wordIds": [
         3,
@@ -255,10 +159,6 @@
         15,
         16
       ],
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 1,
-      "docxTableIndex": 8,
       "isCleanDiff": true
     },
     {
@@ -315,7 +215,7 @@
       "issues": [
         "POSITION_SHIFT"
       ],
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "INLINE_RUN",
       "baselineRegion": {
         "xStart": 45,
         "xEnd": 75,
@@ -343,15 +243,11 @@
         "yTwips": 0,
         "xPt": "-5.4pt",
         "yPt": "0pt",
-        "wordCorrectionHint": "Table 1, Col 0, Row 1: see tableGroups for column/row corrections"
+        "wordCorrectionHint": "[RECLASSIFIED] This phrase group was initially placed in a PDF-heuristic table group (1) but no docxContext confirmed it is inside a Word table. It has been reclassified as INLINE_RUN. This is likely intra-paragraph word-position variation caused by V13\u2192V23 text-layout changes (character spacing, kerning, justification). No Word correction is possible."
       },
       "wordIds": [
         21
       ],
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 3,
-      "docxTableIndex": 8,
       "isCleanDiff": true
     },
     {
@@ -448,7 +344,7 @@
       "issues": [
         "POSITION_SHIFT"
       ],
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "INLINE_RUN",
       "baselineRegion": {
         "xStart": 130.161011,
         "xEnd": 145.161011,
@@ -476,15 +372,11 @@
         "yTwips": 0,
         "xPt": "-1.99pt",
         "yPt": "0pt",
-        "wordCorrectionHint": "Table cell: see tableGroups for column/row width correction"
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.99pt (-40 twips)"
       },
       "wordIds": [
         24
       ],
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 5,
-      "docxTableIndex": 8,
       "isCleanDiff": true
     },
     {
@@ -975,7 +867,7 @@
       "issues": [
         "POSITION_SHIFT"
       ],
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baselineRegion": {
         "xStart": 45,
         "xEnd": 560.570984,
@@ -1003,7 +895,7 @@
         "yTwips": 0,
         "xPt": "-5.4pt",
         "yPt": "0pt",
-        "wordCorrectionHint": "Table cell: see tableGroups for column/row width correction"
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
       "wordIds": [
         44,
@@ -1023,10 +915,6 @@
         58,
         59
       ],
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 13,
-      "docxTableIndex": 8,
       "isCleanDiff": true
     },
     {
@@ -1138,7 +1026,7 @@
       "issues": [
         "POSITION_SHIFT"
       ],
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baselineRegion": {
         "xStart": 45,
         "xEnd": 412.06601,
@@ -1166,7 +1054,7 @@
         "yTwips": 0,
         "xPt": "-5.4pt",
         "yPt": "0pt",
-        "wordCorrectionHint": "Table cell: see tableGroups for column/row width correction"
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
       "wordIds": [
         77,
@@ -1182,10 +1070,6 @@
         87,
         88
       ],
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 7,
-      "docxTableIndex": 8,
       "isCleanDiff": true
     },
     {
@@ -1196,7 +1080,7 @@
       "issues": [
         "POSITION_SHIFT"
       ],
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baselineRegion": {
         "xStart": 45,
         "xEnd": 388.380005,
@@ -1224,7 +1108,7 @@
         "yTwips": 0,
         "xPt": "-5.4pt",
         "yPt": "0pt",
-        "wordCorrectionHint": "Table cell: see tableGroups for column/row width correction"
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
       "wordIds": [
         89,
@@ -1238,10 +1122,6 @@
         97,
         98
       ],
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 9,
-      "docxTableIndex": 8,
       "isCleanDiff": true
     },
     {
@@ -1349,10 +1229,6 @@
         120,
         121
       ],
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 17,
-      "docxTableIndex": 8,
       "isCleanDiff": true
     },
     {
@@ -2841,7 +2717,7 @@
       "issues": [
         "POSITION_SHIFT"
       ],
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baselineRegion": {
         "xStart": 45,
         "xEnd": 95,
@@ -2869,15 +2745,11 @@
         "yTwips": 0,
         "xPt": "-5.4pt",
         "yPt": "0pt",
-        "wordCorrectionHint": "Table cell: see tableGroups for column/row width correction"
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
       "wordIds": [
         300
       ],
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 17,
-      "docxTableIndex": 8,
       "isCleanDiff": true
     },
     {
@@ -2888,7 +2760,7 @@
       "issues": [
         "POSITION_SHIFT"
       ],
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baselineRegion": {
         "xStart": 44.4000015,
         "xEnd": 137.899994,
@@ -2916,15 +2788,11 @@
         "yTwips": 0,
         "xPt": "-5.4pt",
         "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "Table 3 (docx-derived), Col 0, Row 0: see tableGroups for correction strategy."
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
       "wordIds": [
         301
       ],
-      "tableGroupId": 3,
-      "tableColumn": 0,
-      "tableRow": 0,
-      "docxTableIndex": 9,
       "isCleanDiff": true
     },
     {
@@ -2935,7 +2803,7 @@
       "issues": [
         "POSITION_SHIFT"
       ],
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baselineRegion": {
         "xStart": 44.4000015,
         "xEnd": 143.399994,
@@ -2963,15 +2831,11 @@
         "yTwips": 0,
         "xPt": "-5.4pt",
         "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "Table 3 (docx-derived), Col 0, Row 1: see tableGroups for correction strategy."
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
       "wordIds": [
         302
       ],
-      "tableGroupId": 3,
-      "tableColumn": 0,
-      "tableRow": 1,
-      "docxTableIndex": 9,
       "isCleanDiff": true
     },
     {
@@ -3025,7 +2889,7 @@
       "issues": [
         "POSITION_SHIFT"
       ],
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baselineRegion": {
         "xStart": 44.4000015,
         "xEnd": 148.399994,
@@ -3053,16 +2917,12 @@
         "yTwips": 0,
         "xPt": "-5.4pt",
         "yPt": "\u002B0.01pt",
-        "wordCorrectionHint": "Table 3 (docx-derived), Col 0, Row 3: see tableGroups for correction strategy."
+        "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
       "wordIds": [
         304,
         305
       ],
-      "tableGroupId": 3,
-      "tableColumn": 0,
-      "tableRow": 3,
-      "docxTableIndex": 9,
       "isCleanDiff": true
     },
     {
@@ -3219,7 +3079,7 @@
       ],
       "text": "\u00ABDear\u00BB",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "INLINE_RUN",
       "baseline": {
         "x": 45,
         "y": 274.693024,
@@ -3249,41 +3109,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 2,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 0,
-      "docxContext": {
-        "elementType": "MERGE_FIELD",
-        "styleName": "Normal",
-        "isInHeader": false,
-        "isInFooter": false,
-        "isList": false,
-        "mergeFieldName": "Dear",
-        "paragraphLeftIndentPt": 0,
-        "spaceBeforePt": 0,
-        "spaceAfterPt": 0,
-        "lineSpacingPt": 12,
-        "tableIndex": 8,
-        "rowIndex": 0,
-        "colIndex": 0,
-        "colWidthPt": 535.5,
-        "rowHeightPt": 14.3999996,
-        "cellLeftPaddingPt": 5.4000001,
-        "tableLeftIndentPt": 0,
-        "columnOffsetPt": 0,
-        "correctionTargets": [
-          {
-            "property": "CellFormat.LeftPadding",
-            "axis": "X",
-            "currentValuePt": 5.4000001,
-            "newValuePt": 0,
-            "currentValueTwips": 108,
-            "newValueTwips": 0,
-            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 5.4pt \u2192 0pt to cancel \u002B5.4pt drift. Apply once to all rows/cells \u2014 NOT per word."
-          }
-        ]
-      }
+      "phraseGroupId": 2
     },
     {
       "differenceId": 3,
@@ -3293,7 +3119,7 @@
       ],
       "text": "\u00ABWritingCompanyFI\u00BB",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 45,
         "y": 248.657028,
@@ -3323,41 +3149,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 3,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 1,
-      "docxContext": {
-        "elementType": "MERGE_FIELD",
-        "styleName": "Normal",
-        "isInHeader": false,
-        "isInFooter": false,
-        "isList": false,
-        "mergeFieldName": "WritingCompanyFI",
-        "paragraphLeftIndentPt": 0,
-        "spaceBeforePt": 0,
-        "spaceAfterPt": 8,
-        "lineSpacingPt": 12,
-        "tableIndex": 8,
-        "rowIndex": 1,
-        "colIndex": 0,
-        "colWidthPt": 535.5,
-        "rowHeightPt": 35.5499992,
-        "cellLeftPaddingPt": 5.4000001,
-        "tableLeftIndentPt": 0,
-        "columnOffsetPt": 0,
-        "correctionTargets": [
-          {
-            "property": "CellFormat.LeftPadding",
-            "axis": "X",
-            "currentValuePt": 5.4000001,
-            "newValuePt": 0,
-            "currentValueTwips": 108,
-            "newValueTwips": 0,
-            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 5.4pt \u2192 0pt to cancel \u002B5.4pt drift. Apply once to all rows/cells \u2014 NOT per word."
-          }
-        ]
-      }
+      "phraseGroupId": 3
     },
     {
       "differenceId": 4,
@@ -3367,7 +3159,7 @@
       ],
       "text": "is",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 145.839996,
         "y": 248.657028,
@@ -3397,10 +3189,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 3,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 1
+      "phraseGroupId": 3
     },
     {
       "differenceId": 5,
@@ -3410,7 +3199,7 @@
       ],
       "text": "pleased",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 154.960999,
         "y": 248.657028,
@@ -3440,10 +3229,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 3,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 1
+      "phraseGroupId": 3
     },
     {
       "differenceId": 6,
@@ -3453,7 +3239,7 @@
       ],
       "text": "to",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 197.582993,
         "y": 248.657028,
@@ -3483,10 +3269,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 3,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 1
+      "phraseGroupId": 3
     },
     {
       "differenceId": 7,
@@ -3496,7 +3279,7 @@
       ],
       "text": "offer",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 210.757004,
         "y": 248.657028,
@@ -3526,10 +3309,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 3,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 1
+      "phraseGroupId": 3
     },
     {
       "differenceId": 8,
@@ -3539,7 +3319,7 @@
       ],
       "text": "quotation",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 236.328003,
         "y": 248.657028,
@@ -3569,10 +3349,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 3,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 1
+      "phraseGroupId": 3
     },
     {
       "differenceId": 9,
@@ -3582,7 +3359,7 @@
       ],
       "text": "#",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 287.27002,
         "y": 248.657028,
@@ -3612,10 +3389,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 3,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 1
+      "phraseGroupId": 3
     },
     {
       "differenceId": 10,
@@ -3625,7 +3399,7 @@
       ],
       "text": "\u00ABQPno\u00BB",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 297.708984,
         "y": 248.657028,
@@ -3655,10 +3429,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 3,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 1
+      "phraseGroupId": 3
     },
     {
       "differenceId": 11,
@@ -3668,7 +3439,7 @@
       ],
       "text": "for",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 336.71701,
         "y": 248.657028,
@@ -3698,10 +3469,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 3,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 1
+      "phraseGroupId": 3
     },
     {
       "differenceId": 12,
@@ -3711,7 +3479,7 @@
       ],
       "text": "the",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 352.648987,
         "y": 248.657028,
@@ -3741,10 +3509,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 3,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 1
+      "phraseGroupId": 3
     },
     {
       "differenceId": 13,
@@ -3754,7 +3519,7 @@
       ],
       "text": "captioned",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 371.872009,
         "y": 248.657028,
@@ -3784,10 +3549,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 3,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 1
+      "phraseGroupId": 3
     },
     {
       "differenceId": 14,
@@ -3797,7 +3559,7 @@
       ],
       "text": "on",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 426.618011,
         "y": 248.657028,
@@ -3827,10 +3589,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 3,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 1
+      "phraseGroupId": 3
     },
     {
       "differenceId": 15,
@@ -3840,7 +3599,7 @@
       ],
       "text": "our",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 442.501007,
         "y": 248.657028,
@@ -3870,10 +3629,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 3,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 1
+      "phraseGroupId": 3
     },
     {
       "differenceId": 16,
@@ -3883,7 +3639,7 @@
       ],
       "text": "\u00ABCoverageForm\u00BB",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 461.372986,
         "y": 248.657028,
@@ -3913,10 +3669,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 3,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 1
+      "phraseGroupId": 3
     },
     {
       "differenceId": 17,
@@ -4086,7 +3839,7 @@
       ],
       "text": "Please",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "INLINE_RUN",
       "baseline": {
         "x": 45,
         "y": 205.507004,
@@ -4116,40 +3869,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 5,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 3,
-      "docxContext": {
-        "elementType": "TABLE_CELL",
-        "styleName": "Normal",
-        "isInHeader": false,
-        "isInFooter": false,
-        "isList": false,
-        "paragraphLeftIndentPt": 0,
-        "spaceBeforePt": 0,
-        "spaceAfterPt": 0,
-        "lineSpacingPt": 12,
-        "tableIndex": 8,
-        "rowIndex": 3,
-        "colIndex": 0,
-        "colWidthPt": 535.5,
-        "rowHeightPt": 30.75,
-        "cellLeftPaddingPt": 5.4000001,
-        "tableLeftIndentPt": 0,
-        "columnOffsetPt": 0,
-        "correctionTargets": [
-          {
-            "property": "CellFormat.LeftPadding",
-            "axis": "X",
-            "currentValuePt": 5.4000001,
-            "newValuePt": 0,
-            "currentValueTwips": 108,
-            "newValueTwips": 0,
-            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 5.4pt \u2192 0pt to cancel \u002B5.4pt drift. Apply once to all rows/cells \u2014 NOT per word."
-          }
-        ]
-      }
+      "phraseGroupId": 5
     },
     {
       "differenceId": 22,
@@ -4239,7 +3959,7 @@
       ],
       "text": "the",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "INLINE_RUN",
       "baseline": {
         "x": 130.161011,
         "y": 205.507004,
@@ -4269,40 +3989,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -1.99pt (-40 twips)"
       },
-      "phraseGroupId": 8,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 5,
-      "docxContext": {
-        "elementType": "TABLE_CELL",
-        "styleName": "Normal",
-        "isInHeader": false,
-        "isInFooter": false,
-        "isList": false,
-        "paragraphLeftIndentPt": 0,
-        "spaceBeforePt": 0,
-        "spaceAfterPt": 0,
-        "lineSpacingPt": 12,
-        "tableIndex": 8,
-        "rowIndex": 5,
-        "colIndex": 0,
-        "colWidthPt": 535.5,
-        "rowHeightPt": 39.75,
-        "cellLeftPaddingPt": 5.4000001,
-        "tableLeftIndentPt": 0,
-        "columnOffsetPt": 0,
-        "correctionTargets": [
-          {
-            "property": "Table.LeftIndent",
-            "axis": "X",
-            "currentValuePt": 0,
-            "newValuePt": -1.98898315,
-            "currentValueTwips": 0,
-            "newValueTwips": -40,
-            "description": "[TABLE_INDENT_FALLBACK] Table.LeftIndent: 0pt \u2192 -1.99pt. Root cause unknown; padding and indent did not match drift."
-          }
-        ]
-      }
+      "phraseGroupId": 8
     },
     {
       "differenceId": 25,
@@ -4712,32 +4399,13 @@
       ],
       "text": "be",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 45,
         "y": 193.246002,
         "font": "CenturyGothic",
         "fontSize": 10,
         "page": 1
-      },
-      "docxContext": {
-        "elementType": "TABLE_CELL",
-        "styleName": "Normal",
-        "isInHeader": false,
-        "isInFooter": false,
-        "isList": false,
-        "paragraphLeftIndentPt": 0,
-        "spaceBeforePt": 0,
-        "spaceAfterPt": 0,
-        "lineSpacingPt": 12,
-        "tableIndex": 8,
-        "rowIndex": 11,
-        "colIndex": 0,
-        "colWidthPt": 535.5,
-        "rowHeightPt": 54.75,
-        "cellLeftPaddingPt": 5.4000001,
-        "tableLeftIndentPt": 0,
-        "columnOffsetPt": 0
       }
     },
     {
@@ -5068,7 +4736,7 @@
       ],
       "text": "If",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 45,
         "y": 159.610001,
@@ -5098,40 +4766,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 20,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 13,
-      "docxContext": {
-        "elementType": "TABLE_CELL",
-        "styleName": "Normal",
-        "isInHeader": false,
-        "isInFooter": false,
-        "isList": false,
-        "paragraphLeftIndentPt": 0,
-        "spaceBeforePt": 0,
-        "spaceAfterPt": 0,
-        "lineSpacingPt": 12,
-        "tableIndex": 8,
-        "rowIndex": 13,
-        "colIndex": 0,
-        "colWidthPt": 535.5,
-        "rowHeightPt": 87.75,
-        "cellLeftPaddingPt": 5.4000001,
-        "tableLeftIndentPt": 0,
-        "columnOffsetPt": 0,
-        "correctionTargets": [
-          {
-            "property": "CellFormat.LeftPadding",
-            "axis": "X",
-            "currentValuePt": 5.4000001,
-            "newValuePt": 0,
-            "currentValueTwips": 108,
-            "newValueTwips": 0,
-            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 5.4pt \u2192 0pt to cancel \u002B5.4pt drift. Apply once to all rows/cells \u2014 NOT per word."
-          }
-        ]
-      }
+      "phraseGroupId": 20
     },
     {
       "differenceId": 45,
@@ -5141,7 +4776,7 @@
       ],
       "text": "you",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 53.1689987,
         "y": 159.610001,
@@ -5171,40 +4806,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 20,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 15,
-      "docxContext": {
-        "elementType": "TABLE_CELL",
-        "styleName": "Normal",
-        "isInHeader": false,
-        "isInFooter": false,
-        "isList": false,
-        "paragraphLeftIndentPt": 0,
-        "spaceBeforePt": 0,
-        "spaceAfterPt": 0,
-        "lineSpacingPt": 12,
-        "tableIndex": 8,
-        "rowIndex": 15,
-        "colIndex": 0,
-        "colWidthPt": 535.5,
-        "rowHeightPt": 55.5,
-        "cellLeftPaddingPt": 5.4000001,
-        "tableLeftIndentPt": 0,
-        "columnOffsetPt": 0,
-        "correctionTargets": [
-          {
-            "property": "CellFormat.LeftPadding",
-            "axis": "X",
-            "currentValuePt": 5.4000001,
-            "newValuePt": 0,
-            "currentValueTwips": 108,
-            "newValueTwips": 0,
-            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 5.4pt \u2192 0pt to cancel \u002B5.4pt drift. Apply once to all rows/cells \u2014 NOT per word."
-          }
-        ]
-      }
+      "phraseGroupId": 20
     },
     {
       "differenceId": 46,
@@ -5214,7 +4816,7 @@
       ],
       "text": "are",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 73.9259949,
         "y": 159.610001,
@@ -5244,10 +4846,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 20,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 13
+      "phraseGroupId": 20
     },
     {
       "differenceId": 47,
@@ -5257,7 +4856,7 @@
       ],
       "text": "not",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 93.0329971,
         "y": 159.610001,
@@ -5287,10 +4886,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 20,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 13
+      "phraseGroupId": 20
     },
     {
       "differenceId": 48,
@@ -5300,7 +4896,7 @@
       ],
       "text": "currently",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 111.83699,
         "y": 159.610001,
@@ -5330,10 +4926,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 20,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 13
+      "phraseGroupId": 20
     },
     {
       "differenceId": 49,
@@ -5343,7 +4936,7 @@
       ],
       "text": "appointed",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 156.519989,
         "y": 159.610001,
@@ -5373,10 +4966,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 20,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 13
+      "phraseGroupId": 20
     },
     {
       "differenceId": 50,
@@ -5386,7 +4976,7 @@
       ],
       "text": "with",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 211.148987,
         "y": 159.610001,
@@ -5416,10 +5006,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 20,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 13
+      "phraseGroupId": 20
     },
     {
       "differenceId": 51,
@@ -5429,7 +5016,7 @@
       ],
       "text": "StarStone\u0027s",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 233.717987,
         "y": 159.610001,
@@ -5459,10 +5046,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 20,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 13
+      "phraseGroupId": 20
     },
     {
       "differenceId": 52,
@@ -5472,7 +5056,7 @@
       ],
       "text": "Management",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 288.06897,
         "y": 159.610001,
@@ -5502,10 +5086,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 20,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 13
+      "phraseGroupId": 20
     },
     {
       "differenceId": 53,
@@ -5515,7 +5096,7 @@
       ],
       "text": "Liability",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 358.381958,
         "y": 159.610001,
@@ -5545,10 +5126,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 20,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 13
+      "phraseGroupId": 20
     },
     {
       "differenceId": 54,
@@ -5558,7 +5136,7 @@
       ],
       "text": "Division,",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 396.179962,
         "y": 159.610001,
@@ -5588,10 +5166,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 20,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 13
+      "phraseGroupId": 20
     },
     {
       "differenceId": 55,
@@ -5601,7 +5176,7 @@
       ],
       "text": "please",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 437.234955,
         "y": 159.610001,
@@ -5631,10 +5206,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 20,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 13
+      "phraseGroupId": 20
     },
     {
       "differenceId": 56,
@@ -5644,7 +5216,7 @@
       ],
       "text": "forward",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 472.537964,
         "y": 159.610001,
@@ -5674,10 +5246,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 20,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 13
+      "phraseGroupId": 20
     },
     {
       "differenceId": 57,
@@ -5687,7 +5256,7 @@
       ],
       "text": "a",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 513.001953,
         "y": 159.610001,
@@ -5717,10 +5286,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 20,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 13
+      "phraseGroupId": 20
     },
     {
       "differenceId": 58,
@@ -5730,7 +5296,7 @@
       ],
       "text": "copy",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 522.601929,
         "y": 159.610001,
@@ -5760,10 +5326,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 20,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 13
+      "phraseGroupId": 20
     },
     {
       "differenceId": 59,
@@ -5773,7 +5336,7 @@
       ],
       "text": "of",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 550.570984,
         "y": 159.610001,
@@ -5803,10 +5366,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 20,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 13
+      "phraseGroupId": 20
     },
     {
       "differenceId": 60,
@@ -6496,7 +6056,7 @@
       ],
       "text": "StarStone",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 45,
         "y": 96.2020111,
@@ -6526,40 +6086,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 23,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 7,
-      "docxContext": {
-        "elementType": "TABLE_CELL",
-        "styleName": "Normal",
-        "isInHeader": false,
-        "isInFooter": false,
-        "isList": false,
-        "paragraphLeftIndentPt": 0,
-        "spaceBeforePt": 0,
-        "spaceAfterPt": 0,
-        "lineSpacingPt": 12,
-        "tableIndex": 8,
-        "rowIndex": 7,
-        "colIndex": 0,
-        "colWidthPt": 535.5,
-        "rowHeightPt": 41.25,
-        "cellLeftPaddingPt": 5.4000001,
-        "tableLeftIndentPt": 0,
-        "columnOffsetPt": 0,
-        "correctionTargets": [
-          {
-            "property": "CellFormat.LeftPadding",
-            "axis": "X",
-            "currentValuePt": 5.4000001,
-            "newValuePt": 0,
-            "currentValueTwips": 108,
-            "newValueTwips": 0,
-            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 5.4pt \u2192 0pt to cancel \u002B5.4pt drift. Apply once to all rows/cells \u2014 NOT per word."
-          }
-        ]
-      }
+      "phraseGroupId": 23
     },
     {
       "differenceId": 78,
@@ -6569,7 +6096,7 @@
       ],
       "text": "National",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 93.4920044,
         "y": 96.2020111,
@@ -6599,10 +6126,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 23,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 7
+      "phraseGroupId": 23
     },
     {
       "differenceId": 79,
@@ -6612,7 +6136,7 @@
       ],
       "text": "Insurance",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 137.360001,
         "y": 96.2020111,
@@ -6642,10 +6166,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 23,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 7
+      "phraseGroupId": 23
     },
     {
       "differenceId": 80,
@@ -6655,7 +6176,7 @@
       ],
       "text": "Company",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 187.356003,
         "y": 96.2020111,
@@ -6685,10 +6206,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 23,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 7
+      "phraseGroupId": 23
     },
     {
       "differenceId": 81,
@@ -6698,7 +6216,7 @@
       ],
       "text": "(AM",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 239.294998,
         "y": 96.2020111,
@@ -6728,10 +6246,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 23,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 7
+      "phraseGroupId": 23
     },
     {
       "differenceId": 82,
@@ -6741,7 +6256,7 @@
       ],
       "text": "Best",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 262.34198,
         "y": 96.2020111,
@@ -6771,10 +6286,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 23,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 7
+      "phraseGroupId": 23
     },
     {
       "differenceId": 83,
@@ -6784,7 +6296,7 @@
       ],
       "text": "rating:",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 284.622986,
         "y": 96.2020111,
@@ -6814,10 +6326,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 23,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 7
+      "phraseGroupId": 23
     },
     {
       "differenceId": 84,
@@ -6827,7 +6336,7 @@
       ],
       "text": "A",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 318.21701,
         "y": 96.2020111,
@@ -6857,10 +6366,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 23,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 7
+      "phraseGroupId": 23
     },
     {
       "differenceId": 85,
@@ -6870,7 +6376,7 @@
       ],
       "text": "XIII)",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 328.382996,
         "y": 96.2020111,
@@ -6900,10 +6406,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 23,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 7
+      "phraseGroupId": 23
     },
     {
       "differenceId": 86,
@@ -6913,7 +6416,7 @@
       ],
       "text": "is",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 347.713989,
         "y": 96.2020111,
@@ -6943,10 +6446,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 23,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 7
+      "phraseGroupId": 23
     },
     {
       "differenceId": 87,
@@ -6956,7 +6456,7 @@
       ],
       "text": "an",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 356.367004,
         "y": 96.2020111,
@@ -6986,10 +6486,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 23,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 7
+      "phraseGroupId": 23
     },
     {
       "differenceId": 88,
@@ -6999,7 +6496,7 @@
       ],
       "text": "admitted",
       "page": 1,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 372.06601,
         "y": 96.2020111,
@@ -7029,10 +6526,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 23,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 7
+      "phraseGroupId": 23
     },
     {
       "differenceId": 89,
@@ -7042,7 +6536,7 @@
       ],
       "text": "The",
       "page": 2,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 45,
         "y": 744.97998,
@@ -7072,40 +6566,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 24,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 9,
-      "docxContext": {
-        "elementType": "TABLE_CELL",
-        "styleName": "Normal",
-        "isInHeader": false,
-        "isInFooter": false,
-        "isList": false,
-        "paragraphLeftIndentPt": 0,
-        "spaceBeforePt": 0,
-        "spaceAfterPt": 0,
-        "lineSpacingPt": 12,
-        "tableIndex": 8,
-        "rowIndex": 9,
-        "colIndex": 0,
-        "colWidthPt": 535.5,
-        "rowHeightPt": 14.3999996,
-        "cellLeftPaddingPt": 5.4000001,
-        "tableLeftIndentPt": 0,
-        "columnOffsetPt": 0,
-        "correctionTargets": [
-          {
-            "property": "CellFormat.LeftPadding",
-            "axis": "X",
-            "currentValuePt": 5.4000001,
-            "newValuePt": 0,
-            "currentValueTwips": 108,
-            "newValueTwips": 0,
-            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 5.4pt \u2192 0pt to cancel \u002B5.4pt drift. Apply once to all rows/cells \u2014 NOT per word."
-          }
-        ]
-      }
+      "phraseGroupId": 24
     },
     {
       "differenceId": 90,
@@ -7115,7 +6576,7 @@
       ],
       "text": "commission",
       "page": 2,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 64.4000015,
         "y": 744.97998,
@@ -7145,10 +6606,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 24,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 9
+      "phraseGroupId": 24
     },
     {
       "differenceId": 91,
@@ -7158,7 +6616,7 @@
       ],
       "text": "payable",
       "page": 2,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 124.795998,
         "y": 744.97998,
@@ -7188,10 +6646,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 24,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 9
+      "phraseGroupId": 24
     },
     {
       "differenceId": 92,
@@ -7201,7 +6656,7 @@
       ],
       "text": "for",
       "page": 2,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 168.600006,
         "y": 744.97998,
@@ -7231,10 +6686,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 24,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 9
+      "phraseGroupId": 24
     },
     {
       "differenceId": 93,
@@ -7244,7 +6696,7 @@
       ],
       "text": "placement",
       "page": 2,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 183.794998,
         "y": 744.97998,
@@ -7274,10 +6726,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 24,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 9
+      "phraseGroupId": 24
     },
     {
       "differenceId": 94,
@@ -7287,7 +6736,7 @@
       ],
       "text": "of",
       "page": 2,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 239.796005,
         "y": 744.97998,
@@ -7317,10 +6766,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 24,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 9
+      "phraseGroupId": 24
     },
     {
       "differenceId": 95,
@@ -7330,7 +6776,7 @@
       ],
       "text": "this",
       "page": 2,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 251.792999,
         "y": 744.97998,
@@ -7360,10 +6806,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 24,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 9
+      "phraseGroupId": 24
     },
     {
       "differenceId": 96,
@@ -7373,7 +6816,7 @@
       ],
       "text": "business",
       "page": 2,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 270.386993,
         "y": 744.97998,
@@ -7403,10 +6846,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 24,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 9
+      "phraseGroupId": 24
     },
     {
       "differenceId": 97,
@@ -7416,7 +6856,7 @@
       ],
       "text": "is",
       "page": 2,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 313.786011,
         "y": 744.97998,
@@ -7446,10 +6886,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 24,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 9
+      "phraseGroupId": 24
     },
     {
       "differenceId": 98,
@@ -7459,7 +6896,7 @@
       ],
       "text": "\u00ABCommission\u00BB%",
       "page": 2,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 323.380005,
         "y": 744.97998,
@@ -7489,10 +6926,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 24,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 9
+      "phraseGroupId": 24
     },
     {
       "differenceId": 99,
@@ -8372,10 +7806,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 26,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 17
+      "phraseGroupId": 26
     },
     {
       "differenceId": 121,
@@ -8415,40 +7846,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -4.58pt (-92 twips)"
       },
-      "phraseGroupId": 26,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 17,
-      "docxContext": {
-        "elementType": "TABLE_CELL",
-        "styleName": "Normal",
-        "isInHeader": false,
-        "isInFooter": false,
-        "isList": false,
-        "paragraphLeftIndentPt": 0,
-        "spaceBeforePt": 0,
-        "spaceAfterPt": 8,
-        "lineSpacingPt": 12.8000002,
-        "tableIndex": 8,
-        "rowIndex": 17,
-        "colIndex": 0,
-        "colWidthPt": 535.5,
-        "rowHeightPt": 14.3999996,
-        "cellLeftPaddingPt": 5.4000001,
-        "tableLeftIndentPt": 0,
-        "columnOffsetPt": 0,
-        "correctionTargets": [
-          {
-            "property": "Table.LeftIndent",
-            "axis": "X",
-            "currentValuePt": 0,
-            "newValuePt": -4.57901001,
-            "currentValueTwips": 0,
-            "newValueTwips": -92,
-            "description": "[TABLE_INDENT_FALLBACK] Table.LeftIndent: 0pt \u2192 -4.58pt. Root cause unknown; padding and indent did not match drift."
-          }
-        ]
-      }
+      "phraseGroupId": 26
     },
     {
       "differenceId": 122,
@@ -15532,7 +14930,7 @@
       ],
       "text": "Sincerely,",
       "page": 2,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 45,
         "y": 478.141968,
@@ -15562,40 +14960,7 @@
         "yPt": "0pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 58,
-      "tableGroupId": 1,
-      "tableColumn": 0,
-      "tableRow": 17,
-      "docxContext": {
-        "elementType": "TABLE_CELL",
-        "styleName": "Normal",
-        "isInHeader": false,
-        "isInFooter": false,
-        "isList": false,
-        "paragraphLeftIndentPt": 0,
-        "spaceBeforePt": 0,
-        "spaceAfterPt": 0,
-        "lineSpacingPt": 12,
-        "tableIndex": 8,
-        "rowIndex": 17,
-        "colIndex": 0,
-        "colWidthPt": 535.5,
-        "rowHeightPt": 14.3999996,
-        "cellLeftPaddingPt": 5.4000001,
-        "tableLeftIndentPt": 0,
-        "columnOffsetPt": 0,
-        "correctionTargets": [
-          {
-            "property": "CellFormat.LeftPadding",
-            "axis": "X",
-            "currentValuePt": 5.4000001,
-            "newValuePt": 0,
-            "currentValueTwips": 108,
-            "newValueTwips": 0,
-            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 5.4pt \u2192 0pt to cancel \u002B5.4pt drift. Apply once to all rows/cells \u2014 NOT per word."
-          }
-        ]
-      }
+      "phraseGroupId": 58
     },
     {
       "differenceId": 301,
@@ -15605,7 +14970,7 @@
       ],
       "text": "\u00ABUnderwriterName\u00BB",
       "page": 2,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 44.4000015,
         "y": 453.23996,
@@ -15635,40 +15000,7 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 59,
-      "tableGroupId": 3,
-      "tableColumn": 0,
-      "tableRow": 0,
-      "docxContext": {
-        "elementType": "MERGE_FIELD",
-        "styleName": "Normal",
-        "isInHeader": false,
-        "isInFooter": false,
-        "isList": false,
-        "mergeFieldName": "UnderwriterName",
-        "paragraphLeftIndentPt": 0,
-        "spaceBeforePt": 0,
-        "spaceAfterPt": 0,
-        "lineSpacingPt": 12,
-        "tableIndex": 9,
-        "rowIndex": 0,
-        "colIndex": 0,
-        "colWidthPt": 484.75,
-        "cellLeftPaddingPt": 5.4000001,
-        "tableLeftIndentPt": 0,
-        "columnOffsetPt": 0,
-        "correctionTargets": [
-          {
-            "property": "CellFormat.LeftPadding",
-            "axis": "X",
-            "currentValuePt": 5.4000001,
-            "newValuePt": 0,
-            "currentValueTwips": 108,
-            "newValueTwips": 0,
-            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 5.4pt \u2192 0pt to cancel \u002B5.4pt drift. Apply once to all rows/cells \u2014 NOT per word."
-          }
-        ]
-      }
+      "phraseGroupId": 59
     },
     {
       "differenceId": 302,
@@ -15678,7 +15010,7 @@
       ],
       "text": "\u00ABUnderwriterTitle\u00BB",
       "page": 2,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 44.4000015,
         "y": 440.590973,
@@ -15708,40 +15040,7 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 60,
-      "tableGroupId": 3,
-      "tableColumn": 0,
-      "tableRow": 1,
-      "docxContext": {
-        "elementType": "MERGE_FIELD",
-        "styleName": "Normal",
-        "isInHeader": false,
-        "isInFooter": false,
-        "isList": false,
-        "mergeFieldName": "UnderwriterTitle",
-        "paragraphLeftIndentPt": -6,
-        "spaceBeforePt": 0,
-        "spaceAfterPt": 0,
-        "lineSpacingPt": 12,
-        "tableIndex": 9,
-        "rowIndex": 1,
-        "colIndex": 0,
-        "colWidthPt": 484.75,
-        "cellLeftPaddingPt": 5.4000001,
-        "tableLeftIndentPt": 0,
-        "columnOffsetPt": 0,
-        "correctionTargets": [
-          {
-            "property": "CellFormat.LeftPadding",
-            "axis": "X",
-            "currentValuePt": 5.4000001,
-            "newValuePt": 0,
-            "currentValueTwips": 108,
-            "newValueTwips": 0,
-            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 5.4pt \u2192 0pt to cancel \u002B5.4pt drift. Apply once to all rows/cells \u2014 NOT per word."
-          }
-        ]
-      }
+      "phraseGroupId": 60
     },
     {
       "differenceId": 303,
@@ -15791,7 +15090,7 @@
       ],
       "text": "w",
       "page": 2,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 44.4000015,
         "y": 419.890991,
@@ -15821,10 +15120,7 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 62,
-      "tableGroupId": 3,
-      "tableColumn": 0,
-      "tableRow": 3
+      "phraseGroupId": 62
     },
     {
       "differenceId": 305,
@@ -15834,7 +15130,7 @@
       ],
       "text": "www.corespecialty.com",
       "page": 2,
-      "layoutContext": "TABLE_CELL",
+      "layoutContext": "PARAGRAPH",
       "baseline": {
         "x": 53.9000015,
         "y": 419.890991,
@@ -15864,39 +15160,7 @@
         "yPt": "\u002B0.01pt",
         "wordCorrectionHint": "Adjust paragraph LeftIndent by -5.4pt (-108 twips)"
       },
-      "phraseGroupId": 62,
-      "tableGroupId": 3,
-      "tableColumn": 0,
-      "tableRow": 3,
-      "docxContext": {
-        "elementType": "TABLE_CELL",
-        "styleName": "Normal",
-        "isInHeader": false,
-        "isInFooter": false,
-        "isList": false,
-        "paragraphLeftIndentPt": 0,
-        "spaceBeforePt": 0,
-        "spaceAfterPt": 0,
-        "lineSpacingPt": 12.8000002,
-        "tableIndex": 9,
-        "rowIndex": 3,
-        "colIndex": 0,
-        "colWidthPt": 484.75,
-        "cellLeftPaddingPt": 5.4000001,
-        "tableLeftIndentPt": 0,
-        "columnOffsetPt": 0,
-        "correctionTargets": [
-          {
-            "property": "CellFormat.LeftPadding",
-            "axis": "X",
-            "currentValuePt": 5.4000001,
-            "newValuePt": 0,
-            "currentValueTwips": 108,
-            "newValueTwips": 0,
-            "description": "[CELL_PADDING] Reduce LeftPadding on ALL cells in table from 5.4pt \u2192 0pt to cancel \u002B5.4pt drift. Apply once to all rows/cells \u2014 NOT per word."
-          }
-        ]
-      }
+      "phraseGroupId": 62
     },
     {
       "differenceId": 306,
