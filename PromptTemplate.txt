@@ -1,0 +1,46 @@
+Read CLAUDE.md first, then:
+STANDING INSTRUCTION — always follow this without being asked:
+
+After making ANY code changes in this session, before ending your response:
+
+1. Identify if the change affects anything documented in CLAUDE.md:
+   - Modified a core data flow?
+   - Changed how modules interact?
+   - Introduced or removed a pattern?
+   - Added/resolved a non-obvious nuance or ordering dependency?
+   - Deprecated or replaced something?
+
+2. If yes → immediately update the relevant section(s) in CLAUDE.md:
+   - Update only the sections affected, leave everything else untouched
+   - Keep the same structure and formatting
+   - Update the "Last updated" date at the top
+   - Add a one-line change note at the top:
+     > [date] — Updated: [which section] because [what changed in one line]
+
+3. If no → explicitly state "CLAUDE.md unchanged — this change has no 
+   architectural impact."
+
+Rules for updates:
+- NEVER track individual bugs or their fixes
+- NEVER add implementation details that are obvious from reading the code
+- ONLY update when the UNDERSTANDING of how the system works has changed
+- If a nuance was tricky to discover, document it in Section 6
+- If a flow changed, redraw only that flow in Section 3
+- Keep CLAUDE.md lean — remove outdated info when replacing it, 
+  don't just append
+--------------------------
+When I edit the test case the instruction appears like this , for e.g TestSitePro-Forms2 (but this is in general for any tes case):
+@@Click '#~#Test Pages#~#' drop menu
+@@In test pages drop menu click '#~#Form Elements#~#'
+@@Click #~#Color Picker#~# button
+
+Now this is fine for internal representation and all internal logic should keep working as it works today. Absolutely no change to that flow. However To the user the test case should appearsthe way he entered
+originally. And originally it was saved with the values of the default test case. So during display of test case it should display with all values of the default test case.
+
+Now user can make the changes and then the save logic will handle the rest as it does now. 
+
+Make this change so that to the user on UI ttest case appears natuarraly and in the way he entered. You may also need to handle any downstream imapt of this change, but DO NOT change the current workflow at ALL.
+Analyze how this change can be accomodated without impacting any other functionality as it works today.
+
+No changes to the test case execution workflow or anything else apart from what I mentioed which is a visual change on UI.
+

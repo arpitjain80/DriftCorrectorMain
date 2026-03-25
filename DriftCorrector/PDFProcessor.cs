@@ -2978,9 +2978,10 @@ namespace DocumentProcessor
         private Bitmap RenderPdfPageToBitmap(string pdfPath, int pageIndex0Based, int renderWidth, int renderHeight)
         {
             // DocLib.Instance is a singleton — use GetDocReader with using, but do NOT dispose the singleton itself.
+            // PageDimensions requires dimOne <= dimTwo; swap for landscape pages where width > height.
             using var docReader = DocLib.Instance.GetDocReader(
                 pdfPath,
-                new PageDimensions(renderWidth, renderHeight));
+                new PageDimensions(Math.Min(renderWidth, renderHeight), Math.Max(renderWidth, renderHeight)));
 
             using var pageReader = docReader.GetPageReader(pageIndex0Based);
 

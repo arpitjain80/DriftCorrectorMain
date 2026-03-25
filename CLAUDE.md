@@ -1,5 +1,6 @@
 # PROJECT MEMORY — DriftCorrector
-> Auto-maintained by Claude. Last updated: 2026-03-17
+> Auto-maintained by Claude. Last updated: 2026-03-25
+> [2026-03-25] — Updated: Section 6 (floating-table TABLE_FLOAT_SHIFT) because ApplyTableIndent now uses AbsoluteHorizontalDistance for tblpPr tables
 > [2026-03-17] — Updated: Section 6 (GHR Pass 2 Tier 4) because modified-comparison PARAGRAPH groups are now propagated to XI in HTML report
 > [2026-03-17] — Updated: Section 6 (XI single-object guard) because left-pivot uniform fallback added for pages where stable content (e.g. notice box) is FURTHER LEFT than all drifting tables
 > [2026-03-17] — Updated: Section 6 (XI single-object guard) because uniform page-shift fallback added for all-table pages with no external pivot reference
@@ -308,6 +309,19 @@ In a modified comparison, Gate 3 marks all non-table PARAGRAPH phrase groups `is
 **Tier 4 guard:** `IsModifiedComparison && pg.IsCleanDiff && !pg.IsXIgnore && !pg.TableGroupId.HasValue && !pg.DocxTableIndex.HasValue`. Only fires in modified comparisons; original comparisons are unaffected. The tight filter (`!TG && !DI`) ensures table groups already covered by Tiers 1-2 are not double-included.
 
 **When the inner guard fires only via hasTier4:** If a modified comparison page has ZERO IsXIgnore groups but has Gate 3 PARAGRAPH groups, the new `hasTier4` boolean allows entering the `xiTableRegions` block even when `xiDocxTableIndices.Count == 0 && xiTableGroupIds.Count == 0 && xiRectYRanges.Count == 0`.
+
+### Floating-table shift (`ApplyTableIndent` — `TABLE_FLOAT_SHIFT`)
+**File:** `WordDriftCorrector.cs`, `ApplyTableIndent()`
+
+Some Word tables have `<w:tblpPr>` in their XML — this makes them **floating tables** (absolute positioning, `TextWrapping.Around` in Aspose). For floating tables, `Table.LeftIndent` is silently ignored by both Word and Aspose V23 PDF export. Setting it has no visible effect; the table stays at its rendered position.
+
+**Root cause (DO_ERP_Header):** Table has `<w:tblpPr w:horzAnchor="margin" w:tblpY="277"/>`. Aspose V23 renders this 5.65pt right of V14 due to rendering engine differences. `TABLE_INDENT_FALLBACK` was writing `table.LeftIndent = -5.65pt` but the floating-table anchor overrides it, producing identical modified comparison diffs.
+
+**Fix:** In `ApplyTableIndent`, check `table.TextWrapping == TextWrapping.Around`. If floating, use `table.AbsoluteHorizontalDistance -= drift` (maps to `w:tblpX` in OOXML) instead of `table.LeftIndent`. This shifts the entire table as a unit while preserving cell alignment, content centering, and column widths. Strategy label becomes `TABLE_FLOAT_SHIFT` (or `TABLE_FLOAT_SHIFT (fallback)`).
+
+**Inline-table path unchanged:** When `TextWrapping != Around`, the existing `Table.LeftIndent` logic runs as before — zero side-impact on all non-floating tables.
+
+**Why cell-level fixes are wrong for floating tables:** Text inside cells is center-aligned (`w:jc val="center"`). Reducing cell padding shifts the cell boundary but not the centered text, producing spurious "W" (width) markers in the diff report without correcting the visible position.
 
 ### MAX_PARAGRAPH_X_DRIFT_PT = 10pt cap (PATH 3 only)
 **File:** `WordDriftCorrector.cs`, `ApplyParagraphCorrection()`

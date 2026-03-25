@@ -937,6 +937,41 @@ namespace DocumentProcessor
 
         private bool ApplyTableIndent(Table table, TableCorrectionPlan plan, DriftCorrectionResult result, Document doc = null)
         {
+            string stratLabel = plan.Strategy == CorrectionStrategy.TableIndentFallback ? "TABLE_INDENT (fallback)" : "TABLE_INDENT";
+
+            // ── Floating-table branch ──────────────────────────────────────────────────
+            // Tables with tblpPr (TextWrapping.Around) are absolutely positioned.
+            // Table.LeftIndent is silently ignored for floating tables in Aspose V23 PDF
+            // export, so we must instead adjust AbsoluteHorizontalDistance, which maps
+            // directly to the OOXML w:tblpX attribute and is respected by the renderer.
+            if (table.TextWrapping == TextWrapping.Around)
+            {
+                double curAbs = table.AbsoluteHorizontalDistance;
+                double newAbs = curAbs - plan.UniformDriftXPt;
+                table.AbsoluteHorizontalDistance = newAbs;
+
+                stratLabel = plan.Strategy == CorrectionStrategy.TableIndentFallback
+                    ? "TABLE_FLOAT_SHIFT (fallback)"
+                    : "TABLE_FLOAT_SHIFT";
+                result.CorrectionsApplied.Add($"{stratLabel} on Table {plan.TableIndex}");
+                result.Strategy = stratLabel;
+                result.CorrectionLog.Add(new CorrectionLogEntry
+                {
+                    Level = "TABLE",
+                    Strategy = stratLabel,
+                    Element = $"Table {plan.TableIndex} (floating)",
+                    Property = "Table.AbsoluteHorizontalDistance",
+                    Before = $"{curAbs:0.##}pt",
+                    After = $"{newAbs:0.##}pt",
+                    DriftAmount = $"{-plan.UniformDriftXPt:+0.##;-0.##}pt",
+                    Note = "Floating table (tblpPr): shifted via AbsoluteHorizontalDistance."
+                });
+                Console.WriteLine($"   ✓ {stratLabel} on Table {plan.TableIndex} (AbsHorizDist {curAbs:0.##}pt → {newAbs:0.##}pt)");
+                _logger.Log($"[WordDrift] ApplyTableIndent T{plan.TableIndex}: floating table → AbsoluteHorizontalDistance {curAbs:0.##}pt → {newAbs:0.##}pt");
+                return true;
+            }
+
+            // ── Inline-table branch ───────────────────────────────────────────────────
             double cur = table.LeftIndent;
             double desired = cur - plan.UniformDriftXPt;
             double minSafeIndent = doc != null ? GetMarginAwareMinIndentPt(table, doc) : -72.0;
@@ -952,7 +987,6 @@ namespace DocumentProcessor
 
             table.LeftIndent = nw;
 
-            string stratLabel = plan.Strategy == CorrectionStrategy.TableIndentFallback ? "TABLE_INDENT (fallback)" : "TABLE_INDENT";
             result.CorrectionsApplied.Add($"{stratLabel} on Table {plan.TableIndex}");
             result.Strategy = stratLabel;
             result.CorrectionLog.Add(new CorrectionLogEntry
